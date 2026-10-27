@@ -40,10 +40,10 @@ The viewer is a standalone chart; it does not carry a sampling map because the p
 | --- | --- | --- | --- |
 | FKNMS | Florida Keys | `florida_keys.txt` | Geographic proxy, not FKNMS boundary |
 | FGBNMS | Flower Garden Banks, Texas | `flower_garden.txt` | Geographic proxy, not FGBNMS boundary |
-| NMSAS | Samoas | `samoas.txt` | Much broader than American Samoa sanctuary units |
-| PNMS | Northwestern Hawaiian Islands | `nwhi.txt` | Broad regional proxy for Papahānaumokuākea |
-| HIHWNMS | Main Hawaiian Islands | `hawaii.txt` | Broad regional proxy for sanctuary waters |
-| GRNMS | No matching regional station identified | — | Retain boundary clipped series if included |
+| NMSAS | Samoas | `samoas.txt` | Broad regional proxy |
+| PNMS | Northwestern Hawaiian Islands | `nwhi.txt` | Broad regional proxy |
+| HIHWNMS | Main Hawaiian Islands | `hawaii.txt` | Broad regional proxy |
+| GRNMS | No matching regional station identified | — | Not included |
 
 NOAA makes these station boundaries from reef-containing 5 km pixels plus a 20 km buffer, rather than the legal ONMS polygons. This pilot labels comparisons by ONMS code for convenience; captions must name the CRW station and its method. It does **not** claim a sanctuary-wide mean SST. NOAA labels the regional station product experimental. If this path becomes the published figure, a daily scheduled GitHub Action can call this script, publish the regenerated HTML and data outputs. We have not switched the existing chart or its workflow to this data source.
 
