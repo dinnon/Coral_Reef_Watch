@@ -7,7 +7,9 @@ python pull_stations.py FKNMS
 python pull_stations.py                 # all five candidate regions
 ```
 
-Run from this directory. Output is `data/<onms-code>/daily.csv` and `monthly.csv`. Re-running fetches each complete source file and replaces the corresponding CSV after parsing and validation; no raster backfill or cell inventory is needed. `complete_month=0` marks a partly reported current month **or a historical month with missing daily records**. The command prints the count and first dates of any gaps. It never invents missing observations; use only rows with `complete_month=1` for a historical monthly comparison. The monthly SST is the arithmetic mean of NOAA's **daily SST at the 90th-percentile HotSpot pixel**; NOAA can select a different pixel each day. The daily min and max columns describe the full CRW regional station footprint; their monthly means are **not** the spatial 10th–90th percentile band in the existing viewer. The NOAA SSTA column is likewise a NOAA station quantity and should not be presented as the existing viewer's 1991–2020 sanctuary anomaly.
+How to run this:
+
+Run from local directory. Output is `data/<onms-code>/daily.csv` and `monthly.csv`. Re-running pyhon code snip fetches each complete source file and replaces the corresponding CSV after parsing and validation; no raster backfill or cell inventory is needed. `complete_month=0` marks a partly reported current month **or a historical month with missing daily records**. The command prints the count and first dates of any gaps. No missing observations imputed; use only rows with `complete_month=1` for a historical monthly comparison. The monthly SST is the arithmetic mean of NOAA's **daily SST at the 90th-percentile HotSpot pixel**; NOAA can select a different pixel each day. The daily min and max columns describe the full CRW regional station footprint; their monthly means are **not** the spatial 10th–90th percentile band in the existing viewer. The NOAA SSTA column is likewise a NOAA station quantity and should not be presented as the existing viewer's 1991–2020 sanctuary anomaly.
 
 ## View the results
 
