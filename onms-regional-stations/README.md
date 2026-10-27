@@ -34,7 +34,6 @@ Defaults are relative to the script folder. `--output PATH` selects a different 
 
 The **Peak daily DHW** measure uses the maximum of the reported daily station DHW values in each complete month. A dashed 4 °C-weeks line is NOAA's Bleaching Alert Level 1 DHW reference. NOAA also requires the **same day's** HotSpot to be at least 1°C; crossing 4 DHW alone does not establish an alert or observed bleaching. Peak DHW is embedded from `monthly.csv`; when rebuilding an older monthly CSV without that column, the script can derive the same monthly maximum from the companion `daily.csv`. The 4 DHW reference remains in front of the data with a white outline and bold label. SST and SST anomaly stay on their own Celsius scale.
 
-The viewer is a standalone chart; it does not carry a sampling map because the points and ONMS boundary from the earlier raster pipeline describe a different geography.
 
 | ONMS comparison label | CRW regional station | Source file | Fit |
 | --- | --- | --- | --- |
@@ -45,6 +44,6 @@ The viewer is a standalone chart; it does not carry a sampling map because the p
 | HIHWNMS | Main Hawaiian Islands | `hawaii.txt` | Broad regional proxy |
 | GRNMS | No matching regional station identified | — | Not included |
 
-NOAA makes these station boundaries from reef-containing 5 km pixels plus a 20 km buffer, rather than the legal ONMS polygons. This pilot labels comparisons by ONMS code for convenience; captions must name the CRW station and its method. It does **not** claim a sanctuary-wide mean SST. NOAA labels the regional station product experimental. If this path becomes the published figure, a daily scheduled GitHub Action can call this script, publish the regenerated HTML and data outputs. We have not switched the existing chart or its workflow to this data source.
+NOAA makes these station boundaries from reef-containing 5 km pixels. This pilot labels comparisons by ONMS code for convenience; captions must name the CRW station and its method. It does **not** claim a sanctuary-wide mean SST. NOAA labels the regional station product experimental. 
 
 Sources: [station list and text files](https://coralreefwatch.noaa.gov/product/vs/data.php), [regional virtual station method](https://coralreefwatch.noaa.gov/product/vs/map.php), [gauge and SST time-series description](https://coralreefwatch.noaa.gov/product/vs/gauges/samoas.php).
