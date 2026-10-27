@@ -1,6 +1,6 @@
 # Coral Reef Watch regional station pilot
 
-This is a separate, simpler data pull to compare with the ONMS boundary clipped CoralTemp SST series. It downloads NOAA's daily 5 km **regional** virtual station text files and writes a tidy daily CSV plus a monthly summary. Python standard library only.
+Data pull of NOAA's daily 5 km **regional** virtual station text files and writes a tidy daily CSV plus a monthly summary. Python standard library only.
 
 ```bash
 python pull_stations.py FKNMS
