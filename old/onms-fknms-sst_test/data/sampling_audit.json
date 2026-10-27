@@ -1,0 +1,19 @@
+{
+  "station_counts": {
+    "FKNMS": 416
+  },
+  "component_counts": {
+    "FKNMS": [
+      416
+    ]
+  },
+  "grid_spacing_degrees": 0.05,
+  "station_hash": "3633b436593153bb5b011604d0e3647d34d9bd7babf5bfda424fe873bd9d9200",
+  "boundary_retrieved_utc": "2026-09-28T19:04:05.356695+00:00",
+  "boundary_file": "sanctuary_boundaries.geojson",
+  "site_codes": [
+    "FKNMS"
+  ],
+  "method": "all native 0.05 degree grid centers inside ONMS boundary; cosine latitude weighted valid-cell mean",
+  "note": "All native 0.05 degree cell centers inside polygons; boundary-edge partial cells and coral habitat are not separately counted."
+}

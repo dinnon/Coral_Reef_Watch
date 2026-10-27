@@ -1,0 +1,1833 @@
+<html>
+<head>
+<!--<meta http-equiv="refresh" content="0; url=https://coralreefwatch.noaa.gov/product/vs_single_pixel_exp/fgb.php" />-->
+<title>NOAA Coral Reef Watch Flower Garden Banks Virtual Stations</title>
+
+<style>
+.container {
+display: grid;
+align-items: center;
+grid-template-columns: 3fr 1fr;
+column-gap: 5px;
+}
+
+img {
+max-width: 100%;
+max-height:100%;
+}
+
+</style>
+
+<!--// START OF HEADER TEXT FROM INCLUDE STATEMENT  //-->
+<!--// DO NOT MODIFY THIS SECTION  //-->
+<link rel="icon" href="/favicon.png" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="/crw-style_wide.css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Keywords" Content="Oceanography, Marine, Satellite,Remote Sensing,Coral Reef,Coral Bleaching,Marine Biology,Marine Ecology, Physical Oceanography, Environment, Publication,in situ, observation, CREWS, CRW,  NOAA, Government">
+<meta name="Author" Content="NOAA Coral Reef Watch">
+<title>NOAA Coral Reef Watch Program</title>
+<!--// ****** for GSA federal Google Analytics ***** //-->
+<script async id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NOAA"></script>
+<!--// GA4 Google tag (gtag.js) - code updated 6/13/2023; main STAR tag created 3/1/2023 //-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6J8W8XXDSC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6J8W8XXDSC');
+</script>
+<script async src='https://siteimproveanalytics.com/js/siteanalyze_6294131.js'></script>
+<!--// ***************************** //-->
+<script rel="preload" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!--// Add fancyBox 2.1.7 //-->
+<link rel="stylesheet" href="https://www.star.nesdis.noaa.gov/star/global/js/fancyapps/source/jquery.fancybox.css?v=2.1.7" media="screen">
+<script src="https://www.star.nesdis.noaa.gov/star/global/js/fancybox/jquery.fancybox.pack.js?v=2.1.7"></script>
+<script>
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		beforeShow: function(){
+			var fancyAlt = $(this.element).find('img').attr('alt');
+			$(".fancybox-inner").find("img").attr("alt",fancyAlt);
+		}
+	});
+});
+
+$(document).ready(function(){
+	$("#Map area").fancybox({
+		beforeShow: function(){
+			var fancyAlt = $(this.element).find('img').attr('alt');
+			$(".fancybox-inner").find("img").attr("alt",fancyAlt);
+		}
+	}); 
+});
+</script>
+<!--// **** Defining Regional Virtual Stations Number Variable **** //-->
+</head>
+<body>
+<div align="center">
+<div id="header">
+<!--//  <a href="/index.php"><img class="header-right" src="/satellite/icons1/crw_banner_small2_20years_a.png"></a>  //-->
+<a href="/index.php"><img class="header-right" alt="CoralReefWatch banner" src="/satellite/icons1/crw_banner_small2.png"></a>
+<a href="https://www.nesdis.noaa.gov"><img class="header-left" src="/satellite/icons1/banner_nesdis_small_4.png" alt="NOAA NESDIS banner" height='50'></a>
+    <div id="header-links-NOAA">
+		<a href="https://www.commerce.gov/">DOC</a> > <a 
+		href="https://www.noaa.gov/">NOAA</a> > <a 
+		href="https://www.nesdis.noaa.gov/">NESDIS</a> > <a 
+		href="https://www.star.nesdis.noaa.gov/star/index.php">STAR</a> > <a href="/index.php">CRW</a></div>
+	<div id="header-links-CRTF">
+		<a href="https://www.coralreef.gov/">USCRTF</a> | <a 
+		href="https://coralreef.noaa.gov/">CRCP</a> | <!--// <a href="/creios.php">CREIOS</a> | //--> <a 
+		href="https://www.coris.noaa.gov/monitoring">NCRMP</a> | <a 
+		href="https://coris.noaa.gov/">CoRIS</a></div>
+	<img class="header-bottom" alt="CoralReefWatch banner" src="/satellite/icons1/banner_coral_0202.jpg">
+</div>
+
+<!--   Add side-wide announcement below if any; otherwise comment it out    -->
+<!--
+<table width='960'><tr><td>
+  <p>
+  <font size='-1' color="red"><b>
+  USER ALERT: Notice goes here. If ..., please contact us at
+  <a href=
+  "mailto:coralreefwatch@noaa.gov?subject=[Question ... for Coral Reef Watch]">
+  coralreefwatch@noaa.gov</a>.
+  </b></font>
+  </td></tr>
+</table>
+-->
+
+<!--// END OF HEADER TEXT FROM INCLUDE STATEMENT  //-->
+
+<!--</head>--> <!--FROM HEARER WIDE FILE THIS TAG IS CLOSED-->
+
+<!--<body>--> <!--FROM HEARER WIDE FILE THIS TAG IS OPENED-->
+
+<div id="content">
+<div id="main-content-no-navbar-wide">
+<div class="title-section">Flower Garden Banks 5 km Single-Pixel Virtual Stations<br><font size=3>(<font color='orange'><u>experimental product</u></font> 
+         for collaborators based on <a href="https://coralreefwatch.noaa.gov/product/5km/index.php">v3.1 global products</a>)</font><!--Released July 17, 2023, -->
+<p style="color:red; font-size:12px; text-align: center; line-height: 1.5">
+NOTE: This page is still under development. The map, station names, and station order are subject to change.
+</p>
+</div>
+<a name="mainMap"></a> <!-- Anchor -->
+<p style="margin-bottom: 0px;" align="center"><font size=2>Click on a location on the map, the name of a site, or scroll down to see the time series for each location.</font></p>
+
+<div class="container">
+
+<!--  main image -->
+<div class="img">
+<img id="mainImage" src="https://coralreefwatch.noaa.gov/product/vs_single_pixel_exp/site_maps/site_map_fgb.png" alt="Station location chart for the region" usemap="#indexmap">
+<map name="indexmap">
+<area id="a1" SHAPE="RECT" COORDS="78,160,98,180" href="javascript:void(0)" ALT="Stetson Bank" TITLE="Stetson Bank" onclick="document.location='fgb.php#StetsonBank';return false;">
+<area id="a2" SHAPE="RECT" COORDS="183,230,203,250" href="javascript:void(0)" ALT="West Flower Garden Bank" TITLE="West Flower Garden Bank" onclick="document.location='fgb.php#WestFlowerGardenBank';return false;">
+<area id="a3" SHAPE="RECT" COORDS="219,242,239,262" href="javascript:void(0)" ALT="HorseShoe Bank" TITLE="HorseShoe Bank" onclick="document.location='fgb.php#HorseShoeBank';return false;">
+<area id="a4" SHAPE="RECT" COORDS="242,219,262,239" href="javascript:void(0)" ALT="East Flower Garden Bank" TITLE="East Flower Garden Bank" onclick="document.location='fgb.php#EastFlowerGardenBank';return false;">
+<area id="a5" SHAPE="RECT" COORDS="254,195,274,215" href="javascript:void(0)" ALT="MacNeil Bank" TITLE="MacNeil Bank" onclick="document.location='fgb.php#MacNeilBank';return false;">
+<area id="a6" SHAPE="RECT" COORDS="277,219,297,239" href="javascript:void(0)" ALT="Rankin Bank" TITLE="Rankin Bank" onclick="document.location='fgb.php#RankinBank';return false;">
+<area id="a7" SHAPE="RECT" COORDS="277,230,297,250" href="javascript:void(0)" ALT="28 Fathom Bank" TITLE="28 Fathom Bank" onclick="document.location='fgb.php#28FathomBank';return false;">
+<area id="a8" SHAPE="RECT" COORDS="301,230,321,250" href="javascript:void(0)" ALT="Bright Bank" TITLE="Bright Bank" onclick="document.location='fgb.php#BrightBank';return false;">
+<area id="a9" SHAPE="RECT" COORDS="359,242,379,262" href="javascript:void(0)" ALT="Geyer Bank" TITLE="Geyer Bank" onclick="document.location='fgb.php#GeyerBank';return false;">
+<area id="a10" SHAPE="RECT" COORDS="406,242,426,262" href="javascript:void(0)" ALT="Elvers Bank" TITLE="Elvers Bank" onclick="document.location='fgb.php#ElversBank';return false;">
+<area id="a11" SHAPE="RECT" COORDS="476,207,496,227" href="javascript:void(0)" ALT="McGrail Bank" TITLE="McGrail Bank" onclick="document.location='fgb.php#McGrailBank';return false;">
+<area id="a12" SHAPE="RECT" COORDS="500,125,520,145" href="javascript:void(0)" ALT="Sonnier Bank" TITLE="Sonnier Bank" onclick="document.location='fgb.php#SonnierBank';return false;">
+<area id="a13" SHAPE="RECT" COORDS="500,183,520,203" href="javascript:void(0)" ALT="Bouma Bank" TITLE="Bouma Bank" onclick="document.location='fgb.php#BoumaBank';return false;">
+<area id="a14" SHAPE="RECT" COORDS="523,207,543,227" href="javascript:void(0)" ALT="Rezak Bank" TITLE="Rezak Bank" onclick="document.location='fgb.php#RezakBank';return false;">
+<area id="a15" SHAPE="RECT" COORDS="523,219,543,239" href="javascript:void(0)" ALT="Sidner Bank" TITLE="Sidner Bank" onclick="document.location='fgb.php#SidnerBank';return false;">
+<area id="a16" SHAPE="RECT" COORDS="605,207,625,227" href="javascript:void(0)" ALT="Parker Bank" TITLE="Parker Bank" onclick="document.location='fgb.php#ParkerBank';return false;">
+<area id="a17" SHAPE="RECT" COORDS="617,183,637,203" href="javascript:void(0)" ALT="Alderdice Bank" TITLE="Alderdice Bank" onclick="document.location='fgb.php#AlderdiceBank';return false;">
+
+</map>
+</div>
+
+<div class="text">
+<a style="text-decoration:none" href="fgb.php#StetsonBank">1. Stetson Bank</a> <br>
+<a style="text-decoration:none" href="fgb.php#WestFlowerGardenBank">2. West Flower Garden Bank</a> <br>
+<a style="text-decoration:none" href="fgb.php#HorseShoeBank">3. HorseShoe Bank</a> <br>
+<a style="text-decoration:none" href="fgb.php#EastFlowerGardenBank">4. East Flower Garden Bank</a> <br>
+<a style="text-decoration:none" href="fgb.php#MacNeilBank">5. MacNeil Bank</a> <br>
+<a style="text-decoration:none" href="fgb.php#RankinBank">6. Rankin Bank</a> <br>
+<a style="text-decoration:none" href="fgb.php#28FathomBank">7. 28 Fathom Bank</a> <br>
+<a style="text-decoration:none" href="fgb.php#BrightBank">8. Bright Bank</a> <br>
+<a style="text-decoration:none" href="fgb.php#GeyerBank">9. Geyer Bank</a> <br>
+<a style="text-decoration:none" href="fgb.php#ElversBank">10. Elvers Bank</a> <br>
+<a style="text-decoration:none" href="fgb.php#McGrailBank">11. McGrail Bank</a> <br>
+<a style="text-decoration:none" href="fgb.php#SonnierBank">12. Sonnier Bank</a> <br>
+<a style="text-decoration:none" href="fgb.php#BoumaBank">13. Bouma Bank</a> <br>
+<a style="text-decoration:none" href="fgb.php#RezakBank">14. Rezak Bank</a> <br>
+<a style="text-decoration:none" href="fgb.php#SidnerBank">15. Sidner Bank</a> <br>
+<a style="text-decoration:none" href="fgb.php#ParkerBank">16. Parker Bank</a> <br>
+<a style="text-decoration:none" href="fgb.php#AlderdiceBank">17. Alderdice Bank</a> <br>
+
+</p>
+</div>
+
+</div>
+
+<!-- <div id="bottomText" align="center">
+<font color="#000000" size="2" face="verdana,arial,helvetica">
+This page hosts the regional time series graphs and data.<br>
+For more details, please visit our <a href="../map.php">Google Maps interface for the 5-km Virtual Stations system</a></font>.
+</div> -->
+
+<br>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="StetsonBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="StetsonBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('StetsonBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_StetsonBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="WestFlowerGardenBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="WestFlowerGardenBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('WestFlowerGardenBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_WestFlowerGardenBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="HorseShoeBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="HorseShoeBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('HorseShoeBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_HorseShoeBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="EastFlowerGardenBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="EastFlowerGardenBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('EastFlowerGardenBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_EastFlowerGardenBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="MacNeilBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="MacNeilBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('MacNeilBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_MacNeilBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="RankinBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="RankinBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('RankinBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_RankinBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="28FathomBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="28FathomBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('28FathomBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_28FathomBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="BrightBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="BrightBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('BrightBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_BrightBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="GeyerBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="GeyerBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('GeyerBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_GeyerBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="ElversBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="ElversBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('ElversBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_ElversBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="McGrailBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="McGrailBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('McGrailBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_McGrailBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="SonnierBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="SonnierBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('SonnierBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_SonnierBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="BoumaBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="BoumaBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('BoumaBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_BoumaBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="RezakBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="RezakBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('RezakBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_RezakBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="SidnerBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="SidnerBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('SidnerBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_SidnerBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="ParkerBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="ParkerBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('ParkerBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_ParkerBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="AlderdiceBank"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="AlderdiceBank" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('AlderdiceBank').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_FlowerGardenBanks_AlderdiceBank.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="fgb.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<!-- End time series tables -->
+<br>
+
+</b></font>
+
+</div> <!--main-content-no-navbar-wide-->
+
+
+<!-------START OF FOOTER TEXT FROM INCLUDE STATEMENT-------------------------------------->
+<!-------DO NOT MODIFY THIS SECTION------------------------------------------------------->
+
+
+<div id="footer">
+  <a href="http://www.noaa.gov">
+     <img class="footer-left" src="/satellite/icons1/noaalogo.gif"
+     alt="NOAA logo" border="0" height='60'></a>
+  <a href="http://www.doc.gov">
+     <img class="footer-right" src="/satellite/icons1/commerce.gif"
+    alt="commerce logo" border="0"></a>
+  <p>
+<!--  <a href="http://search.usa.gov/search?affiliate=orbit.nesdis.noaa.gov_star" title='Click to access Search'>Search</a> | -->
+  <a href="http://search.usa.gov/search?affiliate=noaa.gov" title='Click to access Search'>Search</a> | 
+
+  <a href="/satellite/docs/recommendations_crw_citation.php">How to cite these products and methods</a>
+  </p>
+  <p>
+<!--  <a href="http://www.star.nesdis.noaa.gov/star/productdisclaimer.php#heartbleed">Heartbleed Notice</a> | -->
+  <a href="http://www.star.nesdis.noaa.gov/star/productdisclaimer.php">Disclaimer</a> |
+  <a href="http://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a> |
+  <a href="http://www.star.nesdis.noaa.gov/star/accessibility.php">Accessibility Policy</a> |
+  <a href="http://www.star.nesdis.noaa.gov/star/privacy.php">Privacy Policy</a> 
+ </p>
+  <p>
+
+<!--        Last modified:  -->
+<!-- #config timefmt="%e %b %Y" --> 
+<!-- #echo var="LAST_MODIFIED" --> 
+<!--   | -->
+
+   <a href="https://www.star.nesdis.noaa.gov/star/survey.php">Customer Survey</a>
+   |
+   <a href=
+   "mailto:coralreefwatch@noaa.gov?subject=[Question for Coral Reef Watch]">
+   Contact Us</a>
+   | 
+  Owner: <a href=
+   "http://coralreefwatch.noaa.gov/satellite/">
+   NOAA Coral Reef Watch</a>
+   </p>
+</div>
+</div>
+
+<!-------END OF FOOTER TEXT FROM INCLUDE STATEMENT-------------------------------------->
+
+
+  </div> <!--content-->
+
+</body>
+</html>
+

@@ -1,0 +1,10 @@
+region,name,sites,unique_pixels,first_date,earliest_source_end,latest_source_end,first_complete_sst_month,last_complete_sst_month
+fgb,Flower Garden Banks,17,17,1985-01-01,2026-10-22,2026-10-22,1985-01,2026-09
+usvi,US Virgin Islands,6,6,1985-01-01,2026-10-22,2026-10-22,1985-01,2026-09
+florida_keys,"Florida (Keys, Dry Tortugas and southeast Florida)",19,19,1985-01-01,2026-10-22,2026-10-22,1985-01,2026-09
+puerto_rico,Puerto Rico,16,16,1985-01-01,2026-10-22,2026-10-22,1985-01,2026-09
+samoas,Samoan Islands,26,26,1985-01-01,2026-10-22,2026-10-22,1985-01,2026-09
+guam,Guam,28,28,1985-01-01,2026-10-22,2026-10-22,1985-01,2026-09
+saipan_tinian_aguijan,"CNMI — Saipan, Tinian and Aguijan",27,27,1985-01-01,2026-10-22,2026-10-22,1985-01,2026-09
+rota,CNMI — Rota,10,10,1985-01-01,2026-10-22,2026-10-22,1985-01,2026-09
+hawaii,Main Hawaiian Islands,69,69,1985-01-01,2026-10-22,2026-10-22,1985-01,2026-09

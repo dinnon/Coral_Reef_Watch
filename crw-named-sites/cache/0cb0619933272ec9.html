@@ -1,0 +1,1553 @@
+<html>
+<head>
+<title>NOAA Coral Reef Watch Hawaiian Islands Virtual Stations</title>
+
+<style>
+.container {
+display: grid;
+align-items: center;
+grid-template-columns: 3fr 1fr;
+column-gap: 5px;
+}
+
+img {
+max-width: 100%;
+max-height:100%;
+}
+
+</style>
+
+<!--// START OF HEADER TEXT FROM INCLUDE STATEMENT  //-->
+<!--// DO NOT MODIFY THIS SECTION  //-->
+<link rel="icon" href="/favicon.png" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="/crw-style_wide.css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Keywords" Content="Oceanography, Marine, Satellite,Remote Sensing,Coral Reef,Coral Bleaching,Marine Biology,Marine Ecology, Physical Oceanography, Environment, Publication,in situ, observation, CREWS, CRW,  NOAA, Government">
+<meta name="Author" Content="NOAA Coral Reef Watch">
+<title>NOAA Coral Reef Watch Program</title>
+<!--// ****** for GSA federal Google Analytics ***** //-->
+<script async id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NOAA"></script>
+<!--// GA4 Google tag (gtag.js) - code updated 6/13/2023; main STAR tag created 3/1/2023 //-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6J8W8XXDSC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6J8W8XXDSC');
+</script>
+<script async src='https://siteimproveanalytics.com/js/siteanalyze_6294131.js'></script>
+<!--// ***************************** //-->
+<script rel="preload" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!--// Add fancyBox 2.1.7 //-->
+<link rel="stylesheet" href="https://www.star.nesdis.noaa.gov/star/global/js/fancyapps/source/jquery.fancybox.css?v=2.1.7" media="screen">
+<script src="https://www.star.nesdis.noaa.gov/star/global/js/fancybox/jquery.fancybox.pack.js?v=2.1.7"></script>
+<script>
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		beforeShow: function(){
+			var fancyAlt = $(this.element).find('img').attr('alt');
+			$(".fancybox-inner").find("img").attr("alt",fancyAlt);
+		}
+	});
+});
+
+$(document).ready(function(){
+	$("#Map area").fancybox({
+		beforeShow: function(){
+			var fancyAlt = $(this.element).find('img').attr('alt');
+			$(".fancybox-inner").find("img").attr("alt",fancyAlt);
+		}
+	}); 
+});
+</script>
+<!--// **** Defining Regional Virtual Stations Number Variable **** //-->
+</head>
+<body>
+<div align="center">
+<div id="header">
+<!--//  <a href="/index.php"><img class="header-right" src="/satellite/icons1/crw_banner_small2_20years_a.png"></a>  //-->
+<a href="/index.php"><img class="header-right" alt="CoralReefWatch banner" src="/satellite/icons1/crw_banner_small2.png"></a>
+<a href="https://www.nesdis.noaa.gov"><img class="header-left" src="/satellite/icons1/banner_nesdis_small_4.png" alt="NOAA NESDIS banner" height='50'></a>
+    <div id="header-links-NOAA">
+		<a href="https://www.commerce.gov/">DOC</a> > <a 
+		href="https://www.noaa.gov/">NOAA</a> > <a 
+		href="https://www.nesdis.noaa.gov/">NESDIS</a> > <a 
+		href="https://www.star.nesdis.noaa.gov/star/index.php">STAR</a> > <a href="/index.php">CRW</a></div>
+	<div id="header-links-CRTF">
+		<a href="https://www.coralreef.gov/">USCRTF</a> | <a 
+		href="https://coralreef.noaa.gov/">CRCP</a> | <!--// <a href="/creios.php">CREIOS</a> | //--> <a 
+		href="https://www.coris.noaa.gov/monitoring">NCRMP</a> | <a 
+		href="https://coris.noaa.gov/">CoRIS</a></div>
+	<img class="header-bottom" alt="CoralReefWatch banner" src="/satellite/icons1/banner_coral_0202.jpg">
+</div>
+
+<!--   Add side-wide announcement below if any; otherwise comment it out    -->
+<!--
+<table width='960'><tr><td>
+  <p>
+  <font size='-1' color="red"><b>
+  USER ALERT: Notice goes here. If ..., please contact us at
+  <a href=
+  "mailto:coralreefwatch@noaa.gov?subject=[Question ... for Coral Reef Watch]">
+  coralreefwatch@noaa.gov</a>.
+  </b></font>
+  </td></tr>
+</table>
+-->
+
+<!--// END OF HEADER TEXT FROM INCLUDE STATEMENT  //-->
+
+<!--</head>--> <!--FROM HEARER WIDE FILE THIS TAG IS CLOSED-->
+
+<!--<body>--> <!--FROM HEARER WIDE FILE THIS TAG IS OPENED-->
+
+<div id="content">
+<div id="main-content-no-navbar-wide">
+
+<div class="title-section">Oahu 5 km Single-Pixel Virtual Stations<br><font size=3>(<font color='orange'><u>experimental product</u></font> 
+         for collaborators based on <a href="https://coralreefwatch.noaa.gov/product/5km/index.php">v3.1 global products</a>)</font><!--Released July 17, 2023, -->
+<p style="color:red; font-size:12px; text-align: center; line-height: 1.5">
+NOTE: This page is still under development. The map, station names, and station order are subject to change.
+</p>
+</div>
+
+<a name="mainMap"></a> <!-- Anchor -->
+<p style="margin-bottom: 0px;" align="center"><font size=2>Click on a location on the map, the name of a site, or scroll down to see the time series for each location.</font></p>
+
+<div class="container">
+
+<!--  main image -->
+<div class="img">
+<img id="mainImage" src="https://coralreefwatch.noaa.gov/product/vs_single_pixel_exp/site_maps/site_map_oahu_labeled.png" alt="Station location chart for the region" usemap="#indexmap">
+<map name="indexmap">
+<area id="a1" SHAPE="RECT" COORDS="201,175,225,199" href="javascript:void(0)" ALT="Mokul&#275;&#699;ia" TITLE="Mokul&#275;&#699;ia" onclick="document.location='oahu.php#Mokuleia';return false;">
+<area id="a2" SHAPE="RECT" COORDS="136,207,160,231" href="javascript:void(0)" ALT="Ka&#699;ena Point" TITLE="Ka&#699;ena Point" onclick="document.location='oahu.php#KaenaPoint';return false;">
+<area id="a3" SHAPE="RECT" COORDS="201,271,225,295" href="javascript:void(0)" ALT="P&#333;ka&#699;&#299; Bay" TITLE="P&#333;ka&#699;&#299; Bay" onclick="document.location='oahu.php#PokaiBay';return false;">
+<area id="a4" SHAPE="RECT" COORDS="201,303,225,327" href="javascript:void(0)" ALT="N&#257;n&#257;kuli" TITLE="N&#257;n&#257;kuli" onclick="document.location='oahu.php#Nanakuli';return false;">
+<area id="a5" SHAPE="RECT" COORDS="233,336,257,360" href="javascript:void(0)" ALT="Ko Olina" TITLE="Ko Olina" onclick="document.location='oahu.php#KoOlina';return false;">
+<area id="a6" SHAPE="RECT" COORDS="265,368,289,392" href="javascript:void(0)" ALT="Nimitz" TITLE="Nimitz" onclick="document.location='oahu.php#Nimitz';return false;">
+<area id="a7" SHAPE="RECT" COORDS="297,368,321,392" href="javascript:void(0)" ALT="Ewa" TITLE="Ewa" onclick="document.location='oahu.php#Ewa';return false;">
+<area id="a8" SHAPE="RECT" COORDS="362,368,386,392" href="javascript:void(0)" ALT="Reef Runway" TITLE="Reef Runway" onclick="document.location='oahu.php#ReefRunway';return false;">
+<area id="a9" SHAPE="RECT" COORDS="394,368,418,392" href="javascript:void(0)" ALT="Kewalo Basin" TITLE="Kewalo Basin" onclick="document.location='oahu.php#KewaloBasin';return false;">
+<area id="a10" SHAPE="RECT" COORDS="490,368,514,392" href="javascript:void(0)" ALT="Maunalua Bay" TITLE="Maunalua Bay" onclick="document.location='oahu.php#MaunaluaBay';return false;">
+<area id="a11" SHAPE="RECT" COORDS="523,303,547,327" href="javascript:void(0)" ALT="Waimanalo Bay" TITLE="Waimanalo Bay" onclick="document.location='oahu.php#WaimanaloBay';return false;">
+<area id="a12" SHAPE="RECT" COORDS="490,271,514,295" href="javascript:void(0)" ALT="Kailua Bay" TITLE="Kailua Bay" onclick="document.location='oahu.php#KailuaBay';return false;">
+<area id="a13" SHAPE="RECT" COORDS="458,239,482,263" href="javascript:void(0)" ALT="K&#257;ne&#699;ohe Bay Outer Reef" TITLE="K&#257;ne&#699;ohe Bay Outer Reef" onclick="document.location='oahu.php#KaneoheBayOuterReef';return false;">
+<area id="a14" SHAPE="RECT" COORDS="426,239,450,263" href="javascript:void(0)" ALT="K&#257;ne&#699;ohe Bay Northwest" TITLE="K&#257;ne&#699;ohe Bay Northwest" onclick="document.location='oahu.php#KaneoheBayNorthwest';return false;">
+
+</map>
+</div>
+
+<div class="text">
+<u>Northern</u><br>
+<a style="text-decoration:none" href="oahu.php#Mokuleia">1. Mokul&#275;&#699;ia</a> <br>
+<br>
+<u>Western</u><br>
+<a style="text-decoration:none" href="oahu.php#KaenaPoint">2. Ka&#699;ena Point</a> <br>
+<a style="text-decoration:none" href="oahu.php#PokaiBay">3. P&#333;ka&#699;&#299; Bay</a> <br>
+<a style="text-decoration:none" href="oahu.php#Nanakuli">4. N&#257;n&#257;kuli</a> <br>
+<a style="text-decoration:none" href="oahu.php#KoOlina">5. Ko Olina</a> <br>
+<br>
+<u>Southern</u><br>
+<a style="text-decoration:none" href="oahu.php#Nimitz">6. Nimitz</a> <br>
+<a style="text-decoration:none" href="oahu.php#Ewa">7. Ewa</a> <br>
+<a style="text-decoration:none" href="oahu.php#ReefRunway">8. Reef Runway</a> <br>
+<a style="text-decoration:none" href="oahu.php#KewaloBasin">9. Kewalo Basin</a> <br>
+<a style="text-decoration:none" href="oahu.php#MaunaluaBay">10. Maunalua Bay</a> <br>
+<br>
+<u>Eastern</u><br>
+<a style="text-decoration:none" href="oahu.php#WaimanaloBay">11. Waimanalo Bay</a> <br>
+<a style="text-decoration:none" href="oahu.php#KailuaBay">12. Kailua Bay</a> <br>
+<a style="text-decoration:none" href="oahu.php#KaneoheBayOuterReef">13. K&#257;ne&#699;ohe Bay Outer Reef</a> <br>
+<a style="text-decoration:none" href="oahu.php#KaneoheBayNorthwest">14. K&#257;ne&#699;ohe Bay Northwest</a> <br>
+
+</p>
+</div>
+
+</div>
+
+<!-- <div id="bottomText" align="center">
+<font color="#000000" size="2" face="verdana,arial,helvetica">
+This page hosts the regional time series graphs and data.<br>
+For more details, please visit our <a href="../map.php">Google Maps interface for the 5-km Virtual Stations system</a></font>.
+</div> -->
+
+<br>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Mokuleia"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Mokuleia" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Mokuleia').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_PacificOcean_Polynesia_HawaiianIslands_Mokuleia.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/PacificOcean_Polynesia_HawaiianIslands_Mokuleia.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="oahu.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="KaenaPoint"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="KaenaPoint" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('KaenaPoint').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/PacificOcean_Polynesia_HawaiianIslands_KaenaPoint.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="oahu.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="PokaiBay"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="PokaiBay" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('PokaiBay').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_PacificOcean_Polynesia_HawaiianIslands_PokaiBay.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/PacificOcean_Polynesia_HawaiianIslands_PokaiBay.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="oahu.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Nanakuli"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Nanakuli" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Nanakuli').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_PacificOcean_Polynesia_HawaiianIslands_Nanakuli.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/PacificOcean_Polynesia_HawaiianIslands_Nanakuli.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="oahu.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="KoOlina"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="KoOlina" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('KoOlina').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_PacificOcean_Polynesia_HawaiianIslands_KoOlina.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/PacificOcean_Polynesia_HawaiianIslands_KoOlina.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="oahu.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Nimitz"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Nimitz" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Nimitz').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_PacificOcean_Polynesia_HawaiianIslands_Nimitz.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/PacificOcean_Polynesia_HawaiianIslands_Nimitz.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="oahu.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Ewa"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Ewa" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Ewa').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_PacificOcean_Polynesia_HawaiianIslands_Ewa.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/PacificOcean_Polynesia_HawaiianIslands_Ewa.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="oahu.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="ReefRunway"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="ReefRunway" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('ReefRunway').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_PacificOcean_Polynesia_HawaiianIslands_ReefRunway.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/PacificOcean_Polynesia_HawaiianIslands_ReefRunway.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="oahu.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="KewaloBasin"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="KewaloBasin" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('KewaloBasin').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/PacificOcean_Polynesia_HawaiianIslands_KewaloBasin.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="oahu.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="MaunaluaBay"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="MaunaluaBay" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('MaunaluaBay').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/PacificOcean_Polynesia_HawaiianIslands_MaunaluaBay.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="oahu.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="WaimanaloBay"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="WaimanaloBay" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('WaimanaloBay').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/PacificOcean_Polynesia_HawaiianIslands_WaimanaloBay.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="oahu.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="KailuaBay"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="KailuaBay" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('KailuaBay').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_PacificOcean_Polynesia_HawaiianIslands_KailuaBay.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/PacificOcean_Polynesia_HawaiianIslands_KailuaBay.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="oahu.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="KaneoheBayOuterReef"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="KaneoheBayOuterReef" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('KaneoheBayOuterReef').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/PacificOcean_Polynesia_HawaiianIslands_KaneoheBayOuterReef.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="oahu.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="KaneoheBayNorthwest"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="KaneoheBayNorthwest" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('KaneoheBayNorthwest').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/PacificOcean_Polynesia_HawaiianIslands_KaneoheBayNorthwest.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="oahu.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<!-- End time series tables -->
+<br>
+
+</b></font>
+
+</div> <!--main-content-no-navbar-wide-->
+
+
+<!-------START OF FOOTER TEXT FROM INCLUDE STATEMENT-------------------------------------->
+<!-------DO NOT MODIFY THIS SECTION------------------------------------------------------->
+
+
+<div id="footer">
+  <a href="http://www.noaa.gov">
+     <img class="footer-left" src="/satellite/icons1/noaalogo.gif"
+     alt="NOAA logo" border="0" height='60'></a>
+  <a href="http://www.doc.gov">
+     <img class="footer-right" src="/satellite/icons1/commerce.gif"
+    alt="commerce logo" border="0"></a>
+  <p>
+<!--  <a href="http://search.usa.gov/search?affiliate=orbit.nesdis.noaa.gov_star" title='Click to access Search'>Search</a> | -->
+  <a href="http://search.usa.gov/search?affiliate=noaa.gov" title='Click to access Search'>Search</a> | 
+
+  <a href="/satellite/docs/recommendations_crw_citation.php">How to cite these products and methods</a>
+  </p>
+  <p>
+<!--  <a href="http://www.star.nesdis.noaa.gov/star/productdisclaimer.php#heartbleed">Heartbleed Notice</a> | -->
+  <a href="http://www.star.nesdis.noaa.gov/star/productdisclaimer.php">Disclaimer</a> |
+  <a href="http://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a> |
+  <a href="http://www.star.nesdis.noaa.gov/star/accessibility.php">Accessibility Policy</a> |
+  <a href="http://www.star.nesdis.noaa.gov/star/privacy.php">Privacy Policy</a> 
+ </p>
+  <p>
+
+<!--        Last modified:  -->
+<!-- #config timefmt="%e %b %Y" --> 
+<!-- #echo var="LAST_MODIFIED" --> 
+<!--   | -->
+
+   <a href="https://www.star.nesdis.noaa.gov/star/survey.php">Customer Survey</a>
+   |
+   <a href=
+   "mailto:coralreefwatch@noaa.gov?subject=[Question for Coral Reef Watch]">
+   Contact Us</a>
+   | 
+  Owner: <a href=
+   "http://coralreefwatch.noaa.gov/satellite/">
+   NOAA Coral Reef Watch</a>
+   </p>
+</div>
+</div>
+
+<!-------END OF FOOTER TEXT FROM INCLUDE STATEMENT-------------------------------------->
+
+
+  </div> <!--content-->
+
+</body>
+</html>
+

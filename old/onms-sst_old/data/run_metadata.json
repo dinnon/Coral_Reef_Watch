@@ -1,0 +1,10 @@
+{
+  "updated_utc": "2026-09-25T02:49:08.382027+00:00",
+  "monthly_source": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1_monthly.csv",
+  "alternate_source": "https://coastwatch.pfeg.noaa.gov/erddap/griddap/NOAA_DHW_monthly.csv",
+  "boundary_source": "https://services2.arcgis.com/C8EMgrsFcRFL6LrL/arcgis/rest/services/NMS_Boundaries_02032022/FeatureServer/0/query",
+  "station_count": 46,
+  "first_month": "1985-01",
+  "last_month": "2026-08",
+  "method": "Fixed selected 5km pixels in or near each ONMS polygon; unweighted monthly mean. NOAA monthly composite SST."
+}

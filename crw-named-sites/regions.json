@@ -1,0 +1,59 @@
+{
+  "fgb": {
+    "name": "Flower Garden Banks",
+    "pages": [
+      "https://www.coralreefwatch.noaa.gov/product/vs_single_pixel_exp/fgb.php"
+    ]
+  },
+  "usvi": {
+    "name": "US Virgin Islands",
+    "pages": [
+      "https://www.coralreefwatch.noaa.gov/product/vs_single_pixel_exp/usvi.php"
+    ]
+  },
+  "florida_keys": {
+    "name": "Florida (Keys, Dry Tortugas and southeast Florida)",
+    "pages": [
+      "https://www.coralreefwatch.noaa.gov/product/vs_single_pixel_exp/florida_keys.php"
+    ]
+  },
+  "puerto_rico": {
+    "name": "Puerto Rico",
+    "pages": [
+      "https://www.coralreefwatch.noaa.gov/product/vs_single_pixel_exp/puerto_rico.php"
+    ]
+  },
+  "samoas": {
+    "name": "Samoan Islands",
+    "pages": [
+      "https://www.coralreefwatch.noaa.gov/product/vs_single_pixel_exp/samoas.php"
+    ]
+  },
+  "guam": {
+    "name": "Guam",
+    "pages": [
+      "https://www.coralreefwatch.noaa.gov/product/vs_single_pixel_exp/guam.php"
+    ]
+  },
+  "saipan_tinian_aguijan": {
+    "name": "CNMI — Saipan, Tinian and Aguijan",
+    "pages": [
+      "https://www.coralreefwatch.noaa.gov/product/vs_single_pixel_exp/saipan_tinian_aguijan.php"
+    ]
+  },
+  "rota": {
+    "name": "CNMI — Rota",
+    "pages": [
+      "https://www.coralreefwatch.noaa.gov/product/vs_single_pixel_exp/rota.php"
+    ]
+  },
+  "hawaii": {
+    "name": "Main Hawaiian Islands",
+    "pages": [
+      "https://www.coralreefwatch.noaa.gov/product/vs_single_pixel_exp/kauai_and_niihau.php",
+      "https://www.coralreefwatch.noaa.gov/product/vs_single_pixel_exp/oahu.php",
+      "https://www.coralreefwatch.noaa.gov/product/vs_single_pixel_exp/maui_nui.php",
+      "https://www.coralreefwatch.noaa.gov/product/vs_single_pixel_exp/island_of_hawaii.php"
+    ]
+  }
+}

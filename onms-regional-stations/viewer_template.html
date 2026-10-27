@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Coral Reef Watch regional station SST</title>
+<style>
+:root{font:14px system-ui,-apple-system,Segoe UI,sans-serif;color:#173747;background:#fff}*{box-sizing:border-box}body{margin:0;padding:14px}.figure{max-width:1000px;margin:auto}h1{font-size:20px;margin:0 0 5px}.subtitle{color:#47616f;margin:0 0 13px;line-height:1.35}.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.toolbar label{display:flex;gap:6px;align-items:center}select,.filebutton{font:inherit;color:#173747;background:#fff;border:1px solid #95b0bb;border-radius:5px;padding:6px}.filebutton{cursor:pointer}input[type=file]{position:absolute;width:1px;height:1px;opacity:0}.range{display:flex;align-items:center;gap:10px;margin:14px 0 3px;font-size:12px}.range input{flex:1;accent-color:#087e86}.chart{position:relative}svg{width:100%;height:auto;display:block;min-height:220px}.grid{stroke:#dce6ea}.axis{fill:#58717d;font-size:12px}.trace{fill:none;stroke:#087e86;stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}.zero{stroke:#9badb6;stroke-dasharray:5 4}.threshold{stroke:#a64514;stroke-width:2.6;stroke-dasharray:8 4;pointer-events:none}.threshold-halo{stroke:#fff;stroke-width:5.6;stroke-dasharray:8 4;pointer-events:none}.threshold-label{fill:#903c12;font-size:12px;font-weight:600;paint-order:stroke;stroke:#fff;stroke-width:4;stroke-linejoin:round;pointer-events:none}.hit{fill:transparent}.cursor{stroke:#436b76;stroke-dasharray:4 4}.tip{position:absolute;display:none;background:#173747;color:#fff;border-radius:5px;padding:7px 9px;font-size:12px;pointer-events:none;white-space:nowrap}.status{color:#405d69;line-height:1.4}.status.error{color:#8e3b29}.method{font-size:12px;color:#526b77;line-height:1.4}.method a{color:#075d78}@media(max-width:520px){body{padding:8px}h1{font-size:17px}.toolbar{gap:7px}.range{gap:5px}}
+.date-range{margin:14px 0 10px}.date-fields{display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:12px}.date-fields label{display:flex;gap:6px;align-items:center}.date-fields input,.date-fields button{font:inherit;border:1px solid #aac0c9;border-radius:5px;padding:5px 7px;color:#183d4c;background:white}.date-fields button{cursor:pointer;margin-left:auto}.range-track{position:relative;height:30px;margin:4px 10px;background:linear-gradient(to right,#d8e5e9 0%,#087d84 0%,#087d84 100%,#d8e5e9 100%) center/100% 4px no-repeat}.range-track input[type=range]{position:absolute;left:0;top:0;width:100%;height:30px;margin:0;padding:0;border:0;background:transparent;appearance:none;-webkit-appearance:none;pointer-events:none}.range-track input[type=range]::-webkit-slider-runnable-track{height:4px;background:transparent}.range-track input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border:2px solid white;border-radius:50%;background:#087d84;box-shadow:0 0 0 1px #275e6b;pointer-events:auto;cursor:ew-resize}.range-track input[type=range]::-moz-range-track{height:4px;background:transparent}.range-track input[type=range]::-moz-range-thumb{width:14px;height:14px;border:2px solid white;border-radius:50%;background:#087d84;box-shadow:0 0 0 1px #275e6b;pointer-events:auto;cursor:ew-resize}.range-track input:focus-visible{outline:2px solid #d17635;outline-offset:2px}.range-track input:disabled{opacity:.4}
+</style>
+</head>
+<body><main class="figure">
+<h1>Coral Reef Watch regional station SST</h1>
+<p class="subtitle" id="regionText">NOAA regional virtual station time series</p>
+<div class="toolbar">
+  <label>Region <select id="site"><option value="fknms">Florida Keys</option><option value="fgbnms">Flower Garden Banks</option><option value="nmsas">Samoas</option><option value="pnms">Northwestern Hawaiian Islands</option><option value="hihwnms">Main Hawaiian Islands</option></select></label>
+  <label>Measure <select id="measure"><option value="mean_sst_at_90th_hotspot_c">SST at 90th HotSpot</option><option value="mean_ssta_at_90th_hotspot_c">NOAA SST anomaly</option><option value="dhw">Peak daily DHW</option></select></label>
+  <label class="filebutton" for="dataFolder">Load all station CSVs</label><input type="file" id="dataFolder" webkitdirectory multiple aria-label="Choose the data folder containing station subfolders">
+  <label class="filebutton" for="csvFile">Open monthly.csv</label><input type="file" id="csvFile" accept=".csv,text/csv" aria-label="Choose monthly.csv for selected region">
+</div>
+<div class="date-range" aria-label="Displayed date range"><div class="date-fields"><label>From <input type="month" id="dateFrom" aria-label="First month shown"></label><label>To <input type="month" id="dateTo" aria-label="Last month shown"></label><button type="button" id="resetRange">All dates</button></div><div class="range-track" id="rangeTrack"><input type="range" id="rangeStart" min="0" max="1" value="0" step="1" aria-label="Start of displayed date range"><input type="range" id="rangeEnd" min="0" max="1" value="1" step="1" aria-label="End of displayed date range"></div></div><div class="chart"><svg id="plot" viewBox="0 0 800 330" role="img" aria-label="Regional station monthly SST chart"></svg><div class="tip" id="tip"></div></div>
+<p class="status" id="status" role="status">Loading…</p>
+<p class="method" id="importNotice"></p><p class="method" id="snapshotNotice"></p>
+<p class="method">SST is the monthly mean of NOAA's daily value at the pixel selected by the regional 90th-percentile HotSpot; that pixel can change daily. The DHW view shows the month's highest daily station DHW, with a 4 °C-weeks reference for NOAA Bleaching Alert Level 1. That alert also requires a HotSpot of at least 1°C on the same day; crossing the line alone does not establish bleaching. Incomplete months are excluded. Station footprints differ from ONMS boundaries. <a href="https://coralreefwatch.noaa.gov/product/5km/methodology.php" target="_blank" rel="noopener">NOAA heat stress levels</a>.</p>
+</main>
+<script id="bundle" type="application/json">__BUNDLE_JSON__</script>
+<script>
+'use strict';
+const names={fknms:'Florida Keys',fgbnms:'Flower Garden Banks, Texas',nmsas:'Samoas',pnms:'Northwestern Hawaiian Islands',hihwnms:'Main Hawaiian Islands'};
+const data={},heat={}; const $=id=>document.getElementById(id); const ns='http://www.w3.org/2000/svg';
+function svg(tag,attributes={}){let e=document.createElementNS(ns,tag);for(let [k,v] of Object.entries(attributes))e.setAttribute(k,v);return e}
+function parseCSV(source){
+  let lines=source.replace(/^\uFEFF/,'').trim().split(/\r?\n/),header=lines.shift().split(',');
+  const required=['month','days_reported','days_in_month','complete_month','mean_sst_at_90th_hotspot_c','mean_ssta_at_90th_hotspot_c'];
+  if(required.some(k=>!header.includes(k)))throw Error('This is not a regional-station monthly.csv. Run pull_stations.py and select data/<region>/monthly.csv.');
+  let rows=lines.filter(Boolean).map(line=>{let cols=line.split(',');if(cols.length!==header.length)throw Error('Malformed monthly CSV row');return Object.fromEntries(header.map((k,i)=>[k,cols[i]]))});
+  if(!rows.length||rows.some(r=>!/^\d{4}-(0[1-9]|1[0-2])$/.test(r.month)))throw Error('No valid monthly dates in CSV');
+  if(rows.some((r,i)=>i&&r.month<=rows[i-1].month))throw Error('Monthly dates are repeated or out of order');
+  if(rows.some(r=>!['0','1'].includes(r.complete_month)||!(+r.days_reported>0)||!(+r.days_in_month>=+r.days_reported)))throw Error('Invalid monthly completeness fields');
+  return rows;
+}
+function parseDailyHeat(source){
+  let lines=source.replace(/^\uFEFF/,'').trim().split(/\r?\n/),header=lines.shift().split(',');
+  const dateIndex=header.indexOf('date'),dhwIndex=header.indexOf('dhw_from_90th_hotspot_c_weeks');
+  if(dateIndex<0||dhwIndex<0)throw Error('Expected a regional-station daily.csv with date and DHW columns');
+  let peaks={};
+  for(let line of lines){if(!line)continue;let cols=line.split(',');if(cols.length!==header.length||!/^\d{4}-(0[1-9]|1[0-2])-\d{2}$/.test(cols[dateIndex]))throw Error('Invalid daily CSV row');let value=Number(cols[dhwIndex]);if(!Number.isFinite(value)||value<0)throw Error('Invalid daily DHW value');let month=cols[dateIndex].slice(0,7);peaks[month]=Math.max(peaks[month]??0,value)}
+  if(!Object.keys(peaks).length)throw Error('No daily DHW values in CSV');
+  return peaks;
+}
+function hasHeat(site){return Boolean(heat[site])||Boolean(data[site]?.some(r=>r.max_dhw_from_90th_hotspot_c_weeks!==undefined))}
+function draw(){
+  let site=$('site').value,all=data[site],plot=$('plot');plot.replaceChildren();$('tip').style.display='none';
+  if(!all)return;
+  $('status').className='status';
+  $('measure').querySelector('[value="dhw"]').disabled=!hasHeat(site);
+  if($('measure').value==='dhw'&&!hasHeat(site))$('measure').value='mean_sst_at_90th_hotspot_c';
+  let {from,to}=syncDateRange(rangeMonthIndex(all[0].month),rangeMonthIndex(all.at(-1).month));
+  let rows=all.filter(r=>rangeMonthIndex(r.month)>=from&&rangeMonthIndex(r.month)<=to),field=$('measure').value,anomaly=field.includes('ssta'),dhw=field==='dhw',unit=dhw?' °C-weeks':' °C';
+  if(!rows.length){$('status').textContent='No observations in the selected range.';return}
+  let series=rows.map(r=>{let source=dhw?(r.max_dhw_from_90th_hotspot_c_weeks??heat[site]?.[r.month]):r[field];return {month:r.month,value:r.complete_month==='1'&&source!==undefined&&source!==''?Number(source):NaN,days:r.days_reported,expected:r.days_in_month}});
+  let values=series.map(r=>r.value).filter(Number.isFinite);
+  if(!values.length){$('status').textContent='No complete months with valid values in this range.';return}
+  let lo=Math.min(...values),hi=Math.max(...values);if(anomaly){lo=Math.min(lo,0);hi=Math.max(hi,0)}if(dhw){lo=0;hi=Math.max(4.5,hi)}let pad=Math.max(.15,(hi-lo)*.12);lo-=dhw?0:pad;hi+=pad;
+  const W=800,H=330,L=58,R=17,T=18,B=37,x=i=>L+(W-L-R)*(series.length===1?.5:i/(series.length-1)),y=v=>T+(H-T-B)*(hi-v)/(hi-lo);
+  for(let j=0;j<5;j++){let yy=T+(H-T-B)*j/4,v=hi-(hi-lo)*j/4;plot.append(svg('line',{x1:L,x2:W-R,y1:yy,y2:yy,class:'grid'}));let label=svg('text',{x:4,y:yy+4,class:'axis'});label.textContent=v.toFixed(1)+(dhw?'':'°C');plot.append(label)}
+  for(let i of new Set(Array.from({length:5},(_,j)=>Math.round(j*(series.length-1)/4)))){let label=svg('text',{x:x(i),y:H-9,'text-anchor':'middle',class:'axis'});label.textContent=series.length<=24?series[i].month:series[i].month.slice(0,4);plot.append(label)}
+  if(anomaly)plot.append(svg('line',{x1:L,x2:W-R,y1:y(0),y2:y(0),class:'zero'}));
+  let d='',open=false;series.forEach((r,i)=>{if(!Number.isFinite(r.value)){open=false;return}d+=(open?'L':'M')+x(i).toFixed(1)+' '+y(r.value).toFixed(1)+' ';open=true});plot.append(svg('path',{d,class:'trace'}));if(values.length===1){let i=series.findIndex(r=>Number.isFinite(r.value));plot.append(svg('circle',{cx:x(i),cy:y(series[i].value),r:3.5,fill:'#087e86'}))}
+  let cursor=svg('line',{x1:0,x2:0,y1:T,y2:H-B,class:'cursor'});plot.append(cursor);
+  // Draw the reference above the time series and cursor, below the transparent hover target.
+  if(dhw){plot.append(svg('line',{x1:L,x2:W-R,y1:y(4),y2:y(4),class:'threshold-halo'}),svg('line',{x1:L,x2:W-R,y1:y(4),y2:y(4),class:'threshold'}));let label=svg('text',{x:W-R-3,y:y(4)-7,'text-anchor':'end',class:'threshold-label'});label.textContent='4 DHW · Alert Level 1 reference';plot.append(label)}
+  let hit=svg('rect',{x:L,y:T,width:W-L-R,height:H-T-B,class:'hit'});plot.append(hit);
+  hit.addEventListener('mousemove',e=>{let box=plot.getBoundingClientRect(),local=(e.clientX-box.left)/box.width*W,i=Math.max(0,Math.min(series.length-1,Math.round((local-L)/(W-L-R)*(series.length-1)))),r=series[i];cursor.setAttribute('x1',x(i));cursor.setAttribute('x2',x(i));let tip=$('tip');tip.textContent=`${r.month} · ${Number.isFinite(r.value)?r.value.toFixed(2)+unit:'Incomplete ('+r.days+'/'+r.expected+' days)'}`;tip.style.display='block';tip.style.left=Math.max(2,Math.min(box.width-tip.offsetWidth-2,e.clientX-box.left+10))+'px';tip.style.top=Math.max(2,e.clientY-box.top-38)+'px'});
+  hit.addEventListener('mouseleave',()=>{$('tip').style.display='none';cursor.setAttribute('x1',0);cursor.setAttribute('x2',0)});
+  let missing=all.filter(r=>r.complete_month!=='1').length;
+  let link=location.protocol==='file:'?'':` · <a href="data/${site}/monthly.csv" download>Download monthly CSV</a>`;
+  $('status').innerHTML=`${names[site]} · ${rows[0].month} to ${rows.at(-1).month} · ${rows.length} months shown · source through ${all.at(-1).month} · ${missing} incomplete month${missing===1?'':'s'}${link}`;
+  plot.setAttribute('aria-label',`${names[site]} monthly ${dhw?'peak daily Degree Heating Weeks':anomaly?'NOAA SST anomaly':'SST'} chart`);
+}
+async function selectSite(){
+  let site=$('site').value;$('regionText').textContent=names[site]+' regional virtual station';resetDateRange();
+  if(data[site]){draw();return}
+  $('plot').replaceChildren();
+  if(location.protocol==='file:'){$('status').textContent='Choose “Load all station CSVs” and select the data folder, or open one monthly.csv for this region.';return}
+  $('status').textContent=`Loading data/${site}/monthly.csv…`;
+  try{
+    let response=await fetch(`data/${site}/monthly.csv`,{cache:'no-cache'});if(!response.ok)throw Error(`HTTP ${response.status}`);
+    let parsed=parseCSV(await response.text());
+    if(!parsed.some(r=>r.max_dhw_from_90th_hotspot_c_weeks!==undefined)){
+      try{let daily=await fetch(`data/${site}/daily.csv`,{cache:'no-cache'});if(daily.ok)heat[site]=parseDailyHeat(await daily.text())}catch(error){console.warn('Daily DHW unavailable:',error)}
+    }
+    data[site]=parsed;if($('site').value===site)draw();
+  }
+  catch(err){if($('site').value!==site)return;$('status').className='status error';$('status').textContent=`Could not load data/${site}/monthly.csv (${err.message}). Run the Python pull, then upload the data folder beside index.html, or choose a CSV manually.`}
+}
+$('site').addEventListener('change',selectSite);$('measure').addEventListener('change',draw);
+$('csvFile').addEventListener('change',async e=>{let file=e.target.files[0];if(!file)return;try{let parsed=parseCSV(await file.text()),site=$('site').value;data[site]=parsed;$('status').className='status';resetDateRange();draw()}catch(err){$('status').className='status error';$('status').textContent=err.message}e.target.value=''});
+$('dataFolder').addEventListener('change',async e=>{
+  const files=Array.from(e.target.files),found={};
+  for(let file of files){let match=file.webkitRelativePath.toLowerCase().match(/(?:^|\/)(fknms|fgbnms|nmsas|pnms|hihwnms)\/(monthly|daily)\.csv$/);if(match)(found[match[1]]??={})[match[2]]=file}
+  let loaded=[],problems=[];
+  for(let [site,pair] of Object.entries(found)){
+    if(!pair.monthly){problems.push(`${site}: monthly.csv missing`);continue}
+    try{let rows=parseCSV(await pair.monthly.text()),daily=pair.daily?parseDailyHeat(await pair.daily.text()):null;data[site]=rows;if(daily)heat[site]=daily;loaded.push(site)}
+    catch(error){problems.push(`${site}: ${error.message}`)}
+  }
+  $('importNotice').textContent=loaded.length?`Loaded ${loaded.length} of 5 regions from the selected folder${problems.length?'; '+problems.join('; '):''}.`:`No station series loaded. Choose the data folder containing fknms/, fgbnms/, nmsas/, pnms/, and hihwnms/. ${problems.join('; ')}`;
+  if(loaded.length){resetDateRange();if(!data[$('site').value])$('site').value=loaded[0];selectSite()}
+  else{$('status').className='status error';$('status').textContent='No usable station CSV files found in that folder.'}
+  e.target.value='';
+});
+
+// Two handles share one monthly timeline; date fields also allow a single-month selection.
+let dateWindow=null;
+function rangeMonthIndex(month){const [y,m]=month.split('-').map(Number);return y*12+m-1}
+function rangeMonthName(index){return Math.floor(index/12)+'-'+String(index%12+1).padStart(2,'0')}
+function resetDateRange(){dateWindow=null}
+function syncDateRange(first,last){
+ if(!dateWindow)dateWindow={first,last,from:first,to:last};
+ else{dateWindow.first=first;dateWindow.last=last;dateWindow.from=Math.max(first,Math.min(last,dateWindow.from));dateWindow.to=Math.max(dateWindow.from,Math.min(last,dateWindow.to))}
+ renderDateRange();return {from:dateWindow.from,to:dateWindow.to};
+}
+function renderDateRange(){
+ const w=dateWindow;if(!w)return;
+ for(const id of ['rangeStart','rangeEnd']){const n=$(id);n.min=w.first;n.max=w.last;n.disabled=w.first===w.last}
+ $('rangeStart').value=w.from;$('rangeEnd').value=w.to;
+ // Keep the start handle reachable when both handles meet at the final month.
+ $('rangeStart').style.zIndex=w.from===w.last?'3':'1';$('rangeEnd').style.zIndex='2';
+ for(const id of ['dateFrom','dateTo']){$(id).min=rangeMonthName(w.first);$(id).max=rangeMonthName(w.last)}
+ $('dateFrom').value=rangeMonthName(w.from);$('dateTo').value=rangeMonthName(w.to);
+ $('rangeStart').setAttribute('aria-valuetext',rangeMonthName(w.from));$('rangeEnd').setAttribute('aria-valuetext',rangeMonthName(w.to));
+ const span=w.last-w.first,a=span?100*(w.from-w.first)/span:0,b=span?100*(w.to-w.first)/span:100;
+ $('rangeTrack').style.backgroundImage=`linear-gradient(to right,#d8e5e9 ${a}%,#087d84 ${a}%,#087d84 ${b}%,#d8e5e9 ${b}%)`;
+}
+function changeDateRange(which,value){
+ if(!dateWindow||!Number.isFinite(value))return;
+ const w=dateWindow;value=Math.max(w.first,Math.min(w.last,value));
+ if(which==='from')w.from=Math.min(value,w.to);else w.to=Math.max(value,w.from);
+ renderDateRange();draw();
+}
+$('rangeStart').oninput=e=>changeDateRange('from',+e.target.value);
+$('rangeEnd').oninput=e=>changeDateRange('to',+e.target.value);
+$('dateFrom').onchange=e=>changeDateRange('from',rangeMonthIndex(e.target.value));
+$('dateTo').onchange=e=>changeDateRange('to',rangeMonthIndex(e.target.value));
+$('resetRange').onclick=()=>{resetDateRange();draw()};
+
+try{
+ const saved=JSON.parse($('bundle').textContent);
+ if(saved.schema!=='crw-regional-stations-v1')throw Error('Unrecognized embedded snapshot');
+ for(const [id,rows] of Object.entries(saved.stations)){if(names[id]&&Array.isArray(rows)&&rows.length)data[id]=rows}
+ const available=Object.keys(data);if(available.length&&!data[$('site').value])$('site').value=available[0];
+ $('snapshotNotice').textContent=`Saved data included · built ${saved.built_utc.slice(0,10)} UTC · ${available.length} regions. Run pull_stations.py to refresh; imported CSVs apply to this session.`;
+}catch(error){console.warn('No embedded regional snapshot:',error.message)}
+selectSite();
+</script></body></html>

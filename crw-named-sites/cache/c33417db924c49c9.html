@@ -1,0 +1,1750 @@
+<html>
+<head>
+<title>NOAA Coral Reef Watch Puerto Rico Virtual Stations</title>
+
+<style>
+.container {
+display: grid;
+align-items: center;
+grid-template-columns: 3fr 1fr;
+column-gap: 5px;
+}
+
+img {
+max-width: 100%;
+max-height:100%;
+}
+
+</style>
+
+<!--// START OF HEADER TEXT FROM INCLUDE STATEMENT  //-->
+<!--// DO NOT MODIFY THIS SECTION  //-->
+<link rel="icon" href="/favicon.png" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="/crw-style_wide.css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Keywords" Content="Oceanography, Marine, Satellite,Remote Sensing,Coral Reef,Coral Bleaching,Marine Biology,Marine Ecology, Physical Oceanography, Environment, Publication,in situ, observation, CREWS, CRW,  NOAA, Government">
+<meta name="Author" Content="NOAA Coral Reef Watch">
+<title>NOAA Coral Reef Watch Program</title>
+<!--// ****** for GSA federal Google Analytics ***** //-->
+<script async id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NOAA"></script>
+<!--// GA4 Google tag (gtag.js) - code updated 6/13/2023; main STAR tag created 3/1/2023 //-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6J8W8XXDSC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6J8W8XXDSC');
+</script>
+<script async src='https://siteimproveanalytics.com/js/siteanalyze_6294131.js'></script>
+<!--// ***************************** //-->
+<script rel="preload" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!--// Add fancyBox 2.1.7 //-->
+<link rel="stylesheet" href="https://www.star.nesdis.noaa.gov/star/global/js/fancyapps/source/jquery.fancybox.css?v=2.1.7" media="screen">
+<script src="https://www.star.nesdis.noaa.gov/star/global/js/fancybox/jquery.fancybox.pack.js?v=2.1.7"></script>
+<script>
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		beforeShow: function(){
+			var fancyAlt = $(this.element).find('img').attr('alt');
+			$(".fancybox-inner").find("img").attr("alt",fancyAlt);
+		}
+	});
+});
+
+$(document).ready(function(){
+	$("#Map area").fancybox({
+		beforeShow: function(){
+			var fancyAlt = $(this.element).find('img').attr('alt');
+			$(".fancybox-inner").find("img").attr("alt",fancyAlt);
+		}
+	}); 
+});
+</script>
+<!--// **** Defining Regional Virtual Stations Number Variable **** //-->
+</head>
+<body>
+<div align="center">
+<div id="header">
+<!--//  <a href="/index.php"><img class="header-right" src="/satellite/icons1/crw_banner_small2_20years_a.png"></a>  //-->
+<a href="/index.php"><img class="header-right" alt="CoralReefWatch banner" src="/satellite/icons1/crw_banner_small2.png"></a>
+<a href="https://www.nesdis.noaa.gov"><img class="header-left" src="/satellite/icons1/banner_nesdis_small_4.png" alt="NOAA NESDIS banner" height='50'></a>
+    <div id="header-links-NOAA">
+		<a href="https://www.commerce.gov/">DOC</a> > <a 
+		href="https://www.noaa.gov/">NOAA</a> > <a 
+		href="https://www.nesdis.noaa.gov/">NESDIS</a> > <a 
+		href="https://www.star.nesdis.noaa.gov/star/index.php">STAR</a> > <a href="/index.php">CRW</a></div>
+	<div id="header-links-CRTF">
+		<a href="https://www.coralreef.gov/">USCRTF</a> | <a 
+		href="https://coralreef.noaa.gov/">CRCP</a> | <!--// <a href="/creios.php">CREIOS</a> | //--> <a 
+		href="https://www.coris.noaa.gov/monitoring">NCRMP</a> | <a 
+		href="https://coris.noaa.gov/">CoRIS</a></div>
+	<img class="header-bottom" alt="CoralReefWatch banner" src="/satellite/icons1/banner_coral_0202.jpg">
+</div>
+
+<!--   Add side-wide announcement below if any; otherwise comment it out    -->
+<!--
+<table width='960'><tr><td>
+  <p>
+  <font size='-1' color="red"><b>
+  USER ALERT: Notice goes here. If ..., please contact us at
+  <a href=
+  "mailto:coralreefwatch@noaa.gov?subject=[Question ... for Coral Reef Watch]">
+  coralreefwatch@noaa.gov</a>.
+  </b></font>
+  </td></tr>
+</table>
+-->
+
+<!--// END OF HEADER TEXT FROM INCLUDE STATEMENT  //-->
+
+<!--</head>--> <!--FROM HEARER WIDE FILE THIS TAG IS CLOSED-->
+
+<!--<body>--> <!--FROM HEARER WIDE FILE THIS TAG IS OPENED-->
+
+<div id="content">
+<div id="main-content-no-navbar-wide">
+<div class="title-section">Puerto Rico 5 km Single-Pixel Virtual Stations<br><font size=3>(<font color='orange'><u>experimental product</u></font> 
+         for collaborators based on <a href="https://coralreefwatch.noaa.gov/product/5km/index.php">v3.1 global products</a>)</font><!--Released July 17, 2023, -->
+        <p style="color:red; font-size:12px; text-align: justify; line-height: 1.5">
+                 NOTE: Alerts displayed on individual Regional Virtual Station (RVS) and Single-Pixel Virtual Station pages still
+                 use the heritage bleaching alert level system (which extended to Bleaching Alert Level 2). We are currently updating
+                 these systems to reflect the <a href='https://coralreefwatch.noaa.gov/product/5km/index_5km_baa-max-7d.php#table'>
+                 modified bleaching alert levels</a> (now extending to Bleaching Alert Level 5). Until this update is complete, when 
+                 a Station displays Alert Level 2, we suggest that users consult the Time Series data file that is linked directly 
+                 below or to the right of the two-year time-series graph. This data file displays the underlying Coral Bleaching 
+                 HotSpot and Degree Heating Week (DHW) values, from which a user can determine, on any day, what the new, 
+                 corresponding Bleaching Alert Level should be, if higher than Alert Level 2.</p>
+</div>
+<a name="mainMap"></a> <!-- Anchor -->
+<p style="margin-bottom: 0px;" align="center"><font size=2>Click on a location on the map, the name of a site, or scroll down to see the time series for each location.</font></p>
+
+<div class="container">
+
+<!--  main image -->
+<div class="img">
+<img id="mainImage" src="https://coralreefwatch.noaa.gov/product/vs_single_pixel_exp/site_maps/site_map_puerto_rico.png" alt="Station location chart for the region" usemap="#indexmap">
+<map name="indexmap">
+<area id="a1" SHAPE="RECT" COORDS="417,279,433,295" href="javascript:void(0)" ALT="Salinas" TITLE="Salinas" onclick="document.location='puerto_rico.php#Salinas';return false;">
+<area id="a2" SHAPE="RECT" COORDS="313,279,329,295" href="javascript:void(0)" ALT="Guayanilla" TITLE="Guayanilla" onclick="document.location='puerto_rico.php#Guayanilla';return false;">
+<area id="a3" SHAPE="RECT" COORDS="282,279,298,295" href="javascript:void(0)" ALT="Gu&#225nica" TITLE="Gu&#225nica" onclick="document.location='puerto_rico.php#Guanica';return false;">
+<area id="a4" SHAPE="RECT" COORDS="240,279,256,295" href="javascript:void(0)" ALT="La Parguera" TITLE="La Parguera" onclick="document.location='puerto_rico.php#LaParguera';return false;">
+<area id="a5" SHAPE="RECT" COORDS="209,227,225,243" href="javascript:void(0)" ALT="Cabo Rojo" TITLE="Cabo Rojo" onclick="document.location='puerto_rico.php#CaboRojo';return false;">
+<area id="a6" SHAPE="RECT" COORDS="199,196,215,212" href="javascript:void(0)" ALT="Rinc&#243n" TITLE="Rinc&#243n" onclick="document.location='puerto_rico.php#Rincon';return false;">
+<area id="a7" SHAPE="RECT" COORDS="220,175,236,191" href="javascript:void(0)" ALT="Aguadilla" TITLE="Aguadilla" onclick="document.location='puerto_rico.php#Aguadilla';return false;">
+<area id="a8" SHAPE="RECT" COORDS="230,154,246,170" href="javascript:void(0)" ALT="Isabela" TITLE="Isabela" onclick="document.location='puerto_rico.php#Isabela';return false;">
+<area id="a9" SHAPE="RECT" COORDS="324,154,340,170" href="javascript:void(0)" ALT="Arecibo" TITLE="Arecibo" onclick="document.location='puerto_rico.php#Arecibo';return false;">
+<area id="a10" SHAPE="RECT" COORDS="375,154,391,170" href="javascript:void(0)" ALT="Vega Baja" TITLE="Vega Baja" onclick="document.location='puerto_rico.php#VegaBaja';return false;">
+<area id="a11" SHAPE="RECT" COORDS="459,165,475,181" href="javascript:void(0)" ALT="San Juan" TITLE="San Juan" onclick="document.location='puerto_rico.php#SanJuan';return false;">
+<area id="a12" SHAPE="RECT" COORDS="552,196,568,212" href="javascript:void(0)" ALT="Fajardo" TITLE="Fajardo" onclick="document.location='puerto_rico.php#Fajardo';return false;">
+<area id="a13" SHAPE="RECT" COORDS="615,206,631,222" href="javascript:void(0)" ALT="Culebra" TITLE="Culebra" onclick="document.location='puerto_rico.php#Culebra';return false;">
+<area id="a14" SHAPE="RECT" COORDS="573,248,589,264" href="javascript:void(0)" ALT="Vieques" TITLE="Vieques" onclick="document.location='puerto_rico.php#Vieques';return false;">
+<area id="a15" SHAPE="RECT" COORDS="64,248,80,264" href="javascript:void(0)" ALT="Isla de Mona" TITLE="Isla de Mona" onclick="document.location='puerto_rico.php#IsladeMona';return false;">
+<area id="a16" SHAPE="RECT" COORDS="490,268,506,284" href="javascript:void(0)" ALT="Maunabo" TITLE="Maunabo" onclick="document.location='puerto_rico.php#Maunabo';return false;">
+
+</map>
+</div>
+
+<div class="text">
+<p style="font-size:15px">
+<u>Southern</u><br>
+<a style="text-decoration:none" href="puerto_rico.php#LaParguera">1. La Parguera</a> <br>
+<a style="text-decoration:none" href="puerto_rico.php#Guanica">2. Gu&#225nica</a> <br>
+<a style="text-decoration:none" href="puerto_rico.php#Guayanilla">3. Guayanilla</a> <br>
+<a style="text-decoration:none" href="puerto_rico.php#Salinas">4. Salinas</a> <br>
+<a style="text-decoration:none" href="puerto_rico.php#Maunabo">5. Maunabo</a> <br>
+<br>
+<u>Eastern</u><br>
+<a style="text-decoration:none" href="puerto_rico.php#Vieques">6. Vieques</a> <br>
+<a style="text-decoration:none" href="puerto_rico.php#Culebra">7. Culebra</a> <br>
+<a style="text-decoration:none" href="puerto_rico.php#Fajardo">8. Fajardo</a> <br>
+<br>
+<u>Northern</u><br>
+<a style="text-decoration:none" href="puerto_rico.php#SanJuan">9. San Juan</a> <br>
+<a style="text-decoration:none" href="puerto_rico.php#VegaBaja">10. Vega Baja</a> <br>
+<a style="text-decoration:none" href="puerto_rico.php#Arecibo">11. Arecibo</a> <br>
+<a style="text-decoration:none" href="puerto_rico.php#Isabela">12. Isabela</a> <br>
+<br>
+<u>Western</u><br>
+<a style="text-decoration:none" href="puerto_rico.php#Aguadilla">13. Aguadilla</a> <br>
+<a style="text-decoration:none" href="puerto_rico.php#Rincon">14. Rinc&#243n</a> <br>
+<a style="text-decoration:none" href="puerto_rico.php#CaboRojo">15. Cabo Rojo</a> <br>
+<a style="text-decoration:none" href="puerto_rico.php#IsladeMona">16. Isla de Mona</a> <br>
+</p>
+</font>
+</div>
+
+</div>
+
+<!-- <div id="bottomText" align="center">
+<font color="#000000" size="2" face="verdana,arial,helvetica">
+This page hosts the regional time series graphs and data.<br>
+For more details, please visit our <a href="../map.php">Google Maps interface for the 5-km Virtual Stations system</a></font>.
+</div> -->
+
+<br>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="LaParguera"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="LaParguera" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('LaParguera').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_PuertoRico_LaParguera.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_PuertoRico_LaParguera.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="puerto_rico.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Guanica"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Guanica" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Guanica').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_PuertoRico_Guanica.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_PuertoRico_Guanica.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="puerto_rico.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Guayanilla"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Guayanilla" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Guayanilla').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_PuertoRico_Guayanilla.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_PuertoRico_Guayanilla.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="puerto_rico.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Salinas"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Salinas" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Salinas').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_PuertoRico_Salinas.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_PuertoRico_Salinas.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="puerto_rico.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Maunabo"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Maunabo" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Maunabo').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_PuertoRico_Maunabo.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_PuertoRico_Maunabo.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="puerto_rico.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Vieques"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Vieques" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Vieques').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_PuertoRico_Vieques.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_PuertoRico_Vieques.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="puerto_rico.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Culebra"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Culebra" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Culebra').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_PuertoRico_Culebra.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_PuertoRico_Culebra.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="puerto_rico.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Fajardo"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Fajardo" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Fajardo').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_PuertoRico_Fajardo.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_PuertoRico_Fajardo.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="puerto_rico.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="SanJuan"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="SanJuan" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('SanJuan').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_PuertoRico_SanJuan.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_PuertoRico_SanJuan.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="puerto_rico.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="VegaBaja"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="VegaBaja" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('VegaBaja').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_PuertoRico_VegaBaja.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_PuertoRico_VegaBaja.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="puerto_rico.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Arecibo"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Arecibo" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Arecibo').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_PuertoRico_Arecibo.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_PuertoRico_Arecibo.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="puerto_rico.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Isabela"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Isabela" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Isabela').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_PuertoRico_Isabela.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_PuertoRico_Isabela.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="puerto_rico.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Aguadilla"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Aguadilla" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Aguadilla').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_PuertoRico_Aguadilla.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_PuertoRico_Aguadilla.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="puerto_rico.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Rincon"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Rincon" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Rincon').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_PuertoRico_Rincon.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_PuertoRico_Rincon.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="puerto_rico.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="CaboRojo"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="CaboRojo" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('CaboRojo').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_PuertoRico_CaboRojo.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_PuertoRico_CaboRojo.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="puerto_rico.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="IsladeMona"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="IsladeMona" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('IsladeMona').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Caribbean_PuertoRico_IsladeMona.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Caribbean_PuertoRico_IsladeMona.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="puerto_rico.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<!-- End time series tables -->
+<br>
+
+</b></font>
+
+</div> <!--main-content-no-navbar-wide-->
+
+
+<!-------START OF FOOTER TEXT FROM INCLUDE STATEMENT-------------------------------------->
+<!-------DO NOT MODIFY THIS SECTION------------------------------------------------------->
+
+
+<div id="footer">
+  <a href="http://www.noaa.gov">
+     <img class="footer-left" src="/satellite/icons1/noaalogo.gif"
+     alt="NOAA logo" border="0" height='60'></a>
+  <a href="http://www.doc.gov">
+     <img class="footer-right" src="/satellite/icons1/commerce.gif"
+    alt="commerce logo" border="0"></a>
+  <p>
+<!--  <a href="http://search.usa.gov/search?affiliate=orbit.nesdis.noaa.gov_star" title='Click to access Search'>Search</a> | -->
+  <a href="http://search.usa.gov/search?affiliate=noaa.gov" title='Click to access Search'>Search</a> | 
+
+  <a href="/satellite/docs/recommendations_crw_citation.php">How to cite these products and methods</a>
+  </p>
+  <p>
+<!--  <a href="http://www.star.nesdis.noaa.gov/star/productdisclaimer.php#heartbleed">Heartbleed Notice</a> | -->
+  <a href="http://www.star.nesdis.noaa.gov/star/productdisclaimer.php">Disclaimer</a> |
+  <a href="http://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a> |
+  <a href="http://www.star.nesdis.noaa.gov/star/accessibility.php">Accessibility Policy</a> |
+  <a href="http://www.star.nesdis.noaa.gov/star/privacy.php">Privacy Policy</a> 
+ </p>
+  <p>
+
+<!--        Last modified:  -->
+<!-- #config timefmt="%e %b %Y" --> 
+<!-- #echo var="LAST_MODIFIED" --> 
+<!--   | -->
+
+   <a href="https://www.star.nesdis.noaa.gov/star/survey.php">Customer Survey</a>
+   |
+   <a href=
+   "mailto:coralreefwatch@noaa.gov?subject=[Question for Coral Reef Watch]">
+   Contact Us</a>
+   | 
+  Owner: <a href=
+   "http://coralreefwatch.noaa.gov/satellite/">
+   NOAA Coral Reef Watch</a>
+   </p>
+</div>
+</div>
+
+<!-------END OF FOOTER TEXT FROM INCLUDE STATEMENT-------------------------------------->
+
+
+  </div> <!--content-->
+
+</body>
+</html>
+

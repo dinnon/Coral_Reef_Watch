@@ -1,0 +1,2036 @@
+<html>
+  <head>
+    <title>NOAA Coral Reef Watch Florida Virtual Stations</title>
+
+<style>
+.container {
+ display: grid;
+ align-items: center; 
+ grid-template-columns: 3fr 1fr;
+ column-gap: 5px;
+}
+
+img {
+  max-width: 100%;
+  max-height:100%;
+}
+
+</style>
+
+    <!--// START OF HEADER TEXT FROM INCLUDE STATEMENT  //-->
+<!--// DO NOT MODIFY THIS SECTION  //-->
+<link rel="icon" href="/favicon.png" type="image/x-icon" />
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="/crw-style_wide.css">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Keywords" Content="Oceanography, Marine, Satellite,Remote Sensing,Coral Reef,Coral Bleaching,Marine Biology,Marine Ecology, Physical Oceanography, Environment, Publication,in situ, observation, CREWS, CRW,  NOAA, Government">
+<meta name="Author" Content="NOAA Coral Reef Watch">
+<title>NOAA Coral Reef Watch Program</title>
+<!--// ****** for GSA federal Google Analytics ***** //-->
+<script async id="_fed_an_ua_tag" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOC&subagency=NOAA"></script>
+<!--// GA4 Google tag (gtag.js) - code updated 6/13/2023; main STAR tag created 3/1/2023 //-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6J8W8XXDSC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6J8W8XXDSC');
+</script>
+<script async src='https://siteimproveanalytics.com/js/siteanalyze_6294131.js'></script>
+<!--// ***************************** //-->
+<script rel="preload" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<!--// Add fancyBox 2.1.7 //-->
+<link rel="stylesheet" href="https://www.star.nesdis.noaa.gov/star/global/js/fancyapps/source/jquery.fancybox.css?v=2.1.7" media="screen">
+<script src="https://www.star.nesdis.noaa.gov/star/global/js/fancybox/jquery.fancybox.pack.js?v=2.1.7"></script>
+<script>
+$(document).ready(function() {
+	$(".fancybox").fancybox({
+		beforeShow: function(){
+			var fancyAlt = $(this.element).find('img').attr('alt');
+			$(".fancybox-inner").find("img").attr("alt",fancyAlt);
+		}
+	});
+});
+
+$(document).ready(function(){
+	$("#Map area").fancybox({
+		beforeShow: function(){
+			var fancyAlt = $(this.element).find('img').attr('alt');
+			$(".fancybox-inner").find("img").attr("alt",fancyAlt);
+		}
+	}); 
+});
+</script>
+<!--// **** Defining Regional Virtual Stations Number Variable **** //-->
+</head>
+<body>
+<div align="center">
+<div id="header">
+<!--//  <a href="/index.php"><img class="header-right" src="/satellite/icons1/crw_banner_small2_20years_a.png"></a>  //-->
+<a href="/index.php"><img class="header-right" alt="CoralReefWatch banner" src="/satellite/icons1/crw_banner_small2.png"></a>
+<a href="https://www.nesdis.noaa.gov"><img class="header-left" src="/satellite/icons1/banner_nesdis_small_4.png" alt="NOAA NESDIS banner" height='50'></a>
+    <div id="header-links-NOAA">
+		<a href="https://www.commerce.gov/">DOC</a> > <a 
+		href="https://www.noaa.gov/">NOAA</a> > <a 
+		href="https://www.nesdis.noaa.gov/">NESDIS</a> > <a 
+		href="https://www.star.nesdis.noaa.gov/star/index.php">STAR</a> > <a href="/index.php">CRW</a></div>
+	<div id="header-links-CRTF">
+		<a href="https://www.coralreef.gov/">USCRTF</a> | <a 
+		href="https://coralreef.noaa.gov/">CRCP</a> | <!--// <a href="/creios.php">CREIOS</a> | //--> <a 
+		href="https://www.coris.noaa.gov/monitoring">NCRMP</a> | <a 
+		href="https://coris.noaa.gov/">CoRIS</a></div>
+	<img class="header-bottom" alt="CoralReefWatch banner" src="/satellite/icons1/banner_coral_0202.jpg">
+</div>
+
+<!--   Add side-wide announcement below if any; otherwise comment it out    -->
+<!--
+<table width='960'><tr><td>
+  <p>
+  <font size='-1' color="red"><b>
+  USER ALERT: Notice goes here. If ..., please contact us at
+  <a href=
+  "mailto:coralreefwatch@noaa.gov?subject=[Question ... for Coral Reef Watch]">
+  coralreefwatch@noaa.gov</a>.
+  </b></font>
+  </td></tr>
+</table>
+-->
+
+<!--// END OF HEADER TEXT FROM INCLUDE STATEMENT  //-->
+
+  <!--</head>--> <!--FROM HEARER WIDE FILE THIS TAG IS CLOSED-->
+ 
+  <!--<body>--> <!--FROM HEARER WIDE FILE THIS TAG IS OPENED-->
+ 
+    <div id="content">
+      <div id="main-content-no-navbar-wide">
+        <div class="title-section">Florida 5 km Single-Pixel Virtual Stations<br><font size=3>(<font color='orange'><u>experimental product</u></font> 
+         for collaborators based on <a href="https://coralreefwatch.noaa.gov/product/5km/index.php">v3.1 global products</a>)</font><!--Released July 17, 2023, -->
+        <p style="color:red; font-size:12px; text-align: justify; line-height: 1.5">
+                 NOTE: Alerts displayed on individual Regional Virtual Station (RVS) and Single-Pixel Virtual Station pages still
+                 use the heritage bleaching alert level system (which extended to Bleaching Alert Level 2). We are currently updating
+                 these systems to reflect the <a href='https://coralreefwatch.noaa.gov/product/5km/index_5km_baa-max-7d.php#table'>
+                 modified bleaching alert levels</a> (now extending to Bleaching Alert Level 5). Until this update is complete, when 
+                 a Station displays Alert Level 2, we suggest that users consult the Time Series data file that is linked directly 
+                 below or to the right of the two-year time-series graph. This data file displays the underlying Coral Bleaching 
+                 HotSpot and Degree Heating Week (DHW) values, from which a user can determine, on any day, what the new, 
+                 corresponding Bleaching Alert Level should be, if higher than Alert Level 2.</p>
+        </div>
+        <a name="mainMap"></a> <!-- Anchor -->
+        <p style="margin-bottom: 0px;" align="center"><font size=2>Click on a location on the map, the name of a site, or scroll down to see the time series for each location.</font></p>
+
+        <div class="container">
+
+          <!--  main image -->
+          <div class="img">
+          <img id="mainImage" src="https://coralreefwatch.noaa.gov/product/vs_single_pixel_exp/site_maps/site_map_florida.png" alt="Station location chart for the region" usemap="#indexmap">
+          <map name="indexmap">
+          <area id="a1" SHAPE="RECT" COORDS="56,394,65,402" href="javascript:void(0)" ALT="Dry Tortugas Nursery" TITLE="Dry Tortugas Nursery" onclick="document.location='florida_keys.php#DryTortugasNursery';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="255,432,262,425" href="javascript:void(0)" ALT="Sand Key" TITLE="Sand Key" onclick="document.location='florida_keys.php#SandKey';return false;">
+	  <area id="a1" SHAPE="RECT" COORDS="263,423,273,434" href="javascript:void(0)" ALT="Eastern Dry Rocks" TITLE="Eastern Dry Rocks" onclick="document.location='florida_keys.php#EasternDryRocks';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="344,414,354,422" href="javascript:void(0)" ALT="Looe Key Reef" TITLE="Looe Key Reef" onclick="document.location='florida_keys.php#LooeKeyReef';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="344,394,352,404" href="javascript:void(0)" ALT="Newfound Harbor" TITLE="Newfound Harbor" onclick="document.location='florida_keys.php#NewfoundHarbor';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="404,395,412,403" href="javascript:void(0)" ALT="Sombrero Reef" TITLE="Sombrero Reef" onclick="document.location='florida_keys.php#SombreroReef';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="422,385,431,394" href="javascript:void(0)" ALT="Marathon Patch Reefs" TITLE="Marathon Patch Reefs" onclick="document.location='florida_keys.php#MarathonPatchReefs';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="503,344,513,355" href="javascript:void(0)" ALT="Cheeca Rocks" TITLE="Cheeca Rocks" onclick="document.location='florida_keys.php#CheecaRocks';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="522,335,531,344" href="javascript:void(0)" ALT="Hen and Chickens Reef" TITLE="Hen and Chickens Reef" onclick="document.location='florida_keys.php#HenAndChickensReef';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="543,325,550,334" href="javascript:void(0)" ALT="Tavernier Nurseries" TITLE="Tavernier Nurseries" onclick="document.location='florida_keys.php#TavernierNurseries';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="553,315,561,323" href="javascript:void(0)" ALT="Molasses Reef" TITLE="Molasses Reef" onclick="document.location='florida_keys.php#MolassesReef';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="572,296,580,304" href="javascript:void(0)" ALT="Horseshoe Reef" TITLE="Horseshoe Reef" onclick="document.location='florida_keys.php#HorseshoeReef';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="582,276,590,284" href="javascript:void(0)" ALT="Carysfort Reef" TITLE="Carysfort Reef" onclick="document.location='florida_keys.php#CarysfortReef';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="612,207,620,214" href="javascript:void(0)" ALT="Fowey Rocks" TITLE="Fowey Rocks" onclick="document.location='florida_keys.php#FoweyRocks';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="613,186,619,193" href="javascript:void(0)" ALT="Paradise" TITLE="Paradise" onclick="document.location='florida_keys.php#Paradise';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="600,176,609,183" href="javascript:void(0)" ALT="Key Biscayne Cluster" TITLE="Key Biscayne Cluster" onclick="document.location='florida_keys.php#KeyBiscayneCluster';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="612,147,620,155" href="javascript:void(0)" ALT="North Miami" TITLE="North Miami" onclick="document.location='florida_keys.php#NorthMiami';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="612,127,620,135" href="javascript:void(0)" ALT="Hallandale" TITLE="Hallandale" onclick="document.location='florida_keys.php#Hallandale';return false;">
+          <area id="a1" SHAPE="RECT" COORDS="612,96,620,104" href="javascript:void(0)" ALT="Broward Cluster" TITLE="Broward Cluster" onclick="document.location='florida_keys.php#BrowardCluster';return false;">
+
+          </map>
+          </div>
+          
+          <div class="text">
+             <p><u>Dry Tortugas</u><br>
+                <a style="text-decoration:none" href='florida_keys.php#DryTortugasNursery'>1. Dry Tortugas Nursery</a> <br>
+                <br>
+                <u>Florida Keys</u><br>
+                <a style="text-decoration:none" href='florida_keys.php#SandKey'>2. Sand Key</a> <br>
+                <a style="text-decoration:none" href='florida_keys.php#EasternDryRocks'>3. Eastern Dry Rocks*</a> <br>
+                <a style="text-decoration:none" href='florida_keys.php#LooeKeyReef'>4. Looe Key Reef*</a> <br>
+                <a style="text-decoration:none" href='florida_keys.php#NewfoundHarbor'>5. Newfound Harbor*</a> <br>
+                <a style="text-decoration:none" href='florida_keys.php#SombreroReef'>6. Sombrero Reef*</a> <br>
+                <a style="text-decoration:none" href='florida_keys.php#MarathonPatchReefs'>7. Marathon Patch Reefs</a> <br>
+                <a style="text-decoration:none" href='florida_keys.php#CheecaRocks'>8. Cheeca Rocks*</a> <br>
+                <a style="text-decoration:none" href='florida_keys.php#HenAndChickensReef'>9. Hen and Chickens Reef</a> <br>
+                <a style="text-decoration:none" href='florida_keys.php#TavernierNurseries'>10. Tavernier Nurseries</a> <br>
+                <a style="text-decoration:none" href='florida_keys.php#MolassesReef'>11. Molasses Reef</a> <br>
+                <a style="text-decoration:none" href='florida_keys.php#HorseshoeReef'>12. Horseshoe Reef*</a> <br>
+                <a style="text-decoration:none" href='florida_keys.php#CarysfortReef'>13. Carysfort Reef*</a> <br>
+                <br>
+                <u>Southeast Florida</u><br>
+                <a style="text-decoration:none" href='florida_keys.php#FoweyRocks'>14. Fowey Rocks</a> <br>
+                <a style="text-decoration:none" href='florida_keys.php#Paradise'>15. Paradise</a> <br>
+                <a style="text-decoration:none" href='florida_keys.php#KeyBiscayneCluster'>16. Key Biscayne Cluster</a> <br>
+                <a style="text-decoration:none" href='florida_keys.php#NorthMiami'>17. North Miami</a> <br>
+                <a style="text-decoration:none" href='florida_keys.php#Hallandale'>18. Hallandale</a> <br>
+                <a style="text-decoration:none" href='florida_keys.php#BrowardCluster'>19. Broward Cluster</a> <br>
+                <br>
+                <font size=2.2>*Mission: Iconic Reefs Sites</font>
+            </p>
+          </div>
+         
+        </div>
+ 
+        <!-- <div id="bottomText" align="center">
+          <font color="#000000" size="2" face="verdana,arial,helvetica">
+            This page hosts the regional time series graphs and data.<br>
+            For more details, please visit our <a href="../map.php">Google Maps interface for the 5-km Virtual Stations system</a></font>.
+        </div> -->
+ 
+        <br>
+ 
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="DryTortugasNursery"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="DryTortugasNursery" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('DryTortugasNursery').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_FloridaKeys_DryTortugasNursery.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="SandKey"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="SandKey" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('SandKey').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_FloridaKeys_SandKey.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_FloridaKeys_SandKey.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_FloridaKeys_SandKey.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="EasternDryRocks"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="EasternDryRocks" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('EasternDryRocks').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_FloridaKeys_EasternDryRocks.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="LooeKeyReef"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="LooeKeyReef" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('LooeKeyReef').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_FloridaKeys_LooeKeyReef.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="NewfoundHarbor"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="NewfoundHarbor" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('NewfoundHarbor').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_FloridaKeys_NewfoundHarbor.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="SombreroReef"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="SombreroReef" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('SombreroReef').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_FloridaKeys_SombreroReef.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_FloridaKeys_SombreroReef.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="MarathonPatchReefs"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="MarathonPatchReefs" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('MarathonPatchReefs').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_FloridaKeys_MarathonPatchReefs.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="CheecaRocks"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="CheecaRocks" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('CheecaRocks').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_FloridaKeys_CheecaRocks.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_FloridaKeys_CheecaRocks.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="HenandChickensReef"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="HenandChickensReef" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('HenandChickensReef').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_FloridaKeys_HenandChickensReef.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="TavernierNurseries"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="TavernierNurseries" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('TavernierNurseries').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_FloridaKeys_TavernierNurseries.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="MolassesReef"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="MolassesReef" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('MolassesReef').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_FloridaKeys_MolassesReef.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_FloridaKeys_MolassesReef.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="HorseshoeReef"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="HorseshoeReef" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('HorseshoeReef').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_FloridaKeys_HorseshoeReef.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="CarysfortReef"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="CarysfortReef" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('CarysfortReef').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_FloridaKeys_CarysfortReef.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_FloridaKeys_CarysfortReef.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="FoweyRocks"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="FoweyRocks" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('FoweyRocks').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_SoutheastFlorida_FoweyRocks.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Paradise"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Paradise" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Paradise').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_SoutheastFlorida_Paradise.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_SoutheastFlorida_Paradise.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="KeyBiscayneCluster"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="KeyBiscayneCluster" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('KeyBiscayneCluster').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_SoutheastFlorida_KeyBiscayneCluster.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="NorthMiami"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="NorthMiami" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('NorthMiami').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_SoutheastFlorida_NorthMiami.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="Hallandale"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="Hallandale" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('Hallandale').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_SoutheastFlorida_Hallandale.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_SoutheastFlorida_Hallandale.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<hr width="95%"><br>
+
+<font size="2" face="verdana, arial, helvetica"><b>
+
+<!--Begin time series tables-->
+
+<a name="BrowardCluster"></a> <!-- Anchor -->
+<div align="center">
+<table align="center">
+<tr>
+<td>
+<img id="BrowardCluster" src="/product/vs_single_pixel_exp/ts_figures/ts_2yr/current/current_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png" alt="current SST time series" width=750px>
+</td>
+<td align="left">
+<font size=2>
+
+<select id="year-dropdown" onchange="document.getElementById('BrowardCluster').src = this.options[this.selectedIndex].value;">
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">Select a 2-yr range:</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2025_2026/2025_2026_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2025-2026</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2024_2025/2024_2025_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2024-2025</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2023_2024/2023_2024_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2023-2024</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2022_2023/2022_2023_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2022-2023</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2021_2022/2021_2022_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2021-2022</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2020_2021/2020_2021_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2020-2021</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2019_2020/2019_2020_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2019-2020</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2018_2019/2018_2019_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2018-2019</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2017_2018/2017_2018_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2017-2018</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2016_2017/2016_2017_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2016-2017</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2015_2016/2015_2016_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2015-2016</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2014_2015/2014_2015_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2014-2015</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2013_2014/2013_2014_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2013-2014</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2012_2013/2012_2013_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2012-2013</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2011_2012/2011_2012_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2011-2012</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2010_2011/2010_2011_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2010-2011</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2009_2010/2009_2010_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2009-2010</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2008_2009/2008_2009_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2008-2009</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2007_2008/2007_2008_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2007-2008</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2006_2007/2006_2007_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2006-2007</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2005_2006/2005_2006_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2005-2006</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2004_2005/2004_2005_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2004-2005</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2003_2004/2003_2004_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2003-2004</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2002_2003/2002_2003_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2002-2003</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2001_2002/2001_2002_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2001-2002</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/2000_2001/2000_2001_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">2000-2001</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1999_2000/1999_2000_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">1999-2000</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1998_1999/1998_1999_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">1998-1999</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1997_1998/1997_1998_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">1997-1998</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1996_1997/1996_1997_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">1996-1997</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1995_1996/1995_1996_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">1995-1996</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1994_1995/1994_1995_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">1994-1995</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1993_1994/1993_1994_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">1993-1994</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1992_1993/1992_1993_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">1992-1993</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1991_1992/1991_1992_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">1991-1992</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1990_1991/1990_1991_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">1990-1991</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1989_1990/1989_1990_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">1989-1990</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1988_1989/1988_1989_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">1988-1989</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1987_1988/1987_1988_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">1987-1988</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1986_1987/1986_1987_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">1986-1987</option>
+<option value="/product/vs_single_pixel_exp/ts_figures/ts_2yr/1985_1986/1985_1986_ts_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">1985-1986</option>
+</select>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="/product/vs_single_pixel_exp/ts_figures/ts_multi_year/vs_ts_multiyr_AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.png">
+Multi-year Graph</a>
+<br>
+<!--<a href="../description.php#graphs">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="./data/AtlanticOcean_Florida_SoutheastFlorida_BrowardCluster.txt">
+Time Series Data</a>
+<br>
+<!--<a href="../description.php#ascii">
+<font size=1>(description)</font></a> -->
+<br>
+<br>
+<br>
+<a href="florida_keys.php#mainMap">
+Back To Map</a>
+<br>
+<br>
+<br>
+<br>
+</font>
+</td>
+</tr>
+</table>
+</div>
+
+<!-- End time series tables -->
+<br>
+
+</b></font>
+
+</div> <!--main-content-no-navbar-wide-->
+
+
+<!-------START OF FOOTER TEXT FROM INCLUDE STATEMENT-------------------------------------->
+<!-------DO NOT MODIFY THIS SECTION------------------------------------------------------->
+
+
+<div id="footer">
+  <a href="http://www.noaa.gov">
+     <img class="footer-left" src="/satellite/icons1/noaalogo.gif"
+     alt="NOAA logo" border="0" height='60'></a>
+  <a href="http://www.doc.gov">
+     <img class="footer-right" src="/satellite/icons1/commerce.gif"
+    alt="commerce logo" border="0"></a>
+  <p>
+<!--  <a href="http://search.usa.gov/search?affiliate=orbit.nesdis.noaa.gov_star" title='Click to access Search'>Search</a> | -->
+  <a href="http://search.usa.gov/search?affiliate=noaa.gov" title='Click to access Search'>Search</a> | 
+
+  <a href="/satellite/docs/recommendations_crw_citation.php">How to cite these products and methods</a>
+  </p>
+  <p>
+<!--  <a href="http://www.star.nesdis.noaa.gov/star/productdisclaimer.php#heartbleed">Heartbleed Notice</a> | -->
+  <a href="http://www.star.nesdis.noaa.gov/star/productdisclaimer.php">Disclaimer</a> |
+  <a href="http://www.cio.noaa.gov/services_programs/info_quality.html">Information Quality</a> |
+  <a href="http://www.star.nesdis.noaa.gov/star/accessibility.php">Accessibility Policy</a> |
+  <a href="http://www.star.nesdis.noaa.gov/star/privacy.php">Privacy Policy</a> 
+ </p>
+  <p>
+
+<!--        Last modified:  -->
+<!-- #config timefmt="%e %b %Y" --> 
+<!-- #echo var="LAST_MODIFIED" --> 
+<!--   | -->
+
+   <a href="https://www.star.nesdis.noaa.gov/star/survey.php">Customer Survey</a>
+   |
+   <a href=
+   "mailto:coralreefwatch@noaa.gov?subject=[Question for Coral Reef Watch]">
+   Contact Us</a>
+   | 
+  Owner: <a href=
+   "http://coralreefwatch.noaa.gov/satellite/">
+   NOAA Coral Reef Watch</a>
+   </p>
+</div>
+</div>
+
+<!-------END OF FOOTER TEXT FROM INCLUDE STATEMENT-------------------------------------->
+
+
+  </div> <!--content-->
+
+</body>
+</html>
+

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sanctuary SST | NOAA CoralTemp</title>
+<style>
+:root{color-scheme:dark;background:#071521;color:#e9f5f5;font:15px system-ui,-apple-system,Segoe UI,sans-serif}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 88% 6%,#164455 0,transparent 34%),#071521}header,main,footer{max-width:1250px;margin:auto;padding:24px}header{padding-top:44px}h1{font-size:clamp(30px,4vw,48px);margin:10px 0 4px;letter-spacing:-.04em}p{line-height:1.5}.eyebrow{color:#69e0cd;font-size:12px;letter-spacing:.14em;font-weight:800}.muted{color:#9eb5bf}.layout{display:grid;grid-template-columns:1fr 300px;gap:18px}.card{background:#102533;border:1px solid #294755;border-radius:18px;padding:22px;box-shadow:0 12px 40px #0003}.controls{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}label{font-size:13px;color:#b7cdd0}select,input,button{font:inherit;color:#effafa;background:#183748;border:1px solid #456572;border-radius:9px;padding:9px 12px}select{width:100%;margin-top:5px}input[type=range]{padding:0;accent-color:#54d9c2;vertical-align:middle}button{cursor:pointer}button:hover,a:hover{border-color:#71e3cf;color:#81f5de}a{color:#7ee7d5}.pill{display:inline-block;border:1px solid #377768;color:#92f5dd;border-radius:99px;padding:5px 11px;font-size:12px}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.metric{background:#152f3c;padding:13px;border-radius:12px}.metric b{display:block;font-size:22px;margin-top:6px}.metric small{color:#9eb5bf}.chart{position:relative;min-height:420px}svg{width:100%;height:auto;display:block}.tooltip{position:absolute;display:none;pointer-events:none;background:#071722;border:1px solid #5c938f;padding:9px 12px;border-radius:10px;font-size:12px;white-space:nowrap;box-shadow:0 8px 24px #0008}.note{font-size:13px;color:#adc2c8}.legend{display:flex;gap:16px;align-items:center;color:#b7cdd0;font-size:12px}.swatch{display:inline-block;width:18px;border-top:3px solid #5be3c5;vertical-align:middle}.dash{border-style:dashed;border-color:#ecbf7c}.range{display:flex;gap:12px;align-items:center}.range input{flex:1}.footerlinks{display:flex;flex-wrap:wrap;gap:15px}.error{color:#ffc6a8}.gridline{stroke:#315061;stroke-width:1}.axis{fill:#a5bdc3;font-size:12px}.trace{fill:none;stroke:#5be3c5;stroke-width:2;stroke-linejoin:round}.smooth{fill:none;stroke:#edc784;stroke-width:2.5;stroke-linecap:round}.zero{stroke:#a5b8bd;stroke-dasharray:5 5;opacity:.5}.hoverline{stroke:#e4eeee;stroke-dasharray:4 5;opacity:.6}#sampleMap{min-height:300px;border-radius:12px;background:#102c3a;margin-top:12px;overflow:hidden}#sampleMap svg{width:100%;height:auto;display:block}#sampleMap circle{cursor:pointer;outline:none}#sampleMap circle:focus{stroke:#fff;stroke-width:3}.mapdetail{min-height:22px;margin:10px 0 0}.maplegend{display:flex;flex-wrap:wrap;gap:16px;margin:12px 0 0;font-size:12px;color:#b7cdd0}.maplegend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;background:#59e2c4}.maplegend .near{background:#f4b869}.maplegend .boundary{border-radius:2px;background:#497f9a;border:1px solid #9cdcf0}.samplingWarning{color:#ffdca7;background:#49351e;border:1px solid #87673d;border-radius:9px;padding:10px}.mapstatus{margin:10px 0}.mapstatus input{max-width:100%;font-size:12px}@media(max-width:850px){.layout{grid-template-columns:1fr}.metrics{grid-template-columns:repeat(3,1fr)}.chart{min-height:250px}#sampleMap{min-height:230px}header,main,footer{padding:18px}}
+</style></head><body>
+<header><div class="eyebrow">ONMS · OCEAN CONDITIONS</div><h1>Sanctuary sea surface temperature</h1><p class="muted">Monthly CoralTemp sea surface temperature for Florida Keys National Marine Sanctuary, using every native grid-cell center inside its boundary.</p><span class="pill" id="freshness">Loading data…</span></header>
+<main><div class="card" style="margin-bottom:18px"><label for="monthlyFile">Open monthly summary CSV: <input type="file" id="monthlyFile" accept=".csv,text/csv" aria-label="Choose sst_monthly.csv"></label><span class="note"> Choose <code>data/sst_monthly.csv</code> to view the chart directly from this file.</span></div><div class="layout"><section class="card"><div class="controls"><label style="min-width:190px;flex:1">Sanctuary<select id="site"></select></label><label style="min-width:170px;flex:1">Measure<select id="measure"><option value="mean_sst_c">Temperature · °C</option><option value="anomaly_c">Change from 1991–2020 · °C</option></select></label><label style="min-width:160px;flex:1">View<select id="view"><option value="monthly">Monthly</option><option value="annual">Annual mean</option></select></label></div><div class="range"><label for="start">Start</label><span id="startText"></span><input type="range" id="start" min="0" value="0" aria-label="First month shown"><span id="endText"></span></div><div class="chart"><svg id="plot" viewBox="0 0 900 420" aria-label="SST time series" role="img"></svg><div class="tooltip" id="tip"></div></div><div class="legend"><span><i class="swatch"></i> Monthly value</span><span id="smoothLegend"><i class="swatch dash"></i> 12-month mean</span></div><p class="note" id="chartNote"></p><section aria-label="SST sampling locations"><h3>Sampling locations</h3><p class="note">NOAA boundaries and native 0.05° grid centers used in the series. The full station CSV contains every location; the map limits markers when the inventory is large.</p><div id="sampleMap" role="region" aria-label="Coordinate plot of selected SST pixels"></div><p class="note mapdetail" id="mapDetail">Select a cell to see its coordinates.</p><div class="maplegend"><span><i class="boundary"></i> ONMS boundary</span><span><i></i> Cell center inside boundary</span></div><p class="note mapstatus" id="mapStatus">Loading sampling locations…</p><p class="note mapstatus" id="boundaryStatus">Loading sanctuary boundaries…</p><label class="note" id="boundaryPicker" hidden>Choose <code>sanctuary_boundaries.geojson</code>: <input type="file" id="boundaryFile" accept=".geojson,.json,application/geo+json"></label><label class="note" id="stationPicker" hidden>Choose your <code>stations.csv</code> to show the map: <input type="file" id="stationFile" accept=".csv,text/csv"></label></section></section><aside class="card"><div class="eyebrow">SELECTED RECORD</div><h2 id="name">—</h2><div class="metrics"><div class="metric"><small>Latest SST</small><b id="latest">—</b></div><div class="metric"><small>Latest anomaly</small><b id="anomaly">—</b></div><div class="metric"><small>Cells with SST</small><b id="coverage">—</b></div></div><p class="note" id="dateLabel"></p><p class="note" id="samplingNotice"></p><p class="note">Values average valid native surface grid cells with centers inside each sanctuary boundary. They do not measure temperature at reef depth or account for partial boundary cells.</p><p class="note">Anomaly uses the mean for the same calendar month during 1991–2020 calculated from these selected pixels. Only monthly SST is pulled here; bleaching heat stress requires separate analysis.</p><div class="footerlinks"><a id="downloadSummary" href="data/sst_monthly.csv" download>Download summary CSV</a><a id="downloadPixels" href="data/chunks/index.json" download>Pixel file index</a><a id="downloadStations" href="data/stations.csv" download>Sampling locations</a><a id="downloadBoundaries" href="data/sanctuary_boundaries.geojson" download>Sanctuary boundaries</a></div></aside></div><p class="note" id="status"></p></main>
+<footer class="note">Source: <a href="https://coralreefwatch.noaa.gov/product/5km/index_5km_sst.php">NOAA Coral Reef Watch CoralTemp</a> · <a href="https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1_monthly.html">monthly ERDDAP dataset</a> · <a href="https://www.fisheries.noaa.gov/inport/item/37245">ONMS boundaries</a>. The page loads its published CSV; the update script refreshes the CSV from NOAA.</footer>
+<script>
+const labels={PNMS:'Papahānaumokuākea',HIHWNMS:'Hawaiian Islands Humpback Whale',NMSAS:'American Samoa',FGBNMS:'Flower Garden Banks',FKNMS:'Florida Keys',GRNMS:'Gray’s Reef'};
+const fullGridSites=['FKNMS'];
+const els=Object.fromEntries(['site','measure','view','start','startText','endText','plot','tip','latest','anomaly','coverage','dateLabel','chartNote','freshness','status','name','smoothLegend','samplingNotice','downloadSummary','downloadPixels','downloadStations'].map(k=>[k,document.getElementById(k)]));
+let rows=[], metadata={}, stationRows=[], boundaryData=null, mappedSite='', usingLocalCsv=false;
+function parseCSV(s){let lines=s.trim().split(/\r?\n/); let h=lines.shift().split(',');return lines.map(line=>{let parts=line.split(',');return Object.fromEntries(h.map((key,i)=>[key,parts[i]??'']))})}
+function renderStationMap(){
+  let site=els.site.value;
+  if(!site||mappedSite===site)return;
+  if(!stationRows.length)return;
+  let selected=stationRows.filter(r=>r.sanctuary===site&&Number.isFinite(+r.latitude)&&Number.isFinite(+r.longitude));
+  let status=document.getElementById('mapStatus'), container=document.getElementById('sampleMap');
+  if(!selected.length){status.textContent=`No station coordinates found for ${labels[site]}.`;container.replaceChildren();return}
+  // Unwrap longitudes near the first station so locations around 180° stay adjacent.
+  const W=900,H=360,L=78,R=26,T=24,B=52, plotW=W-L-R,plotH=H-T-B;
+  let anchor=+selected[0].longitude, midLat=selected.reduce((a,r)=>a+(+r.latitude),0)/selected.length;
+  let cos=Math.max(.2,Math.cos(midLat*Math.PI/180));
+  let points=selected.map(r=>{let lon=+r.longitude+360*Math.round((anchor-(+r.longitude))/360);return {row:r,lat:+r.latitude,lon,x:lon*cos}});
+  let shapes=[];
+  for(let feature of boundaryData?.features??[]){
+    if(feature.properties?.sanctuary!==site)continue;
+    let geom=feature.geometry??{};
+    let polys=geom.type==='MultiPolygon'?geom.coordinates:geom.type==='Polygon'?[geom.coordinates]:[];
+    for(let polygon of polys){
+      let rings=[];
+      for(let ring of polygon){
+        let previous=null,unwrapped=[];
+        for(let coord of ring){
+          let lon=+coord[0];lon+=360*Math.round(((previous??anchor)-lon)/360);
+          unwrapped.push({x:lon*cos,lat:+coord[1]});previous=lon;
+        }
+        if(unwrapped.length>=4)rings.push(unwrapped);
+      }
+      if(rings.length)shapes.push(rings);
+    }
+  }
+  let boundaryPoints=shapes.flat(2);
+  let allPoints=points.concat(boundaryPoints);
+  let minX=Infinity,maxX=-Infinity,minY=Infinity,maxY=-Infinity;
+  for(let p of allPoints){minX=Math.min(minX,p.x);maxX=Math.max(maxX,p.x);minY=Math.min(minY,p.lat);maxY=Math.max(maxY,p.lat)}
+  let width=Math.max(maxX-minX,.25*cos)*1.3,height=Math.max(maxY-minY,.25)*1.3;
+  if(width/height<plotW/plotH)width=height*plotW/plotH;
+  else height=width*plotH/plotW;
+  let cx=(minX+maxX)/2,cy=(minY+maxY)/2;
+  minX=cx-width/2;maxX=cx+width/2;minY=cy-height/2;maxY=cy+height/2;
+  let px=x=>L+(x-minX)/width*plotW, py=y=>T+(maxY-y)/height*plotH;
+  let plot=svg('svg',{viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':`Longitude and latitude plot of ${selected.length} SST cells at ${labels[site]}`});
+  plot.append(svg('rect',{x:L,y:T,width:plotW,height:plotH,fill:'#173e51',stroke:'#527584'}));
+  for(let i=0;i<=4;i++){
+    let x=L+i*plotW/4,y=T+i*plotH/4;
+    plot.append(svg('line',{x1:x,y1:T,x2:x,y2:H-B,stroke:'#527080','stroke-opacity':'.45'}));
+    plot.append(svg('line',{x1:L,y1:y,x2:W-R,y2:y,stroke:'#527080','stroke-opacity':'.45'}));
+    let lon=(minX+width*i/4)/cos;lon=((lon+180)%360+360)%360-180;
+    let xt=svg('text',{x,y:H-19,'text-anchor':'middle',fill:'#b9d1d7','font-size':'13'});xt.textContent=lon.toFixed(1)+'°';plot.append(xt);
+    let yt=svg('text',{x:L-10,y:y+4,'text-anchor':'end',fill:'#b9d1d7','font-size':'13'});yt.textContent=(maxY-height*i/4).toFixed(1)+'°';plot.append(yt);
+  }
+  let xlabel=svg('text',{x:W/2,y:H-3,'text-anchor':'middle',fill:'#d6e8eb','font-size':'13'});xlabel.textContent='Longitude';plot.append(xlabel);
+  for(let polygon of shapes){
+    let d=polygon.map(ring=>ring.map((p,i)=>(i?'L':'M')+px(p.x).toFixed(2)+' '+py(p.lat).toFixed(2)).join(' ')+' Z').join(' ');
+    plot.append(svg('path',{d,fill:'#4aa9c9','fill-opacity':'.2',stroke:'#a2dcea','stroke-width':'2','fill-rule':'evenodd','aria-label':'NOAA sanctuary boundary'}));
+  }
+  // Keep the SVG responsive; the complete inventory remains downloadable as CSV.
+  let displayStep=Math.max(1,Math.ceil(points.length/1200));
+  for(let p of points.filter((_point,i)=>i%displayStep===0)){
+    let color='#59e2c4';
+    let cellW=.05*cos/width*plotW,cellH=.05/height*plotH;
+    plot.append(svg('rect',{x:px(p.x)-cellW/2,y:py(p.lat)-cellH/2,width:cellW,height:cellH,fill:color,'fill-opacity':'.27',stroke:color,'stroke-width':'1.4'}));
+    let dot=svg('circle',{cx:px(p.x),cy:py(p.lat),r:6,fill:color,stroke:'#102533','stroke-width':2,tabindex:0,role:'button','aria-label':`${p.row.station_id}: ${p.lat.toFixed(3)} latitude, ${(+p.row.longitude).toFixed(3)} longitude`});
+    let title=svg('title');title.textContent=`${p.row.station_id} · ${p.lat.toFixed(3)}°, ${(+p.row.longitude).toFixed(3)}°`;dot.append(title);
+    let show=()=>{document.getElementById('mapDetail').textContent=`${p.row.station_id} · ${p.lat.toFixed(3)}° latitude, ${(+p.row.longitude).toFixed(3)}° longitude · Cell center inside boundary`};
+    dot.addEventListener('click',show);dot.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show()}});
+    plot.append(dot);
+  }
+  container.replaceChildren(plot);mappedSite=site;
+  document.getElementById('mapDetail').textContent='Select a cell to see its coordinates.';
+  status.textContent=`${selected.length} fixed cells${displayStep>1?` · showing every ${displayStep}th cell for map speed; download the station CSV for all coordinates`:''}. Cell outlines show the 0.05° grid.${shapes.length?' NOAA sanctuary boundary outlines shown.':' Boundary file needed for outlines.'}`;
+}
+async function loadStations(){
+  if(stationRows.length)return;
+  let status=document.getElementById('mapStatus'), picker=document.getElementById('stationPicker');
+  try{
+    let res=await fetch('data/stations.csv?ts='+Date.now());
+    if(!res.ok)throw Error('stations.csv is missing');
+    let parsed=parseCSV(await res.text());
+    if(!parsed.some(r=>r.station_id&&r.latitude&&r.longitude))throw Error('stations.csv has no usable coordinates');
+    stationRows=parsed;mappedSite='';picker.hidden=true;renderStationMap();
+  }catch(e){status.textContent=`${e.message}. Run run_sst.py to create the station inventory, or select stations.csv below.`;picker.hidden=false}
+}
+function setBoundaries(parsed){
+  if(parsed?.type!=='FeatureCollection'||!Array.isArray(parsed.features)||!parsed.features.some(f=>f.properties?.sanctuary&&f.geometry?.coordinates))throw Error('No usable sanctuary polygons found');
+  boundaryData=parsed;mappedSite='';document.getElementById('boundaryPicker').hidden=true;
+  let date=parsed.retrieved_utc?.slice(0,10);
+  document.getElementById('boundaryStatus').textContent=`NOAA ONMS boundary polygons · ${date?'retrieved '+date:'date not supplied'} · ${parsed.features.length} features. Shown as geographic context for the fixed sampling cells.`;
+  renderStationMap();
+}
+async function loadBoundaries(){
+  if(boundaryData)return;
+  let status=document.getElementById('boundaryStatus'),picker=document.getElementById('boundaryPicker');
+  try{
+    let res=await fetch('data/sanctuary_boundaries.geojson?ts='+Date.now());
+    if(!res.ok)throw Error('Boundary file not found');
+    setBoundaries(await res.json());
+  }catch(e){status.textContent=`${e.message}. Run run_sst.py to create it, or select sanctuary_boundaries.geojson below.`;picker.hidden=false}
+}
+document.getElementById('boundaryFile').addEventListener('change',async ev=>{
+  let file=ev.target.files[0];if(!file)return;
+  try{setBoundaries(JSON.parse(await file.text()))}
+  catch(e){document.getElementById('boundaryStatus').textContent=`Could not use that GeoJSON: ${e.message}`}
+});
+document.getElementById('stationFile').addEventListener('change',async ev=>{
+  let file=ev.target.files[0];if(!file)return;
+  let parsed=parseCSV(await file.text());
+  if(!parsed.some(r=>r.station_id&&r.latitude&&r.longitude)){document.getElementById('mapStatus').textContent='That CSV has no station coordinates.';return}
+  stationRows=parsed;mappedSite='';document.getElementById('stationPicker').hidden=true;renderStationMap();
+});
+function n(v){return v===''?NaN:Number(v)}
+function fmt(v,suffix=''){return Number.isFinite(v)?v.toFixed(2)+suffix:'—'}
+function svg(tag,attrs={}){let el=document.createElementNS('http://www.w3.org/2000/svg',tag);for(let [k,v] of Object.entries(attrs))el.setAttribute(k,v);return el}
+function render(){let site=els.site.value,measure=els.measure.value,annual=els.view.value==='annual',list=rows.filter(r=>r.sanctuary===site).sort((a,b)=>a.month.localeCompare(b.month));if(!list.length)return;renderStationMap();
+let min=Math.min(+els.start.value,list.length-1),max=list.length-1;els.startText.textContent=list[min].month;els.endText.textContent=`Latest: ${list[max].month}`;
+let slice=list.slice(min,max+1), latest=list.at(-1);els.name.textContent=labels[site];els.latest.textContent=fmt(n(latest.mean_sst_c),'°');els.anomaly.textContent=fmt(n(latest.anomaly_c),'°');els.coverage.textContent=`${latest.n_valid}/${latest.n_stations}`;els.dateLabel.textContent=`Latest published month: ${latest.month} · ${latest.coverage_pct}% selected-cell data completeness`;
+els.samplingNotice.className='note'+(+latest.n_stations<20?' samplingWarning':'');els.samplingNotice.textContent=`${latest.n_stations} grid centers inside the sanctuary boundary${+latest.n_stations<20?'; few cells at this grid resolution':''}. ${latest.coverage_pct}% had valid SST in ${latest.month}.`;
+let series=annual?Object.entries(Object.groupBy(slice,r=>r.month.slice(0,4))).map(([year,part])=>({month:year+'-07',value:part.length===12?part.reduce((a,r)=>a+n(r[measure]),0)/12:NaN,n:part.length})):slice.map(r=>({month:r.month,value:n(r[measure]),n:n(r.n_valid)}));
+if(annual)series=series.filter(p=>Number.isFinite(p.value));let values=series.map(p=>p.value).filter(Number.isFinite);if(!values.length){els.status.textContent='No complete years in this range; widen the dates.';els.plot.replaceChildren();return}els.status.textContent='';
+let smooth=!annual&&measure==='mean_sst_c'?series.map((p,i)=>({month:p.month,value:i<11?NaN:series.slice(i-11,i+1).reduce((a,b)=>a+b.value,0)/12})):[];
+let ys=values.concat(smooth.map(p=>p.value).filter(Number.isFinite));let lo=Math.min(...ys),hi=Math.max(...ys);if(measure==='anomaly_c'){lo=Math.min(lo,0);hi=Math.max(hi,0)}let pad=Math.max((hi-lo)*.12,.15);lo-=pad;hi+=pad;
+let w=900,h=420,L=62,R=20,T=20,B=42;let xx=i=>L+(w-L-R)*(series.length===1?.5:i/(series.length-1));let yy=v=>T+(h-T-B)*(hi-v)/(hi-lo);let plot=els.plot;plot.replaceChildren();
+for(let j=0;j<5;j++){let v=lo+(hi-lo)*j/4, y=yy(v);plot.append(svg('line',{x1:L,x2:w-R,y1:y,y2:y,class:'gridline'}));let t=svg('text',{x:5,y:y+4,class:'axis'});t.textContent=v.toFixed(1)+'°';plot.append(t)}
+for(let i=0;i<5;i++){let ix=Math.round(i*(series.length-1)/4);let t=svg('text',{x:xx(ix)-18,y:h-12,class:'axis'});t.textContent=series[ix]?.month.slice(0,4)??'';plot.append(t)}
+if(measure==='anomaly_c')plot.append(svg('line',{x1:L,x2:w-R,y1:yy(0),y2:yy(0),class:'zero'}));
+function path(points){let d='',draw=false;points.forEach((p,i)=>{if(!Number.isFinite(p.value)){draw=false;return}d+=(draw?'L':'M')+xx(i).toFixed(1)+' '+yy(p.value).toFixed(1)+' ';draw=true});return d}
+plot.append(svg('path',{d:path(series),class:'trace'}));if(smooth.length)plot.append(svg('path',{d:path(smooth),class:'smooth'}));els.smoothLegend.style.display=smooth.length?'':'none';document.querySelector('.legend .swatch').parentElement.lastChild.textContent=annual?' Annual mean':' Monthly value';
+let guide=svg('line',{x1:0,x2:0,y1:T,y2:h-B,class:'hoverline'});plot.append(guide);let zone=svg('rect',{x:L,y:T,width:w-L-R,height:h-T-B,fill:'transparent'});plot.append(zone);zone.addEventListener('mousemove',ev=>{let b=plot.getBoundingClientRect(),x=(ev.clientX-b.left)/b.width*w,i=Math.max(0,Math.min(series.length-1,Math.round((x-L)/(w-L-R)*(series.length-1))));let p=series[i];guide.setAttribute('x1',xx(i));guide.setAttribute('x2',xx(i));els.tip.style.display='block';els.tip.textContent=`${annual?p.month.slice(0,4):p.month} · ${fmt(p.value,' °C')}${annual?'':` · ${p.n} valid pixels`}`;els.tip.style.left=Math.min(b.width-180,Math.max(10,ev.clientX-b.left+12))+'px';els.tip.style.top=Math.max(8,ev.clientY-b.top-35)+'px'});zone.addEventListener('mouseleave',()=>{els.tip.style.display='none';guide.setAttribute('x1',0);guide.setAttribute('x2',0)});
+els.chartNote.textContent=annual?'Annual means include only years with all 12 valid monthly values in the selected range.':'Dashed line is the trailing 12-month mean; gaps indicate unavailable values.';
+}
+let controlsBound=false;
+function installControls(){
+  if(controlsBound)return;controlsBound=true;
+  for(let el of [els.site,els.measure,els.view])el.addEventListener('change',render);
+  els.start.addEventListener('input',render);
+}
+function setRows(newRows,stamp){
+  let previous=els.site.value;
+  rows=newRows;
+  els.site.innerHTML=Object.keys(labels).filter(k=>rows.some(r=>r.sanctuary===k)).map(k=>`<option value="${k}">${labels[k]}</option>`).join('');
+  if([...els.site.options].some(option=>option.value===previous))els.site.value=previous;
+  let months=[...new Set(rows.map(r=>r.month))].sort();
+  els.start.max=Math.max(0,months.length-12);
+  els.freshness.textContent=`Data through ${months.at(-1)} · ${stamp}`;
+  mappedSite='';installControls();render();
+}
+async function load(){
+  if(usingLocalCsv)return;
+  try{
+    let tag='?ts='+Date.now();
+    let [csv,meta]=await Promise.all([fetch('data/sst_monthly.csv'+tag),fetch('data/run_metadata.json'+tag)]);
+    if(!csv.ok||!meta.ok)throw Error('The FKNMS history has not been built yet');
+    let fresh=parseCSV(await csv.text());let detail=await meta.json();
+    if(!fresh.length||!fullGridSites.every(site=>detail.site_codes?.includes(site)&&fresh.some(r=>r.sanctuary===site)))throw Error('The FKNMS result is incomplete');
+    if(usingLocalCsv)return;
+    metadata=detail;setRows(fresh,'updated '+(detail.updated_utc?.slice(0,10)??'recently'));
+  }catch(e){if(usingLocalCsv)return;els.freshness.textContent='No completed FKNMS series';els.status.textContent=e.message+'. Run python run_sst.py, then serve this folder with python -m http.server 8000, or choose a CSV above.'}
+}
+document.getElementById('monthlyFile').addEventListener('change',async event=>{
+  let file=event.target.files?.[0];if(!file)return;
+  try{
+    let parsed=parseCSV(await file.text());
+    let local=parsed.filter(r=>r.sanctuary==='FKNMS'&&/^\d{4}-\d{2}$/.test(r.month)&&r.mean_sst_c!==undefined&&r.n_valid!==undefined&&r.n_stations!==undefined);
+    if(!local.length)throw Error('This is not an FKNMS monthly summary CSV');
+    usingLocalCsv=true;setRows(local,'selected CSV: '+file.name);
+    els.status.textContent=`Loaded ${local.length} FKNMS months from ${file.name}. For the location map, choose stations.csv and sanctuary_boundaries.geojson below if needed.`;
+  }catch(error){els.status.textContent=error.message}
+});
+load();loadStations();loadBoundaries();setInterval(()=>{if(location.protocol!=='file:'){load();loadStations();loadBoundaries()}},3600000);
+</script></body></html>
