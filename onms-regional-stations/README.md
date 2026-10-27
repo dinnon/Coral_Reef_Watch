@@ -1,13 +1,15 @@
 # Coral Reef Watch regional station pilot
 
-This is a separate, simpler data pull to compare with the ONMS boundary clipped CoralTemp SST series. It downloads NOAA's daily 5 km **regional** virtual station text files and writes a tidy daily CSV plus a monthly summary. Python standard library only.
+Data pull of NOAA's daily 5 km **regional** virtual station text files and writes a tidy daily CSV plus a monthly summary. Python standard library only.
 
 ```bash
 python pull_stations.py FKNMS
 python pull_stations.py                 # all five candidate regions
 ```
 
-Run from this directory. Output is `data/<onms-code>/daily.csv` and `monthly.csv`. Re-running fetches each complete source file and replaces the corresponding CSV after parsing and validation; no raster backfill or cell inventory is needed. `complete_month=0` marks a partly reported current month **or a historical month with missing daily records**. The command prints the count and first dates of any gaps. It never invents missing observations; use only rows with `complete_month=1` for a historical monthly comparison. The monthly SST is the arithmetic mean of NOAA's **daily SST at the 90th-percentile HotSpot pixel**; NOAA can select a different pixel each day. The daily min and max columns describe the full CRW regional station footprint; their monthly means are **not** the spatial 10th–90th percentile band in the existing viewer. The NOAA SSTA column is likewise a NOAA station quantity and should not be presented as the existing viewer's 1991–2020 sanctuary anomaly.
+How to run this:
+
+Run from local directory. Output is `data/<onms-code>/daily.csv` and `monthly.csv`. Re-running pyhon code snip fetches each complete source file and replaces the corresponding CSV after parsing and validation; no raster backfill or cell inventory is needed. `complete_month=0` marks a partly reported current month **or a historical month with missing daily records**. The command prints the count and first dates of any gaps. No missing observations imputed; use only rows with `complete_month=1` for a historical monthly comparison. The monthly SST is the arithmetic mean of NOAA's **daily SST at the 90th-percentile HotSpot pixel**; NOAA can select a different pixel each day. The daily min and max columns describe the full CRW regional station footprint; their monthly means are **not** the spatial 10th–90th percentile band in the existing viewer. The NOAA SSTA column is likewise a NOAA station quantity and should not be presented as the existing viewer's 1991–2020 sanctuary anomaly.
 
 ## View the results
 
@@ -32,17 +34,33 @@ Defaults are relative to the script folder. `--output PATH` selects a different 
 
 The **Peak daily DHW** measure uses the maximum of the reported daily station DHW values in each complete month. A dashed 4 °C-weeks line is NOAA's Bleaching Alert Level 1 DHW reference. NOAA also requires the **same day's** HotSpot to be at least 1°C; crossing 4 DHW alone does not establish an alert or observed bleaching. Peak DHW is embedded from `monthly.csv`; when rebuilding an older monthly CSV without that column, the script can derive the same monthly maximum from the companion `daily.csv`. The 4 DHW reference remains in front of the data with a white outline and bold label. SST and SST anomaly stay on their own Celsius scale.
 
-The viewer is a standalone chart; it does not carry a sampling map because the points and ONMS boundary from the earlier raster pipeline describe a different geography.
 
 | ONMS comparison label | CRW regional station | Source file | Fit |
 | --- | --- | --- | --- |
 | FKNMS | Florida Keys | `florida_keys.txt` | Geographic proxy, not FKNMS boundary |
 | FGBNMS | Flower Garden Banks, Texas | `flower_garden.txt` | Geographic proxy, not FGBNMS boundary |
-| NMSAS | Samoas | `samoas.txt` | Much broader than American Samoa sanctuary units |
-| PNMS | Northwestern Hawaiian Islands | `nwhi.txt` | Broad regional proxy for Papahānaumokuākea |
-| HIHWNMS | Main Hawaiian Islands | `hawaii.txt` | Broad regional proxy for sanctuary waters |
-| GRNMS | No matching regional station identified | — | Retain boundary clipped series if included |
+| NMSAS | Samoas | `samoas.txt` | Broad regional proxy |
+| PNMS | Northwestern Hawaiian Islands | `nwhi.txt` | Broad regional proxy |
+| HIHWNMS | Main Hawaiian Islands | `hawaii.txt` | Broad regional proxy |
+| GRNMS | No matching regional station identified | — | Not included |
 
-NOAA makes these station boundaries from reef-containing 5 km pixels plus a 20 km buffer, rather than the legal ONMS polygons. This pilot labels comparisons by ONMS code for convenience; captions must name the CRW station and its method. It does **not** claim a sanctuary-wide mean SST. NOAA labels the regional station product experimental. If this path becomes the published figure, a daily scheduled GitHub Action can call this script, publish the regenerated HTML and data outputs. We have not switched the existing chart or its workflow to this data source.
+NOAA makes these station boundaries from reef-containing 5 km pixels. This pilot labels comparisons by ONMS code for convenience; captions must name the CRW station and its method. It does **not** claim a sanctuary-wide mean SST. NOAA labels the regional station product experimental. 
 
 Sources: [station list and text files](https://coralreefwatch.noaa.gov/product/vs/data.php), [regional virtual station method](https://coralreefwatch.noaa.gov/product/vs/map.php), [gauge and SST time-series description](https://coralreefwatch.noaa.gov/product/vs/gauges/samoas.php).
+
+## El Niño shading and figure-only view — October 27, 2026
+
+Light-grey bands show historical El Niño episodes using NOAA CPC **ONI (ERSSTv5)**: at least five consecutive overlapping seasons with ONI ≥ 0.5°C. Each season maps to its center month (DJF → January), and bands cover those months only, behind the data and reference lines. This is historical ONI context, **not the operational RONI classification**. The retrieved table currently ends May 2026; later unshaded months must not be interpreted as neutral. Sources, raw index values, inclusive episode dates and retrieval date are saved in `enso_periods.json`.
+
+`index-figure.html` is the second, standalone view: just the chart, date controls and time slider. Titles, menus and explanatory text are hidden; axis labels and hover values remain. Default: Florida Keys SST. Set the region in its URL, for example `index-figure.html?site=fgbnms`. Supported sites: `fknms`, `fgbnms`, `nmsas`, `pnms`, `hihwnms`. Optional `measure=dhw` or `measure=mean_ssta_at_90th_hotspot_c` selects another measure. The full viewer's **Figure-only view** link opens the selected region/measure using the saved snapshot (session-only CSV imports are not transferred).
+
+Every `pull_stations.py` run, including `--offline`, rebuilds **both HTML views** from the same template and local data. A custom `--viewer report.html` also creates `report-figure.html`. Keep `enso_periods.json` beside the template. To explicitly update the historical index snapshot:
+
+```bash
+python refresh_enso.py
+python pull_stations.py --offline
+```
+
+A normal SST refresh reuses the saved ENSO snapshot. Neither forecasts nor unconfirmed warm runs shorter than five seasons are added to the grey bands.
+
+Snapshot consistency: the existing regional HTML contains October 24 data, while the committed CSVs stop October 22. This visual update preserves the newer embedded snapshot exactly. An offline rebuild reflects the CSVs supplied to it; refresh those with a normal NOAA pull first if you want to avoid reverting that partial-month coverage. Complete months are unaffected.

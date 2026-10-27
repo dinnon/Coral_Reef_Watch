@@ -91,7 +91,7 @@ A subset run rebuilds the viewer and coverage report with only the requested gro
 3. **Regional mean:** equal weight per distinct coordinate pair, averaging complete site monthly values. Site aliases at the same coordinate pair are counted once. The regional mean is only published when every selected distinct pixel has a complete value for that metric in that month. This is the mean of selected reef sites, not an ONMS area average. It is not a probability sample of all sanctuary waters.
 4. **Anomaly:** NOAA's reported daily SSTA is averaged by month, then across sites; each site uses NOAA's climatology. We do not calculate a new 1991–2020 baseline.
 5. **DHW:** the site chart displays each month's maximum of NOAA's reported daily DHW. The regional chart averages those site maxima, which may occur on different days. That average is descriptive; it is not NOAA's regional DHW algorithm or an alert classification. The 4 °C-weeks reference appears only for individual sites; NOAA Alert Level 1 also requires concurrent HotSpot ≥1°C. No observed coral bleaching is inferred from the line alone.
-6. **Mapping:** a self-contained longitude/latitude plot with 0.05° cell squares and clickable site centers. No external basemap service. NOAA ONMS boundaries are not included because this selection follows NOAA's named site list.
+6. **Mapping:** a self-contained longitude/latitude plot with selectable 0.05° × 0.05° cell footprints and embedded NOAA ONMS boundaries. Boundaries are geographic context only; site membership and all averages still follow NOAA's named site list. No external basemap service.
 7. **Refresh and provenance:** all requested downloads and parsing must succeed before publishing new outputs. Each source file's hash, URL, and first/last dates are recorded. A later NOAA revision can change historical values. Archive a ZIP or git commit after each reviewed update if a publication needs an exact frozen version.
 
 ## Endpoint update in this version
@@ -110,3 +110,11 @@ NOAA labels these site products experimental; some pages are under development. 
 ## Viewer update — October 26, 2026
 
 The date controls now select both the first and last month. Region changes reset the range; site/measure changes retain it where the data coverage allows. The foreground 4 DHW reference styling is retained. Only the viewer HTML/template and documentation changed in this update; the named-site source data and numerical outputs are unchanged. Future `pull_sites.py` runs retain the controls through `viewer_template.html`.
+
+## ONMS boundaries and selectable pixels — October 27, 2026
+
+Purple outlines show NOAA ONMS boundaries intersecting the station map extent. Station markers are now the **actual 0.05° × 0.05° footprints**, with no center dots. Their apparent width/height follows the latitude-adjusted projection; they are not arbitrary fixed-size screen symbols. Click a cell or select a station from the list/menu. Orange marks the selected cell. Regions without nearby ONMS boundaries explicitly say so. Boundary overlays do not filter stations or change any SST, anomaly or DHW calculations.
+
+`onms_boundaries.json` embeds all 18 features from NOAA's [ONMS boundary layer](https://services2.arcgis.com/C8EMgrsFcRFL6LrL/arcgis/rest/services/NMS_Boundaries_02032022/FeatureServer/0), retrieved October 27, 2026. Layer name: `NMS_Bndy_Update_02062026`. Display geometries were requested with `where=1=1`, `outFields=NMS_Name,NMS_Abbrv`, `returnGeometry=true`, `outSR=4326`, `maxAllowableOffset=0.001`, `geometryPrecision=5`, `f=json`; rings, names and abbreviations are retained. This generalized snapshot is for display, not spatial analysis. Ring continuity is preserved across the antimeridian and rendering is clipped to the local map frame.
+
+Future `pull_sites.py` runs embed this saved boundary file automatically. The viewer still opens offline without map tiles or API requests. Boundary refresh is separate from SST refresh: retrieve the same layer query, validate all returned features and replace the snapshot when NOAA updates its boundaries.

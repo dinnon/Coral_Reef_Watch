@@ -222,6 +222,8 @@ def main():
         serialized = json.dumps(bundle, ensure_ascii=False, separators=(',', ':'), allow_nan=False)
         (stage/'viewer_data.json').write_text(serialized, encoding='utf-8')
         template = (ROOT/'viewer_template.html').read_text(encoding='utf-8')
+        boundaries = json.loads((ROOT/'onms_boundaries.json').read_text(encoding='utf-8'))
+        template = template.replace('__ONMS_JSON__', json.dumps(boundaries, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/'))
         rendered = template.replace('__BUNDLE_JSON__', serialized.replace('</', '<\\/'))
         # Publish only after all requested sites and outputs validate. Keep prior data on fetch/parse failure.
         dest = ROOT/'data'

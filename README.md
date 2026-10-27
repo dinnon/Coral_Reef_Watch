@@ -1,3 +1,10 @@
+# Viewer updates — October 27, 2026
+
+- Regional stations: light-grey historical El Niño (ONI) bands and a standalone `onms-regional-stations/index-figure.html` containing only the figure and date controls. Open the **Figure-only view** link from the full viewer to use its selected region and measure.
+- Named sites: embedded NOAA ONMS boundaries and selectable 0.05° station pixels, replacing center dots. Boundaries provide context and do not alter station membership or averages.
+- Both Python refresh workflows preserve the changes. Keep the new `enso_periods.json` and `onms_boundaries.json` alongside their scripts/templates. See each folder's README for source dates, methods and refresh instructions.
+- The historical ONI source snapshot ends May 2026; later unshaded months are unclassified here. The previous embedded SST/DHW snapshots are retained exactly.
+
 # Offline viewer + date range update — October 26, 2026
 
 Copy the files from each folder in this ZIP into the matching existing project folder, replacing files with the same name. Your existing data and cache folders are not overwritten by this update.

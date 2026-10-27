@@ -1,0 +1,17 @@
+Coral Reef Watch viewer update — October 27, 2026
+
+Unzip and copy the two folders into your existing Coral_Reef_Watch repository, allowing replacement of the matching files. Existing data and cache folders are not included and are not overwritten.
+
+Open onms-regional-stations/index.html for the full regional viewer.
+Open onms-regional-stations/index-figure.html for only the figure and date slider/controls. The full viewer has a link that carries your region/measure selection.
+Open crw-named-sites/index.html for ONMS outlines and selectable 0.05-degree station pixels.
+
+All HTML files include saved observations and work offline. Keep the updated Python scripts, templates and the new JSON snapshot files together to preserve these edits during future refreshes.
+
+El Nino bands use historical ONI (ERSSTv5), season-center months, and require five consecutive qualifying seasons. The available ONI table ends May 2026; later unshaded months are not necessarily neutral. See the regional README for refresh instructions.
+
+The regional HTML retains the original October 24 snapshot exactly; the repository CSVs stop October 22. Do a normal NOAA pull before an offline rebuild if you want to avoid reverting partial-month coverage. Complete months are unaffected.
+
+Validation: five pipeline tests passed; DOM checks covered both regional views, all regions, both date handles, one-month shaded/unshaded cases, DHW foreground ordering, all 218 named-site pixel buttons and the four corresponding ONMS boundary overlays. SVG map/plot renderings were visually inspected. A full browser layout check was unavailable because the browser download failed.
+
+GitHub refused write access (403 Resource not accessible by integration), so no remote branch or pull request was created. This ZIP contains the completed changes. Copy them into your local checkout and commit/push with your normal GitHub workflow.

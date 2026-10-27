@@ -1,12 +1,15 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-view="__VIEW_MODE__">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Coral Reef Watch regional station SST</title>
 <style>
 :root{font:14px system-ui,-apple-system,Segoe UI,sans-serif;color:#173747;background:#fff}*{box-sizing:border-box}body{margin:0;padding:14px}.figure{max-width:1000px;margin:auto}h1{font-size:20px;margin:0 0 5px}.subtitle{color:#47616f;margin:0 0 13px;line-height:1.35}.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.toolbar label{display:flex;gap:6px;align-items:center}select,.filebutton{font:inherit;color:#173747;background:#fff;border:1px solid #95b0bb;border-radius:5px;padding:6px}.filebutton{cursor:pointer}input[type=file]{position:absolute;width:1px;height:1px;opacity:0}.range{display:flex;align-items:center;gap:10px;margin:14px 0 3px;font-size:12px}.range input{flex:1;accent-color:#087e86}.chart{position:relative}svg{width:100%;height:auto;display:block;min-height:220px}.grid{stroke:#dce6ea}.axis{fill:#58717d;font-size:12px}.trace{fill:none;stroke:#087e86;stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}.zero{stroke:#9badb6;stroke-dasharray:5 4}.threshold{stroke:#a64514;stroke-width:2.6;stroke-dasharray:8 4;pointer-events:none}.threshold-halo{stroke:#fff;stroke-width:5.6;stroke-dasharray:8 4;pointer-events:none}.threshold-label{fill:#903c12;font-size:12px;font-weight:600;paint-order:stroke;stroke:#fff;stroke-width:4;stroke-linejoin:round;pointer-events:none}.hit{fill:transparent}.cursor{stroke:#436b76;stroke-dasharray:4 4}.tip{position:absolute;display:none;background:#173747;color:#fff;border-radius:5px;padding:7px 9px;font-size:12px;pointer-events:none;white-space:nowrap}.status{color:#405d69;line-height:1.4}.status.error{color:#8e3b29}.method{font-size:12px;color:#526b77;line-height:1.4}.method a{color:#075d78}@media(max-width:520px){body{padding:8px}h1{font-size:17px}.toolbar{gap:7px}.range{gap:5px}}
 .date-range{margin:14px 0 10px}.date-fields{display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:12px}.date-fields label{display:flex;gap:6px;align-items:center}.date-fields input,.date-fields button{font:inherit;border:1px solid #aac0c9;border-radius:5px;padding:5px 7px;color:#183d4c;background:white}.date-fields button{cursor:pointer;margin-left:auto}.range-track{position:relative;height:30px;margin:4px 10px;background:linear-gradient(to right,#d8e5e9 0%,#087d84 0%,#087d84 100%,#d8e5e9 100%) center/100% 4px no-repeat}.range-track input[type=range]{position:absolute;left:0;top:0;width:100%;height:30px;margin:0;padding:0;border:0;background:transparent;appearance:none;-webkit-appearance:none;pointer-events:none}.range-track input[type=range]::-webkit-slider-runnable-track{height:4px;background:transparent}.range-track input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border:2px solid white;border-radius:50%;background:#087d84;box-shadow:0 0 0 1px #275e6b;pointer-events:auto;cursor:ew-resize}.range-track input[type=range]::-moz-range-track{height:4px;background:transparent}.range-track input[type=range]::-moz-range-thumb{width:14px;height:14px;border:2px solid white;border-radius:50%;background:#087d84;box-shadow:0 0 0 1px #275e6b;pointer-events:auto;cursor:ew-resize}.range-track input:focus-visible{outline:2px solid #d17635;outline-offset:2px}.range-track input:disabled{opacity:.4}
+
+.enso-band{fill:#e8e8e8;pointer-events:none}.enso-key{display:inline-block;width:16px;height:10px;background:#e8e8e8;margin-right:5px}.figure-only h1,.figure-only .subtitle,.figure-only .toolbar,.figure-only .status:not(.error),.figure-only .method{display:none}.figure-only .date-range{margin-top:0}.figure-only body{padding:8px}
 </style>
+<script>if(document.documentElement.dataset.view==='figure')document.documentElement.classList.add('figure-only');</script>
 </head>
 <body><main class="figure">
 <h1>Coral Reef Watch regional station SST</h1>
@@ -14,18 +17,21 @@
 <div class="toolbar">
   <label>Region <select id="site"><option value="fknms">Florida Keys</option><option value="fgbnms">Flower Garden Banks</option><option value="nmsas">Samoas</option><option value="pnms">Northwestern Hawaiian Islands</option><option value="hihwnms">Main Hawaiian Islands</option></select></label>
   <label>Measure <select id="measure"><option value="mean_sst_at_90th_hotspot_c">SST at 90th HotSpot</option><option value="mean_ssta_at_90th_hotspot_c">NOAA SST anomaly</option><option value="dhw">Peak daily DHW</option></select></label>
+  <a id="figureLink" href="index-figure.html" target="_blank" rel="noopener">Figure-only view</a>
   <label class="filebutton" for="dataFolder">Load all station CSVs</label><input type="file" id="dataFolder" webkitdirectory multiple aria-label="Choose the data folder containing station subfolders">
   <label class="filebutton" for="csvFile">Open monthly.csv</label><input type="file" id="csvFile" accept=".csv,text/csv" aria-label="Choose monthly.csv for selected region">
 </div>
 <div class="date-range" aria-label="Displayed date range"><div class="date-fields"><label>From <input type="month" id="dateFrom" aria-label="First month shown"></label><label>To <input type="month" id="dateTo" aria-label="Last month shown"></label><button type="button" id="resetRange">All dates</button></div><div class="range-track" id="rangeTrack"><input type="range" id="rangeStart" min="0" max="1" value="0" step="1" aria-label="Start of displayed date range"><input type="range" id="rangeEnd" min="0" max="1" value="1" step="1" aria-label="End of displayed date range"></div></div><div class="chart"><svg id="plot" viewBox="0 0 800 330" role="img" aria-label="Regional station monthly SST chart"></svg><div class="tip" id="tip"></div></div>
 <p class="status" id="status" role="status">Loading…</p>
 <p class="method" id="importNotice"></p><p class="method" id="snapshotNotice"></p>
+<p class="method" id="ensoNote"></p>
 <p class="method">SST is the monthly mean of NOAA's daily value at the pixel selected by the regional 90th-percentile HotSpot; that pixel can change daily. The DHW view shows the month's highest daily station DHW, with a 4 °C-weeks reference for NOAA Bleaching Alert Level 1. That alert also requires a HotSpot of at least 1°C on the same day; crossing the line alone does not establish bleaching. Incomplete months are excluded. Station footprints differ from ONMS boundaries. <a href="https://coralreefwatch.noaa.gov/product/5km/methodology.php" target="_blank" rel="noopener">NOAA heat stress levels</a>.</p>
 </main>
 <script id="bundle" type="application/json">__BUNDLE_JSON__</script>
 <script>
 'use strict';
 const names={fknms:'Florida Keys',fgbnms:'Flower Garden Banks, Texas',nmsas:'Samoas',pnms:'Northwestern Hawaiian Islands',hihwnms:'Main Hawaiian Islands'};
+const enso=__ENSO_JSON__;
 const data={},heat={}; const $=id=>document.getElementById(id); const ns='http://www.w3.org/2000/svg';
 function svg(tag,attributes={}){let e=document.createElementNS(ns,tag);for(let [k,v] of Object.entries(attributes))e.setAttribute(k,v);return e}
 function parseCSV(source){
@@ -50,6 +56,7 @@ function parseDailyHeat(source){
 function hasHeat(site){return Boolean(heat[site])||Boolean(data[site]?.some(r=>r.max_dhw_from_90th_hotspot_c_weeks!==undefined))}
 function draw(){
   let site=$('site').value,all=data[site],plot=$('plot');plot.replaceChildren();$('tip').style.display='none';
+  $('figureLink').href=location.pathname.split('/').pop().replace(/\.html$/, '-figure.html')+'?site='+encodeURIComponent(site)+'&measure='+encodeURIComponent($('measure').value);
   if(!all)return;
   $('status').className='status';
   $('measure').querySelector('[value="dhw"]').disabled=!hasHeat(site);
@@ -62,6 +69,16 @@ function draw(){
   if(!values.length){$('status').textContent='No complete months with valid values in this range.';return}
   let lo=Math.min(...values),hi=Math.max(...values);if(anomaly){lo=Math.min(lo,0);hi=Math.max(hi,0)}if(dhw){lo=0;hi=Math.max(4.5,hi)}let pad=Math.max(.15,(hi-lo)*.12);lo-=dhw?0:pad;hi+=pad;
   const W=800,H=330,L=58,R=17,T=18,B=37,x=i=>L+(W-L-R)*(series.length===1?.5:i/(series.length-1)),y=v=>T+(H-T-B)*(hi-v)/(hi-lo);
+  // Shade the center months of qualifying ONI seasons, clipped to the displayed window.
+  const firstMonth=rangeMonthIndex(series[0].month),lastMonth=rangeMonthIndex(series.at(-1).month);
+  const monthX=m=>series.length===1?(m<=firstMonth?L:W-R):L+(m-firstMonth)/(lastMonth-firstMonth)*(W-L-R);
+  for(const period of enso.episodes){
+    const start=rangeMonthIndex(period.start),end=rangeMonthIndex(period.end);
+    if(end<firstMonth||start>lastMonth)continue;
+    const left=Math.max(L,monthX(start-.5)),right=Math.min(W-R,monthX(end+.5));
+    const band=svg('rect',{x:left,y:T,width:right-left,height:H-T-B,class:'enso-band','data-start':period.start,'data-end':period.end});
+    plot.append(band);
+  }
   for(let j=0;j<5;j++){let yy=T+(H-T-B)*j/4,v=hi-(hi-lo)*j/4;plot.append(svg('line',{x1:L,x2:W-R,y1:yy,y2:yy,class:'grid'}));let label=svg('text',{x:4,y:yy+4,class:'axis'});label.textContent=v.toFixed(1)+(dhw?'':'°C');plot.append(label)}
   for(let i of new Set(Array.from({length:5},(_,j)=>Math.round(j*(series.length-1)/4)))){let label=svg('text',{x:x(i),y:H-9,'text-anchor':'middle',class:'axis'});label.textContent=series.length<=24?series[i].month:series[i].month.slice(0,4);plot.append(label)}
   if(anomaly)plot.append(svg('line',{x1:L,x2:W-R,y1:y(0),y2:y(0),class:'zero'}));
@@ -151,5 +168,9 @@ try{
  const available=Object.keys(data);if(available.length&&!data[$('site').value])$('site').value=available[0];
  $('snapshotNotice').textContent=`Saved data included · built ${saved.built_utc.slice(0,10)} UTC · ${available.length} regions. Run pull_stations.py to refresh; imported CSVs apply to this session.`;
 }catch(error){console.warn('No embedded regional snapshot:',error.message)}
+const params=new URLSearchParams(location.search);
+if(names[params.get('site')])$('site').value=params.get('site');
+if(Array.from($('measure').options).some(o=>o.value===params.get('measure')))$('measure').value=params.get('measure');
+$('ensoNote').innerHTML='<span class="enso-key"></span>Light grey: historical El Niño periods (ONI, ERSSTv5; season center months). <a href="'+enso.source_url+'" target="_blank" rel="noopener">NOAA CPC</a> · index snapshot through '+enso.source_through+'. Unclassified later months are not necessarily neutral.';
 selectSite();
 </script></body></html>

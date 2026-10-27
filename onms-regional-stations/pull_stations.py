@@ -157,7 +157,11 @@ def build_viewer(output_dir, viewer_path):
     template = (ROOT / 'viewer_template.html').read_text(encoding='utf-8')
     if template.count('__BUNDLE_JSON__') != 1:
         raise ValueError('Viewer template must contain exactly one bundle placeholder')
-    html = template.replace('__BUNDLE_JSON__', serialized.replace('</', '<\\/'))
+    enso = json.loads((ROOT / 'enso_periods.json').read_text(encoding='utf-8'))
+    template = template.replace('__ENSO_JSON__', json.dumps(enso, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/'))
+    rendered = template.replace('__BUNDLE_JSON__', serialized.replace('</', '<\\/'))
+    html = rendered.replace('__VIEW_MODE__', 'full')
+    figure_html = rendered.replace('__VIEW_MODE__', 'figure')
     output_dir.mkdir(parents=True, exist_ok=True)
     viewer_path.parent.mkdir(parents=True, exist_ok=True)
     json_path = output_dir / 'viewer_data.json'
@@ -165,6 +169,9 @@ def build_viewer(output_dir, viewer_path):
     json_tmp.write_text(serialized, encoding='utf-8'); json_tmp.replace(json_path)
     html_tmp = viewer_path.with_suffix('.html.tmp')
     html_tmp.write_text(html, encoding='utf-8'); html_tmp.replace(viewer_path)
+    figure_path = viewer_path.with_name(viewer_path.stem + '-figure.html')
+    figure_tmp = figure_path.with_suffix('.html.tmp')
+    figure_tmp.write_text(figure_html, encoding='utf-8'); figure_tmp.replace(figure_path)
     print(f'Built offline-ready viewer with {len(stations)} regions: {viewer_path}')
 
 
