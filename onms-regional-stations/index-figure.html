@@ -56,7 +56,12 @@ function parseDailyHeat(source){
 function hasHeat(site){return Boolean(heat[site])||Boolean(data[site]?.some(r=>r.max_dhw_from_90th_hotspot_c_weeks!==undefined))}
 function draw(){
   let site=$('site').value,all=data[site],plot=$('plot');plot.replaceChildren();$('tip').style.display='none';
-  $('figureLink').href=location.pathname.split('/').pop().replace(/\.html$/, '-figure.html')+'?site='+encodeURIComponent(site)+'&measure='+encodeURIComponent($('measure').value);
+  // Directory URLs serve index.html without a filename in location.pathname.
+  const pageName=location.pathname.split('/').pop()||'index.html';
+  const figureURL=new URL(pageName.replace(/(?:-figure)?\.html$/i,'-figure.html'),location.href);
+  figureURL.search='';figureURL.hash='';
+  figureURL.searchParams.set('site',site);figureURL.searchParams.set('measure',$('measure').value);
+  $('figureLink').href=figureURL.href;
   if(!all)return;
   $('status').className='status';
   $('measure').querySelector('[value="dhw"]').disabled=!hasHeat(site);
