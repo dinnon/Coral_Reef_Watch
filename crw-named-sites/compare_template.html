@@ -1,0 +1,136 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reef site comparison · test viewer</title>
+<style>
+:root{font:14px system-ui,-apple-system,Segoe UI,sans-serif;color:#183d4c;background:#f2f6f7}*{box-sizing:border-box}body{margin:0;padding:24px}main{max-width:1180px;margin:auto}header p{color:#58727d;margin:7px 0 20px}h1{font-size:26px;letter-spacing:-.6px;margin:0}h2{font-size:16px;margin:0 0 10px}.toolbar,.tools{display:flex;gap:14px;align-items:center;flex-wrap:wrap}.toolbar{background:white;border:1px solid #d2e0e4;padding:14px;border-radius:9px;margin-bottom:16px}label{display:flex;align-items:center;gap:7px}select,button{font:inherit;background:white;color:#183d4c;padding:7px;border:1px solid #aac0c9;border-radius:5px}button{cursor:pointer}button:hover{background:#edf7f7}.layout{display:grid;grid-template-columns:350px 1fr;gap:16px}.card{background:white;border:1px solid #d2e0e4;border-radius:9px;padding:16px;min-width:0}svg{display:block;width:100%;height:auto}.note{font-size:12px;color:#53707c;line-height:1.5}.small{font-size:12px;color:#58727d}.range{display:flex;gap:8px;align-items:center;font-size:12px;margin-bottom:10px}.range input{flex:1;min-width:70px;accent-color:#087d84}.chart{position:relative}.tip{display:none;position:absolute;pointer-events:none;white-space:pre-line;border-radius:5px;background:#173747;color:white;padding:8px;font-size:12px;max-width:260px}.grid{stroke:#e0e9ec}.axis{font-size:11px;fill:#52707c}.trace{fill:none;stroke:#087d84;stroke-width:2.2;stroke-linejoin:round}.average{fill:none;stroke:#8a9fa8;stroke-width:1.5;stroke-dasharray:5 3}.threshold{stroke:#a64514;stroke-width:2.6;stroke-dasharray:8 4;pointer-events:none}.threshold-halo{stroke:#fff;stroke-width:5.6;stroke-dasharray:8 4;pointer-events:none}.threshold-label{fill:#903c12;font-size:12px;font-weight:600;paint-order:stroke;stroke:#fff;stroke-width:4;stroke-linejoin:round;pointer-events:none}.cell{cursor:pointer;fill:#087d84;fill-opacity:.65;stroke:#fff;stroke-width:.8}.cell.selected{fill:#e07a36;fill-opacity:1;stroke:#784520;stroke-width:1.5}.cell:focus{stroke:#152e3b;stroke-width:2.5;outline:none}.boundary{fill:#7b70ad;fill-opacity:.07;stroke:#72529b;stroke-width:1.4;fill-rule:evenodd;pointer-events:none}.boundary-key{display:inline-block;width:20px;border-top:2px solid #72529b;vertical-align:middle;margin-right:5px}.mapnum{font-size:10px;fill:#284f5e;pointer-events:none;paint-order:stroke;stroke:#fff;stroke-width:2px}.stations{max-height:180px;overflow:auto;margin-top:12px}.station{display:block;border:0;border-radius:3px;padding:5px 2px;width:100%;text-align:left;font-size:12px}.station[aria-pressed=true]{background:#e6f3f2;font-weight:600}footer{margin-top:15px}.error{color:#a14325}.legend{font-size:12px;margin:8px 0}.legend span{margin-right:15px}.key{display:inline-block;width:20px;border-top:3px solid #087d84;vertical-align:middle;margin-right:5px}.key.gray{border-color:#8a9fa8;border-top-style:dashed}a{color:#08727b}.import{margin-left:auto}.hidden{display:none}@media(max-width:850px){.layout{grid-template-columns:1fr}.stations{max-height:110px}body{padding:12px}#map{max-height:290px}h1{font-size:23px}}
+.date-range{margin:14px 0 10px}.date-fields{display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:12px}.date-fields label{display:flex;gap:6px;align-items:center}.date-fields input,.date-fields button{font:inherit;border:1px solid #aac0c9;border-radius:5px;padding:5px 7px;color:#183d4c;background:white}.date-fields button{cursor:pointer;margin-left:auto}.range-track{position:relative;height:30px;margin:4px 10px;background:linear-gradient(to right,#d8e5e9 0%,#087d84 0%,#087d84 100%,#d8e5e9 100%) center/100% 4px no-repeat}.range-track input[type=range]{position:absolute;left:0;top:0;width:100%;height:30px;margin:0;padding:0;border:0;background:transparent;appearance:none;-webkit-appearance:none;pointer-events:none}.range-track input[type=range]::-webkit-slider-runnable-track{height:4px;background:transparent}.range-track input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:-7px;border:2px solid white;border-radius:50%;background:#087d84;box-shadow:0 0 0 1px #275e6b;pointer-events:auto;cursor:ew-resize}.range-track input[type=range]::-moz-range-track{height:4px;background:transparent}.range-track input[type=range]::-moz-range-thumb{width:14px;height:14px;border:2px solid white;border-radius:50%;background:#087d84;box-shadow:0 0 0 1px #275e6b;pointer-events:auto;cursor:ew-resize}.range-track input:focus-visible{outline:2px solid #d17635;outline-offset:2px}.range-track input:disabled{opacity:.4}
+.map-tools{display:flex;gap:6px;align-items:center}.map-tools button{min-width:34px}#map{touch-action:none;cursor:grab}#map:active{cursor:grabbing}.legend{display:flex;flex-wrap:wrap;gap:6px 12px}.legend button{font-size:12px;border:0;padding:3px 5px}.tip{max-width:350px}.cell.selected{fill-opacity:1;stroke:#183d4c;stroke-width:1}.station{border-left:4px solid transparent;padding-left:7px}.selection-note{color:#a14325}.layout{grid-template-columns:370px 1fr}@media(max-width:850px){.layout{grid-template-columns:1fr}}
+</style></head><body><main>
+<header><h1>Reef site comparison · test viewer</h1><p>Select up to eight sites within a region to compare on one chart · Fixed 5 km pixels</p></header>
+<div class="toolbar"><label>Region <select id="region"></select></label><label>Add / remove site <select id="station"></select></label><label><input type="checkbox" id="showAverage" checked> Regional average</label><button id="clearSites">Clear sites</button><label>Measure <select id="metric"><option value="sst_c">Mean SST</option><option value="ssta_c">Mean NOAA SST anomaly</option><option value="peak_dhw_c_weeks">Peak daily DHW</option></select></label><button class="import" id="open">Open updated data JSON</button><input id="file" class="hidden" type="file" accept=".json"></div>
+<div class="layout"><section class="card"><h2>Station locations</h2><div class="map-tools"><button id="zoomIn" aria-label="Zoom in">+</button><button id="zoomOut" aria-label="Zoom out">−</button><button id="resetMap">Reset map</button><span id="zoomLevel" aria-live="polite">1×</span></div><p class="small">Scroll to zoom · drag to pan · click a pixel to add/remove its line</p><svg id="map" tabindex="0" viewBox="0 0 400 310" aria-label="Station longitude and latitude map"></svg><p class="small" id="boundaryNote"></p><p class="note" id="mapDetail">Select a pixel or station name.</p><div id="stations" class="stations"></div></section>
+<section class="card"><h2 id="chartTitle">Monthly SST</h2><div class="date-range" aria-label="Displayed date range"><div class="date-fields"><label>From <input type="month" id="dateFrom" aria-label="First month shown"></label><label>To <input type="month" id="dateTo" aria-label="Last month shown"></label><button type="button" id="resetRange">All dates</button></div><div class="range-track" id="rangeTrack"><input type="range" id="rangeStart" min="0" max="1" value="0" step="1" aria-label="Start of displayed date range"><input type="range" id="rangeEnd" min="0" max="1" value="1" step="1" aria-label="End of displayed date range"></div></div><div class="chart"><svg id="chart" viewBox="0 0 850 390" role="img"></svg><div id="tip" class="tip"></div></div><div id="legend" class="legend"></div><p id="status" class="note" role="status"></p><button id="download">Download displayed series CSV</button><p id="metricNote" class="note"></p></section></div>
+<footer class="note"><p>The regional average gives equal weight to each distinct selected site pixel. It represents these named sites; the selection has not been clipped to an ONMS boundary. Monthly values require every calendar day, and the regional mean requires all selected unique pixels. Missing or partial months appear as gaps. Map cells show 0.05° × 0.05° pixel footprints (approximately 5 km). Purple outlines show NOAA ONMS boundaries for geographic context; they do not change site inclusion or averages. The boundary snapshot and data are embedded for offline use. <a href="https://services2.arcgis.com/C8EMgrsFcRFL6LrL/arcgis/rest/services/NMS_Boundaries_02032022/FeatureServer/0" target="_blank" rel="noopener">NOAA boundary source</a>.</p><p id="provenance"></p><p id="error" class="error" role="alert"></p></footer>
+<script id="bundle" type="application/json">__BUNDLE_JSON__</script>
+<script>
+'use strict';
+const onms=__ONMS_JSON__;
+const $=id=>document.getElementById(id),NS='http://www.w3.org/2000/svg';let bundle,currentRegion,displayed=[],chartSeries=[];
+const palette=['#007f86','#c95020','#7854a6','#287c39','#b23b76','#3069b0','#956400','#555555'];
+let selectedSites=new Map(),camera={zoom:1,dx:0,dy:0},mapBounds=null,dragState=null,suppressClick=false;
+function siteColor(id){return selectedSites.get(id)||'#96b6bd'}
+function node(tag,attrs={},text){let n=document.createElementNS(NS,tag);for(let [k,v] of Object.entries(attrs))n.setAttribute(k,v);if(text!==undefined)n.textContent=text;return n}
+function option(value,text){let n=document.createElement('option');n.value=value;n.textContent=text;return n}
+function finite(v){return typeof v==='number'&&Number.isFinite(v)}
+function monthIndex(m){let [y,n]=m.split('-').map(Number);return y*12+n-1}
+function monthName(n){return Math.floor(n/12)+'-'+String(n%12+1).padStart(2,'0')}
+function load(b){if(b.schema_version!==1||!Array.isArray(b.regions)||!b.regions.length)throw Error('Choose viewer_data.json from this named-site pipeline');for(let r of b.regions){if(!r.stations?.length||!r.monthly?.length||r.stations.some(s=>!finite(s.lat)||!finite(s.lon)||!s.monthly?.length))throw Error('Incomplete station bundle')};bundle=b;$('region').replaceChildren(...b.regions.map(r=>option(r.id,r.name)));$('provenance').textContent=`Built ${b.built_utc.slice(0,10)} UTC · ${b.build_mode} · NOAA source links are listed for each site.`;chooseRegion();$('error').textContent=''}
+function chooseRegion(){$('error').textContent='';currentRegion=bundle.regions.find(r=>r.id===$('region').value);selectedSites=new Map(currentRegion.stations.slice(0,2).map((s,i)=>[s.id,palette[i]]));camera={zoom:1,dx:0,dy:0};$('station').replaceChildren(option('','Choose a site…'),...currentRegion.stations.map(s=>option(s.id,s.name)));resetDateRange();buildMap();draw()}
+function chooseSite(id){if(!id)return;if(selectedSites.has(id))selectedSites.delete(id);else{if(selectedSites.size>=8){$('error').textContent='Select up to eight sites. Remove a selected site before adding another.';return}const used=new Set(selectedSites.values());selectedSites.set(id,palette.find(c=>!used.has(c)))}$('error').textContent='';$('station').value='';draw();buildMap()}
+function buildMap(){const plot=$('map'),listScroll=$('stations').scrollTop;plot.replaceChildren();$('stations').replaceChildren();let stations=currentRegion.stations,selected=selectedSites,lon0=stations[0].lon;let unwrap=v=>lon0+((v-lon0+540)%360)-180;
+ let west=Math.min(...stations.map(s=>unwrap(s.lon)))-.12,east=Math.max(...stations.map(s=>unwrap(s.lon)))+.12,south=Math.min(...stations.map(s=>s.lat))-.12,north=Math.max(...stations.map(s=>s.lat))+.12;
+ const L=46,R=18,T=16,B=38,W=400,H=310,cos=Math.cos((north+south)/2*Math.PI/180),ratio=(W-L-R)/(H-T-B);let dx=(east-west)*cos,dy=north-south;if(dx/dy<ratio){let extra=(dy*ratio/cos-(east-west))/2;west-=extra;east+=extra}else{let extra=(dx/ratio-dy)/2;south-=extra;north+=extra}
+ const baseWidth=east-west,baseHeight=north-south,cx=(west+east)/2+camera.dx,cy=(south+north)/2+camera.dy;
+ west=cx-baseWidth/camera.zoom/2;east=cx+baseWidth/camera.zoom/2;south=cy-baseHeight/camera.zoom/2;north=cy+baseHeight/camera.zoom/2;
+ mapBounds={west,east,south,north};$('zoomLevel').textContent=camera.zoom.toFixed(1)+'×';$('zoomOut').disabled=camera.zoom<=1;$('zoomIn').disabled=camera.zoom>=32;
+ let x=v=>L+(unwrap(v)-west)/(east-west)*(W-L-R),y=v=>T+(north-v)/(north-south)*(H-T-B);plot.append(node('rect',{x:L,y:T,width:W-L-R,height:H-T-B,fill:'#edf5f7',stroke:'#c5d8df'}));
+ for(let i=0;i<4;i++){let a=L+(W-L-R)*i/3,b=T+(H-T-B)*i/3;plot.append(node('line',{x1:a,x2:a,y1:T,y2:H-B,class:'grid'}),node('text',{x:a,y:H-17,'text-anchor':i===0?'start':i===3?'end':'middle',class:'axis'},(west+(east-west)*i/3).toFixed(2)+'°'),node('text',{x:L-5,y:b+4,'text-anchor':'end',class:'axis'},(north-(north-south)*i/3).toFixed(2)+'°'))}
+ plot.append(node('text',{x:W/2,y:H-2,'text-anchor':'middle',class:'axis'},'Longitude'));
+ const defs=node('defs'),clip=node('clipPath',{id:'mapClip'});clip.append(node('rect',{x:L,y:T,width:W-L-R,height:H-T-B}));defs.append(clip);plot.append(defs);
+ const outlines=node('g',{'clip-path':'url(#mapClip)'}),pixels=node('g',{'clip-path':'url(#mapClip)'});plot.append(outlines,pixels);
+ const visible=[];
+ for(const feature of onms.features){
+   let paths=[];
+   for(const ring of feature.rings){
+     // Unwrap each ring continuously, then place it beside the local station extent.
+     let previous=unwrap(ring[0][0]);const points=ring.map(([lon,lat])=>{let u=previous+((lon-previous+540)%360)-180;previous=u;return [u,lat]});
+     const shift=360*Math.round((lon0-points.reduce((sum,p)=>sum+p[0],0)/points.length)/360);points.forEach(p=>p[0]+=shift);
+     if(Math.max(...points.map(p=>p[0]))<west||Math.min(...points.map(p=>p[0]))>east||Math.max(...points.map(p=>p[1]))<south||Math.min(...points.map(p=>p[1]))>north)continue;
+     paths.push(points.map(([lon,lat],i)=>(i?'L':'M')+(L+(lon-west)/(east-west)*(W-L-R)).toFixed(2)+' '+y(lat).toFixed(2)).join(' ')+'Z');
+   }
+   if(paths.length){const path=node('path',{d:paths.join(' '),class:'boundary','data-sanctuary':feature.abbr});outlines.append(path);visible.push(feature.name)}
+ }
+ $('boundaryNote').replaceChildren();const key=document.createElement('span');key.className='boundary-key';$('boundaryNote').append(key,document.createTextNode(visible.length?'ONMS boundaries · '+visible.join(', '):'No ONMS boundaries in this map extent'));
+ stations.forEach((s,i)=>{let c=node('rect',{x:x(s.lon)-(.025/(east-west))*(W-L-R),y:y(s.lat+.025),width:(.05/(east-west))*(W-L-R),height:(.05/(north-south))*(H-T-B),class:'cell'+(selected.has(s.id)?' selected':''),tabindex:0,role:'button','aria-label':s.name,'aria-pressed':String(selected.has(s.id))});c.style.fill=siteColor(s.id);c.append(node('title',{},`${s.name}: ${s.lat.toFixed(3)}, ${s.lon.toFixed(3)} · 0.05° pixel`));c.addEventListener('click',()=>chooseSite(s.id));c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();chooseSite(s.id)}});pixels.append(c);if(stations.length<=30||selected.has(s.id))pixels.append(node('text',{x:x(s.lon)+6,y:y(s.lat)-6,class:'mapnum'},i+1));let b=document.createElement('button');b.className='station';b.textContent=`${selected.has(s.id)?'✓ ':''}${i+1}. ${s.name}`;b.style.borderLeftColor=siteColor(s.id);b.setAttribute('aria-pressed',String(selected.has(s.id)));b.onclick=()=>chooseSite(s.id);$('stations').append(b)});
+
+ $('stations').scrollTop=listScroll;
+ $('mapDetail').replaceChildren(document.createTextNode(`${selectedSites.size} sites selected · ${stations.length} available · colors match chart lines. `));
+ for(const station of stations.filter(s=>selectedSites.has(s.id))){const a=document.createElement('a');a.href=station.source_url;a.target='_blank';a.rel='noopener';a.textContent=station.name+' ↗';a.style.marginRight='8px';$('mapDetail').append(a)}
+}
+
+function draw(){
+ const metric=$('metric').value,dhw=metric==='peak_dhw_c_weeks',unit=dhw?'°C-weeks':'°C';
+ chartSeries=currentRegion.stations.filter(s=>selectedSites.has(s.id)).map(s=>({id:s.id,name:s.name,rows:s.monthly,color:siteColor(s.id),last:s.last_date}));
+ if($('showAverage').checked)chartSeries.unshift({id:'average',name:'Regional average (all named pixels)',rows:currentRegion.monthly,color:'#89949c',average:true});
+ const allRows=chartSeries.length?chartSeries.flatMap(s=>s.rows):currentRegion.monthly;
+ const first=Math.min(...allRows.map(r=>monthIndex(r.month))),last=Math.max(...allRows.map(r=>monthIndex(r.month))),{from,to}=syncDateRange(first,last);
+ displayed=[];for(let i=from;i<=to;i++)displayed.push({month:monthName(i),values:{},coverage:{}});
+ for(const s of chartSeries){const lookup=new Map(s.rows.map(r=>[r.month,r]));for(const d of displayed){const r=lookup.get(d.month);d.values[s.id]=r?.[metric]??null;d.coverage[s.id]=s.average?`${r?.['n_'+metric]??0}/${currentRegion.unique_pixels} pixels`:`${r?.['valid_days_'+metric]??0}/${r?.days_expected??'—'} days`}}
+ $('chartTitle').textContent=currentRegion.name+' — '+(dhw?'Monthly peak daily DHW':metric==='ssta_c'?'Monthly NOAA SST anomaly':'Monthly mean SST');
+ $('metricNote').textContent=dhw?'Site lines show monthly maxima of daily DHW. The dashed grey regional line averages all unique named-site monthly maxima; selecting sites does not recalculate it. The 4 DHW reference applies only to individual site lines and also requires concurrent HotSpot ≥1°C for NOAA Alert Level 1.':'Each line retains the original monthly values and completeness rules. The dashed grey regional average includes all unique named pixels in this region, regardless of your selection.';
+ $('legend').replaceChildren();for(const s of chartSeries){const item=document.createElement('button');item.type='button';item.textContent=s.name+(s.average?'':' ×');item.title=s.average?'Toggle the Regional average checkbox to hide this line':'Remove '+s.name;const key=document.createElement('i');key.className='key';key.style.borderColor=s.color;if(s.average)key.style.borderTopStyle='dashed';item.prepend(key);item.onclick=()=>{if(s.average){$('showAverage').checked=false;draw()}else chooseSite(s.id)};$('legend').append(item)}
+ const plot=$('chart');plot.replaceChildren();$('tip').style.display='none';plot.setAttribute('aria-label',$('chartTitle').textContent+'; '+chartSeries.map(s=>s.name).join(', '));
+ const vals=displayed.flatMap(d=>Object.values(d.values)).filter(finite);
+ $('status').textContent=`${selectedSites.size} selected sites · ${displayed[0].month} to ${displayed.at(-1).month} · gaps = missing or incomplete months`;
+ if(!chartSeries.length){$('status').textContent='Select a site on the map or list, or enable Regional average.';return}
+ if(!vals.length){$('status').textContent='No complete monthly values in this date range.';return}
+ let lo=Math.min(...vals),hi=Math.max(...vals);if(dhw){lo=0;hi=Math.max(hi,selectedSites.size?4.5:1)}if(metric==='ssta_c'){lo=Math.min(0,lo);hi=Math.max(0,hi)}const pad=Math.max(.2,(hi-lo)*.12);lo-=dhw?0:pad;hi+=pad;
+ const W=850,H=390,L=62,R=18,T=30,B=38,x=i=>L+(W-L-R)*(displayed.length===1?.5:i/(displayed.length-1)),y=v=>T+(H-T-B)*(hi-v)/(hi-lo);
+ plot.append(node('text',{x:L,y:15,class:'axis'},unit));let tickIndices=new Set();for(let i=0;i<5;i++){let yy=T+(H-T-B)*i/4;plot.append(node('line',{x1:L,x2:W-R,y1:yy,y2:yy,class:'grid'}),node('text',{x:L-8,y:yy+4,'text-anchor':'end',class:'axis'},(hi-(hi-lo)*i/4).toFixed(1)));let j=Math.round(i*(displayed.length-1)/4);if(!tickIndices.has(j)){plot.append(node('text',{x:x(j),y:H-13,'text-anchor':displayed.length===1?'middle':i===0?'start':i===4?'end':'middle',class:'axis'},displayed[j].month));tickIndices.add(j)}}
+ for(const s of chartSeries){let d='',pen=false;displayed.forEach((r,i)=>{const v=r.values[s.id];if(!finite(v)){pen=false;return}d+=(pen?'L':'M')+x(i).toFixed(2)+' '+y(v).toFixed(2)+' ';pen=true});const path=node('path',{d,class:'comparison-trace',fill:'none',stroke:s.color,'stroke-width':s.average?1.8:2.2,'stroke-dasharray':s.average?'6 4':'none','data-site':s.id});plot.append(path);
+ // Mark isolated observations, including a one-month window, without joining gaps.
+ displayed.forEach((r,i)=>{const v=r.values[s.id];if(finite(v)&&!finite(displayed[i-1]?.values[s.id])&&!finite(displayed[i+1]?.values[s.id]))plot.append(node('circle',{cx:x(i),cy:y(v),r:3,fill:s.color}));});}
+ if(dhw&&selectedSites.size){plot.append(node('line',{x1:L,x2:W-R,y1:y(4),y2:y(4),class:'threshold-halo'}),node('line',{x1:L,x2:W-R,y1:y(4),y2:y(4),class:'threshold'}),node('text',{x:W-R-3,y:y(4)-7,'text-anchor':'end',class:'threshold-label'},'4 DHW · individual-site reference'))}
+ const cursor=node('line',{x1:-1,x2:-1,y1:T,y2:H-B,stroke:'#8b9fa8'});plot.append(cursor);const hit=node('rect',{x:L,y:T,width:W-L-R,height:H-T-B,fill:'transparent'});plot.append(hit);
+ hit.onpointermove=e=>{const box=plot.getBoundingClientRect(),px=(e.clientX-box.left)/box.width*W,i=Math.max(0,Math.min(displayed.length-1,Math.round((px-L)/(W-L-R)*(displayed.length-1)))),r=displayed[i];cursor.setAttribute('x1',x(i));cursor.setAttribute('x2',x(i));const tip=$('tip');tip.textContent=r.month+'\n'+chartSeries.map(s=>s.name+': '+(finite(r.values[s.id])?r.values[s.id].toFixed(2)+' '+unit:'No complete value')+' ('+r.coverage[s.id]+')').join('\n');tip.style.display='block';tip.style.left=Math.max(0,Math.min(box.width-tip.offsetWidth,e.clientX-box.left+10))+'px';tip.style.top='20px'};
+ hit.onpointerleave=()=>{$('tip').style.display='none';cursor.setAttribute('x1',-1);cursor.setAttribute('x2',-1)};
+}
+$('region').onchange=chooseRegion;$('station').onchange=e=>chooseSite(e.target.value);$('metric').onchange=draw;$('showAverage').onchange=draw;
+$('clearSites').onclick=()=>{selectedSites.clear();$('error').textContent='';buildMap();draw()};
+$('open').onclick=()=>$('file').click();$('file').onchange=async e=>{const file=e.target.files[0];if(!file)return;try{load(JSON.parse(await file.text()))}catch(err){$('error').textContent=err.message}e.target.value=''};
+function comparisonCSV(){const escape=v=>'"'+String(v??'').replaceAll('"','""')+'"';return [['month','series_id','series_name','metric','value','coverage'],...displayed.flatMap(r=>chartSeries.map(s=>[r.month,s.id,s.name,$('metric').value,r.values[s.id]??'',r.coverage[s.id]]))].map(r=>r.map(escape).join(',')).join('\n')}
+$('download').onclick=()=>{const url=URL.createObjectURL(new Blob([comparisonCSV()],{type:'text/csv'})),a=document.createElement('a');a.href=url;a.download=currentRegion.id+'_comparison_'+$('metric').value+'.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};
+function zoomMap(factor,fx=.5,fy=.5){if(!mapBounds)return;const next=Math.max(1,Math.min(32,camera.zoom*factor)),ratio=camera.zoom/next;camera.dx+=(fx-.5)*(mapBounds.east-mapBounds.west)*(1-ratio);camera.dy+=(.5-fy)*(mapBounds.north-mapBounds.south)*(1-ratio);camera.zoom=next;buildMap()}
+$('zoomIn').onclick=()=>zoomMap(1.5);$('zoomOut').onclick=()=>zoomMap(1/1.5);$('resetMap').onclick=()=>{camera={zoom:1,dx:0,dy:0};buildMap()};
+const map=$('map');function mapPoint(e){const r=map.getBoundingClientRect();return {x:(e.clientX-r.left)/r.width*400,y:(e.clientY-r.top)/r.height*310}}
+map.addEventListener('wheel',e=>{const p=mapPoint(e);if(p.x<46||p.x>382||p.y<16||p.y>272)return;e.preventDefault();zoomMap(e.deltaY<0?1.2:1/1.2,(p.x-46)/336,(p.y-16)/256)},{passive:false});
+map.addEventListener('pointerdown',e=>{if(e.button!==0)return;const p=mapPoint(e);suppressClick=false;dragState={x:e.clientX,y:e.clientY,point:p,camera:{...camera},bounds:{...mapBounds},moved:false}});
+map.addEventListener('pointermove',e=>{if(!dragState)return;const drag=dragState;if(Math.hypot(e.clientX-drag.x,e.clientY-drag.y)>4){drag.moved=true;suppressClick=true;map.setPointerCapture(e.pointerId)}if(!drag.moved)return;const p=mapPoint(e);camera.dx=drag.camera.dx-(p.x-drag.point.x)/336*(drag.bounds.east-drag.bounds.west);camera.dy=drag.camera.dy+(p.y-drag.point.y)/256*(drag.bounds.north-drag.bounds.south);buildMap()});
+function endDrag(e){dragState=null;if(map.hasPointerCapture(e.pointerId))map.releasePointerCapture(e.pointerId)}map.addEventListener('pointerup',endDrag);map.addEventListener('pointercancel',endDrag);map.addEventListener('pointerleave',e=>{if(dragState&&!dragState.moved)dragState=null});
+map.addEventListener('click',e=>{if(suppressClick){e.preventDefault();e.stopImmediatePropagation();suppressClick=false}},true);
+map.addEventListener('keydown',e=>{if(e.target!==map)return;const step=.15;if(['+','=','-','0','ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key))e.preventDefault();if(e.key==='+'||e.key==='=')zoomMap(1.5);else if(e.key==='-')zoomMap(1/1.5);else if(e.key==='0')$('resetMap').click();else if(e.key.startsWith('Arrow')){camera.dx+=(e.key==='ArrowRight'?step:e.key==='ArrowLeft'?-step:0)*(mapBounds.east-mapBounds.west);camera.dy+=(e.key==='ArrowUp'?step:e.key==='ArrowDown'?-step:0)*(mapBounds.north-mapBounds.south);buildMap()}});
+
+// Two handles share one monthly timeline; date fields also allow a single-month selection.
+let dateWindow=null;
+function rangeMonthIndex(month){const [y,m]=month.split('-').map(Number);return y*12+m-1}
+function rangeMonthName(index){return Math.floor(index/12)+'-'+String(index%12+1).padStart(2,'0')}
+function resetDateRange(){dateWindow=null}
+function syncDateRange(first,last){
+ if(!dateWindow)dateWindow={first,last,from:first,to:last};
+ else{dateWindow.first=first;dateWindow.last=last;dateWindow.from=Math.max(first,Math.min(last,dateWindow.from));dateWindow.to=Math.max(dateWindow.from,Math.min(last,dateWindow.to))}
+ renderDateRange();return {from:dateWindow.from,to:dateWindow.to};
+}
+function renderDateRange(){
+ const w=dateWindow;if(!w)return;
+ for(const id of ['rangeStart','rangeEnd']){const n=$(id);n.min=w.first;n.max=w.last;n.disabled=w.first===w.last}
+ $('rangeStart').value=w.from;$('rangeEnd').value=w.to;
+ // Keep the start handle reachable when both handles meet at the final month.
+ $('rangeStart').style.zIndex=w.from===w.last?'3':'1';$('rangeEnd').style.zIndex='2';
+ for(const id of ['dateFrom','dateTo']){$(id).min=rangeMonthName(w.first);$(id).max=rangeMonthName(w.last)}
+ $('dateFrom').value=rangeMonthName(w.from);$('dateTo').value=rangeMonthName(w.to);
+ $('rangeStart').setAttribute('aria-valuetext',rangeMonthName(w.from));$('rangeEnd').setAttribute('aria-valuetext',rangeMonthName(w.to));
+ const span=w.last-w.first,a=span?100*(w.from-w.first)/span:0,b=span?100*(w.to-w.first)/span:100;
+ $('rangeTrack').style.backgroundImage=`linear-gradient(to right,#d8e5e9 ${a}%,#087d84 ${a}%,#087d84 ${b}%,#d8e5e9 ${b}%)`;
+}
+function changeDateRange(which,value){
+ if(!dateWindow||!Number.isFinite(value))return;
+ const w=dateWindow;value=Math.max(w.first,Math.min(w.last,value));
+ if(which==='from')w.from=Math.min(value,w.to);else w.to=Math.max(value,w.from);
+ renderDateRange();draw();
+}
+$('rangeStart').oninput=e=>changeDateRange('from',+e.target.value);
+$('rangeEnd').oninput=e=>changeDateRange('to',+e.target.value);
+$('dateFrom').onchange=e=>changeDateRange('from',rangeMonthIndex(e.target.value));
+$('dateTo').onchange=e=>changeDateRange('to',rangeMonthIndex(e.target.value));
+$('resetRange').onclick=()=>{resetDateRange();draw()};
+
+try{load(JSON.parse($('bundle').textContent))}catch(error){$('status').textContent='Run python pull_sites.py to build the viewer, or open a generated viewer_data.json.';$('error').textContent=error.message}
+</script></main></body></html>
