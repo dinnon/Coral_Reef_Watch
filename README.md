@@ -1,4 +1,4 @@
-# Green SST / red DHW regional figures
+# SST / DHW regional figures
 
 ## Open a simple standalone figure
 Each of these files includes its own data and works offline. Open it directly in a browser:
