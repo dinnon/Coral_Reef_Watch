@@ -9,11 +9,23 @@
 const SITE_THRESHOLDS = {
   nmsas: 30,     // American Samoa (Samoas regional station)
   fknms: null,   // Florida Keys
-  fgbnms: 28,  // Flower Garden Banks
+  fgbnms: null,  // Flower Garden Banks
   pnms: null,    // Northwestern Hawaiian Islands
   hihwnms: null  // Main Hawaiian Islands
 };
 const THRESHOLD_LABEL = 'Bleaching Threshold';
+
+// BLEACHING EVENTS (MARKED YEARS): a dot is drawn just above the SST line (or DHW shading) at each year's highest month.
+// List years per site, e.g. fknms: [1998, 2005, 2014]. Leave [] for none.
+const MARKED_YEARS = {
+  nmsas: [1994, 2003, 2015, 2017, 2020],  // American Samoa (Samoas regional station)
+  fknms: [],     // Florida Keys
+  fgbnms: [],    // Flower Garden Banks
+  pnms: [],      // Northwestern Hawaiian Islands
+  hihwnms: []    // Main Hawaiian Islands
+};
+const MARKED_YEARS_LABEL = 'Bleaching event';  // checkbox, legend and hover text
+const MARKED_YEARS_COLOR = '#173747';       // dot color
 </script>
 <style>
 :root{font:14px system-ui,-apple-system,Segoe UI,sans-serif;color:#173747;background:#fff}*{box-sizing:border-box}body{margin:0;padding:14px}.figure{max-width:1000px;margin:auto}h1{font-size:20px;margin:0 0 5px}.subtitle{color:#47616f;margin:0 0 13px;line-height:1.35}.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.toolbar label{display:flex;gap:6px;align-items:center}select,.filebutton{font:inherit;color:#173747;background:#fff;border:1px solid #95b0bb;border-radius:5px;padding:6px}.filebutton{cursor:pointer}input[type=file]{position:absolute;width:1px;height:1px;opacity:0}.range{display:flex;align-items:center;gap:10px;margin:14px 0 3px;font-size:12px}.range input{flex:1;accent-color:#087e86}.chart{position:relative}svg{width:100%;height:auto;display:block;min-height:220px}.grid{stroke:#dce6ea}.axis{fill:#58717d;font-size:12px}.trace{fill:none;stroke:#087e86;stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}.zero{stroke:#9badb6;stroke-dasharray:5 4}.threshold{stroke:#a64514;stroke-opacity:.5;stroke-width:1.8;stroke-dasharray:8 4;pointer-events:none}.threshold-halo{display:none}.threshold-label{fill:#903c12;font-size:12px;font-weight:600;paint-order:stroke;stroke:#fff;stroke-width:4;stroke-linejoin:round;pointer-events:none}.hit{fill:transparent}.cursor{stroke:#436b76;stroke-dasharray:4 4}.tip{position:absolute;display:none;background:#173747;color:#fff;border-radius:5px;padding:7px 9px;font-size:12px;pointer-events:none;white-space:nowrap}.status{color:#405d69;line-height:1.4}.status.error{color:#8e3b29}.method{font-size:12px;color:#526b77;line-height:1.4}.method a{color:#075d78}@media(max-width:520px){body{padding:8px}h1{font-size:17px}.toolbar{gap:7px}.range{gap:5px}}
@@ -22,6 +34,7 @@ const THRESHOLD_LABEL = 'Bleaching Threshold';
 .enso-band{fill:#e8e8e8;pointer-events:none}.enso-key{display:inline-block;width:16px;height:10px;background:#e8e8e8;margin-right:5px}.figure-only h1,.figure-only .subtitle,.figure-only .toolbar,.figure-only .status:not(.error),.figure-only .method{display:none}.figure-only .date-range{margin-top:0}.figure-only body{padding:8px}
 .overlay-controls{display:flex;gap:16px;align-items:center;flex-wrap:wrap;font-size:12px;margin:4px 0 8px}.overlay-controls label{display:flex;gap:6px;align-items:center}.overlay-controls input{accent-color:#087e86}.dhw-area{fill:#7b2d8e;fill-opacity:.32;stroke:none;pointer-events:none}.dhw-trace{fill:none;stroke:#7b2d8e;stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round}.dhw-axis{fill:#6a2479;font-size:11px;font-weight:600}
 .dhw-reference{stroke:#7b2d8e;stroke-opacity:.45;stroke-width:1;stroke-dasharray:5 5;pointer-events:none}.dhw-reference-label{fill:#6a2479;font-size:10px;font-weight:600;paint-order:stroke;stroke:#fff;stroke-width:3;stroke-linejoin:round;pointer-events:none}
+.year-mark{stroke:#fff;stroke-width:1.5;cursor:default}.mark-key{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}
 </style>
 <script>if(document.documentElement.dataset.view==='figure'||new URLSearchParams(location.search).get('view')==='figure')document.documentElement.classList.add('figure-only');</script>
 </head>
@@ -35,7 +48,7 @@ const THRESHOLD_LABEL = 'Bleaching Threshold';
   <label class="filebutton" for="dataFolder">Load all station CSVs</label><input type="file" id="dataFolder" webkitdirectory multiple aria-label="Choose the data folder containing station subfolders">
   <label class="filebutton" for="csvFile">Open monthly.csv</label><input type="file" id="csvFile" accept=".csv,text/csv" aria-label="Choose monthly.csv for selected region">
 </div>
-<div class="date-range" aria-label="Displayed date range"><div class="date-fields"><label>From <input type="month" id="dateFrom" aria-label="First month shown"></label><label>To <input type="month" id="dateTo" aria-label="Last month shown"></label><button type="button" id="resetRange">All dates</button></div><div class="range-track" id="rangeTrack"><input type="range" id="rangeStart" min="0" max="1" value="0" step="1" aria-label="Start of displayed date range"><input type="range" id="rangeEnd" min="0" max="1" value="1" step="1" aria-label="End of displayed date range"></div></div><div class="overlay-controls"><label><input type="checkbox" id="showDHW"> Show DHW on SST plot</label><span id="overlayNote" role="status"></span></div><div class="chart"><svg id="plot" viewBox="0 0 800 330" role="img" aria-label="Regional station monthly SST chart"></svg><div class="tip" id="tip"></div></div>
+<div class="date-range" aria-label="Displayed date range"><div class="date-fields"><label>From <input type="month" id="dateFrom" aria-label="First month shown"></label><label>To <input type="month" id="dateTo" aria-label="Last month shown"></label><button type="button" id="resetRange">All dates</button></div><div class="range-track" id="rangeTrack"><input type="range" id="rangeStart" min="0" max="1" value="0" step="1" aria-label="Start of displayed date range"><input type="range" id="rangeEnd" min="0" max="1" value="1" step="1" aria-label="End of displayed date range"></div></div><div class="overlay-controls"><label><input type="checkbox" id="showDHW"> Show DHW on SST plot</label><label><input type="checkbox" id="showMarks" checked> <span id="marksText"></span></label><span id="overlayNote" role="status"></span></div><div class="chart"><svg id="plot" viewBox="0 0 800 330" role="img" aria-label="Regional station monthly SST chart"></svg><div class="tip" id="tip"></div></div>
 <p class="status" id="status" role="status">Loading…</p>
 <p class="method" id="importNotice"></p><p class="method" id="snapshotNotice"></p>
 <p class="method" id="ensoNote"></p>
@@ -82,7 +95,7 @@ function draw(){
   const pageName=location.pathname.split('/').pop()||'index.html';
   const figureURL=new URL(pageName,location.href);
   figureURL.search='';figureURL.hash='';figureURL.searchParams.set('view','figure');
-  figureURL.searchParams.set('dhw',$('showDHW').checked?'1':'0');figureURL.searchParams.set('site',site);figureURL.searchParams.set('measure',$('measure').value);
+  figureURL.searchParams.set('dhw',$('showDHW').checked?'1':'0');figureURL.searchParams.set('marks',$('showMarks').checked?'1':'0');figureURL.searchParams.set('site',site);figureURL.searchParams.set('measure',$('measure').value);
   $('figureLink').href=figureURL.href;
   if(!all)return;
   $('status').className='status';
@@ -93,6 +106,9 @@ function draw(){
   const isSST=!anomaly&&!dhw;
   $('showDHW').disabled=!isSST||!hasHeat(site);
   const overlay=isSST&&hasHeat(site)&&$('showDHW').checked;
+  const markYears=new Set((MARKED_YEARS[site]||[]).map(String));
+  $('showMarks').disabled=anomaly||!markYears.size;
+  const showMarks=!anomaly&&markYears.size>0&&$('showMarks').checked;
   const threshold=isSST&&Number.isFinite(SITE_THRESHOLDS[site])?SITE_THRESHOLDS[site]:null;
   const heatSeries=rows.map(r=>{const v=r.max_dhw_from_90th_hotspot_c_weeks??heat[site]?.[r.month];return r.complete_month==='1'&&v!==undefined&&v!==null&&v!==''&&Number.isFinite(Number(v))?Number(v):NaN});
   $('overlayNote').textContent=!isSST?'DHW overlay is available in the SST view.':!hasHeat(site)?'DHW data unavailable.':overlay?'Teal: SST (left) · Purple shading: monthly peak DHW (right)':'';
@@ -142,9 +158,18 @@ function draw(){
   // Draw the reference above the time series and cursor, below the transparent hover target.
   if(threshold!==null){
     plot.append(svg('line',{x1:L,x2:W-R,y1:y(threshold),y2:y(threshold),class:'threshold-halo'}),svg('line',{x1:L,x2:W-R,y1:y(threshold),y2:y(threshold),class:'threshold sst-threshold'}));
-    const label=svg('text',{x:W-R-3,y:y(threshold)-7,'text-anchor':'end',class:'threshold-label'});label.textContent=THRESHOLD_LABEL+': '+threshold.toFixed(1)+'°C';plot.append(label);
+    const label=svg('text',{x:W-R-3,y:y(threshold)+16,'text-anchor':'end',class:'threshold-label'});label.textContent=THRESHOLD_LABEL+': '+threshold.toFixed(1)+'°C';plot.append(label);
   }
   let hit=svg('rect',{x:L,y:T,width:W-L-R,height:H-T-B,class:'hit'});plot.append(hit);
+  if(showMarks){
+    // One dot per marked year, above that year's highest complete month (SST or DHW) in the displayed range.
+    const peaks={};
+    series.forEach((r,i)=>{const yr=r.month.slice(0,4);if(markYears.has(yr)&&Number.isFinite(r.value)&&(peaks[yr]===undefined||r.value>series[peaks[yr]].value))peaks[yr]=i});
+    for(const [yr,i] of Object.entries(peaks)){
+      const dot=svg('circle',{cx:x(i),cy:Math.max(T+5,y(series[i].value)-16),r:4.5,fill:MARKED_YEARS_COLOR,class:'year-mark'});
+      const title=svg('title');title.textContent=`${MARKED_YEARS_LABEL}: ${yr} · peak ${dhw?'DHW':'SST'} ${series[i].value.toFixed(2)}${unit} (${series[i].month})`;dot.append(title);plot.append(dot);
+    }
+  }
   hit.addEventListener('mousemove',e=>{let box=plot.getBoundingClientRect(),local=(e.clientX-box.left)/box.width*W,i=Math.max(0,Math.min(series.length-1,Math.round((local-L)/(W-L-R)*(series.length-1)))),r=series[i];cursor.setAttribute('x1',x(i));cursor.setAttribute('x2',x(i));let tip=$('tip');tip.textContent=`${r.month} · ${Number.isFinite(r.value)?r.value.toFixed(2)+unit:'Incomplete ('+r.days+'/'+r.expected+' days)'}`;if(overlay)tip.textContent+=' · DHW: '+(Number.isFinite(heatSeries[i])?heatSeries[i].toFixed(2)+' °C-weeks':'unavailable');tip.style.display='block';tip.style.left=Math.max(2,Math.min(box.width-tip.offsetWidth-2,e.clientX-box.left+10))+'px';tip.style.top=Math.max(2,e.clientY-box.top-38)+'px'});
   hit.addEventListener('mouseleave',()=>{$('tip').style.display='none';cursor.setAttribute('x1',0);cursor.setAttribute('x2',0)});
   let missing=all.filter(r=>r.complete_month!=='1').length;
@@ -168,7 +193,7 @@ async function selectSite(){
   }
   catch(err){if($('site').value!==site)return;$('status').className='status error';$('status').textContent=`Could not load data/${site}/monthly.csv (${err.message}). Run the Python pull, then upload the data folder beside index.html, or choose a CSV manually.`}
 }
-$('showDHW').addEventListener('change',draw);
+$('showDHW').addEventListener('change',draw);$('showMarks').addEventListener('change',draw);
 $('site').addEventListener('change',selectSite);$('measure').addEventListener('change',draw);
 $('csvFile').addEventListener('change',async e=>{let file=e.target.files[0];if(!file)return;try{let parsed=parseCSV(await file.text()),site=$('site').value;data[site]=parsed;$('status').className='status';resetDateRange();draw()}catch(err){$('status').className='status error';$('status').textContent=err.message}e.target.value=''});
 $('dataFolder').addEventListener('change',async e=>{
@@ -229,6 +254,8 @@ try{
 }catch(error){console.warn('No embedded regional snapshot:',error.message)}
 const params=new URLSearchParams(location.search);
 $('showDHW').checked=params.get('dhw')==='1';
+$('showMarks').checked=params.get('marks')!=='0';
+$('marksText').innerHTML='<span class="mark-key" style="background:'+MARKED_YEARS_COLOR+'"></span>Show '+MARKED_YEARS_LABEL.toLowerCase()+'s';
 if(names[params.get('site')])$('site').value=params.get('site');
 if(Array.from($('measure').options).some(o=>o.value===params.get('measure')))$('measure').value=params.get('measure');
 $('ensoNote').innerHTML='<span class="enso-key"></span>Light grey: historical El Niño periods (ONI, ERSSTv5; season center months). <a href="'+enso.source_url+'" target="_blank" rel="noopener">NOAA CPC</a> · index snapshot through '+enso.source_through+'. Unclassified later months are not necessarily neutral.';
