@@ -18,14 +18,16 @@ const THRESHOLD_LABEL = 'Bleaching Threshold';
 // BLEACHING EVENTS (MARKED YEARS): a dot is drawn just above the SST line (or DHW shading) at each year's highest month.
 // List years per site, e.g. fknms: [1998, 2005, 2014]. Leave [] for none.
 const MARKED_YEARS = {
-  nmsas: [1994, 2003, 2015, 2017, 2020, 2024],  // American Samoa (Samoas regional station)
+  nmsas: [],  // American Samoa (Samoas regional station)
   fknms: [],     // Florida Keys
   fgbnms: [],    // Flower Garden Banks
   pnms: [],      // Northwestern Hawaiian Islands
   hihwnms: []    // Main Hawaiian Islands
 };
+<!-- 
 const MARKED_YEARS_LABEL = 'Bleaching event';  // checkbox, legend and hover text
-const MARKED_YEARS_COLOR = '#173747';       // dot color
+const MARKED_YEARS_COLOR = '#173747';       // dot color 
+  -->
 </script>
 <style>
 :root{font:14px system-ui,-apple-system,Segoe UI,sans-serif;color:#173747;background:#fff}*{box-sizing:border-box}body{margin:0;padding:14px}.figure{max-width:1000px;margin:auto}h1{font-size:20px;margin:0 0 5px}.subtitle{color:#47616f;margin:0 0 13px;line-height:1.35}.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center}.toolbar label{display:flex;gap:6px;align-items:center}select,.filebutton{font:inherit;color:#173747;background:#fff;border:1px solid #95b0bb;border-radius:5px;padding:6px}.filebutton{cursor:pointer}input[type=file]{position:absolute;width:1px;height:1px;opacity:0}.range{display:flex;align-items:center;gap:10px;margin:14px 0 3px;font-size:12px}.range input{flex:1;accent-color:#087e86}.chart{position:relative}svg{width:100%;height:auto;display:block;min-height:220px}.grid{stroke:#dce6ea}.axis{fill:#58717d;font-size:12px}.trace{fill:none;stroke:#087e86;stroke-width:2.4;stroke-linejoin:round;stroke-linecap:round}.zero{stroke:#9badb6;stroke-dasharray:5 4}.threshold{stroke:#a64514;stroke-opacity:.5;stroke-width:1.8;stroke-dasharray:8 4;pointer-events:none}.threshold-halo{display:none}.threshold-label{fill:#903c12;font-size:12px;font-weight:600;paint-order:stroke;stroke:#fff;stroke-width:4;stroke-linejoin:round;pointer-events:none}.hit{fill:transparent}.cursor{stroke:#436b76;stroke-dasharray:4 4}.tip{position:absolute;display:none;background:#173747;color:#fff;border-radius:5px;padding:7px 9px;font-size:12px;pointer-events:none;white-space:nowrap}.status{color:#405d69;line-height:1.4}.status.error{color:#8e3b29}.method{font-size:12px;color:#526b77;line-height:1.4}.method a{color:#075d78}@media(max-width:520px){body{padding:8px}h1{font-size:17px}.toolbar{gap:7px}.range{gap:5px}}
